@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <title>SuperBot</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" id="mystyle" href="style.css">
+  <base target="_blank">
+</head>
+
+<body onload=setcolor()>
+  <button type="button" onclick="location.href='/'"
+    class="button3 rbutton">SuperBot Homepage</button>
+  <button type="button" onclick="location.href='/Documentation'"
+    class="button3 rbutton">Documentation Homepage</button>
+  <button type="button" onclick="location.href='/Documentation/Arguments'"
+    class="button3 rbutton">How to supply arguments?</button>
+  <h1>SuperBot Official Website</h1>
+
+  <p>Change the theme!</p>
+
+  <div style="width:100%; float: right;">
+    <button type="button" onclick="theme(0,0,false)" class="mbutton">White</button>
+    <button type="button" onclick="theme(1,1,true)" class="mbutton">Light</button>
+    <button type="button" onclick="theme(2,2,false)" class="mbutton">Blue</button>
+    <button type="button" onclick="theme(3,3,false)" class="mbutton">Ocean</button>
+    <button type="button" onclick="theme(4,4,false)" class="mbutton">Purple</button>
+    <button type="button" onclick="theme(5,5,false)" class="mbutton">Violet</button>
+    <button type="button" onclick="theme(6,6,false)" class="mbutton">Pink</button>
+    <button type="button" onclick="theme(7,7,false)" class="mbutton">Red</button>
+    <button type="button" onclick="theme(8,8,false)" class="mbutton">Orange</button>
+    <button type="button" onclick="theme(9,9,false)" class="mbutton">Tan</button>
+    <button type="button" onclick="theme(10,10,false)" class="mbutton">Gold</button>
+    <button type="button" onclick="theme(11,11,false)" class="mbutton">Yellow</button>
+    <button type="button" onclick="theme(12,12,false)" class="mbutton">Olive</button>
+    <button type="button" onclick="theme(13,13,false)" class="mbutton">Green</button><br>
+    <button type="button" onclick="theme(0,0,true)" class="mbutton">Black</button>
+    <button type="button" onclick="theme(1,1,false)" class="mbutton">Dark</button>
+    <button type="button" onclick="theme(2,2,true)" class="mbutton">Blue</button>
+    <button type="button" onclick="theme(3,3,true)" class="mbutton">Ocean</button>
+    <button type="button" onclick="theme(4,4,true)" class="mbutton">Purple</button>
+    <button type="button" onclick="theme(5,5,true)" class="mbutton">Violet</button>
+    <button type="button" onclick="theme(6,6,true)" class="mbutton">Pink</button>
+    <button type="button" onclick="theme(7,7,true)" class="mbutton">Red</button>
+    <button type="button" onclick="theme(8,8,true)" class="mbutton">Orange</button>
+    <button type="button" onclick="theme(9,9,true)" class="mbutton">Tan</button>
+    <button type="button" onclick="theme(10,10,true)" class="mbutton">Gold</button>
+    <button type="button" onclick="theme(11,11,true)" class="mbutton">Yellow</button>
+    <button type="button" onclick="theme(12,12,true)" class="mbutton">Olive</button>
+    <button type="button" onclick="theme(13,13,true)" class="mbutton">Green</button>
+  </div>
+  <script src="script.js"></script>
+  <br>
+  <h2>Quick Start</h2>
+  <button type="button" class="rbutton" target="_blank"
+    onclick="window.open('https://discord.com/oauth2/authorize?client_id=796686363604680755&permissions=0&scope=bot%20applications.commands','_blank')">
+    Invite the bot</button>
+  <button type="button" class="rbutton" target="_blank"
+    onclick="window.open('https://discord.gg/sesedKMWHH','_blank')">Join the support server!</button>
+  <p>Quick list of commands:<span class="code inverted">=help</span></p><br>
+  <p>Check whether the bot is online:<span class="code inverted">=ping</span></p><br>
+  <p>Join the support server!<span class="code inverted">=server</span></p><br>
+  <p>Invite the bot to other servers!<span class="code inverted">=invite</span></p><br>
+  <button type="button" onclick="location.href='https://johann-lau.github.io/superbot-website/Documentation'"
+    class="rbutton">All commands</button>
+  <h2>What's on?</h2>
+  <div class="card">
+    <div class="cardl">
+      <p class="card1">Split files</p>
+    </div>
+    <div class="cardr">
+      <p class="card2"><span class="beta">Beta</span> • We're testing out split files on our bot! We've tested it on 4
+        commands but we're definitely going to roll this out. This would mean a significant drop in file size and deploy
+        speed.</p>
+    </div>
+  </div>
+  <div class="card">
+    <div class="cardl">
+      <p class="card1">New IDLE</p>
+    </div>
+    <div class="cardr">
+      <p class="card2">I had been editing files on GitHub website directly for 7 months, since the start of the bot.
+        However, thanks to my Javascript teacher's recommendation, I started using Visual Studio Code. It'd be more
+        efficient to handle bugs.</p>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <title>SuperBot Documentation - Arguments</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" id="mystyle" href="../../style.css">
+  <base target="_blank">
+</head>
+
+<body>
+  <button type="button" onclick="location.href='/'"
+    class="button3 rbutton">SuperBot Homepage</button>
+  <button type="button" onclick="location.href='/Documentation'"
+    class="button3 rbutton">Documentation Homepage</button>
+  <button type="button" onclick="location.href='/Documentation/Arguments'"
+    class="button3 rbutton">How to supply arguments?</button>
+
+  <script src="../script.js"></script>
+  <h1>SuperBot Official Documentation: Supplying Arguments</h1>
+
+  <p>Please see these information on how to provide arguments for the bot to parse.</p>
+
+  <h3>How to supply <span class="code">text</span>?</h3>
+  <p>
+    <span class="code">text</span>is simply a piece of "arbitrary" text which can contain anything but not spaces, new lines or
+    straight double quotes(<span class="code">"</span>). For comparison, these are curved double quotes:
+    <span class="code">“</span>and<span class="code">”</span>
+    <br>
+    Examples are <span class="inverted code">100</span>, <span class="inverted code">hello</span>,
+    <span class="inverted code">Good-morning</span>.
+    <br>
+    To bypass the no-space limit, wrap the argument in straight double-quotes:
+    <br>
+    <span class="inverted code">"Good morning"</span>
+  </p>
+
+  <h3>How to supply <span class="code">text*</span>?</h3>
+  <p>
+    <span class="code">text*</span>allows you to provide as many arguments
+    as you want, separated by spaces. In fact, you can provide no arguments at all (by providing nothing).
+    <br>
+    Examples are<span class="inverted code">argument-1, argument-2, argument 3</span>,<span
+      class="inverted code">only-argument</span>.
+    <br>
+    Similarly, to bypass the no-space limit, wrap the argument in straight double-quotes:
+    <br>
+    <span class="inverted code">argument-1 "Very long argument 2" argument-3</span>
+  </p>
+
+  <h3>How to supply <span class="code">text+</span>?</h3>
+  <p>
+    <span class="code">text+</span>allows you to supply any character, including spaces, extra lines and
+    quotes. This is always the last argument of each command.
+    <br>
+    You do not need to wrap the argument in double quotes. If you do so, they will be parsed with the quotes.
+  </p>
+
+  <h3>How to supply other Discord objects?</h3>
+  <table style="width: 100%; table-layout: fixed;">
+    <tr>
+      <th>Object</th>
+      <th>Name</th>
+      <th>ID</th>
+      <th>Mention</th>
+      <th>URL</th>
+    </tr>
+
+    <tr>
+      <td>Channel<a target="_self" href="#f1"><sup>1</sup></a></td>
+      <td class="inverted">●</td>
+      <td class="inverted">●</td>
+      <td class="inverted">●</td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td>Role</td>
+      <td class="inverted">●</td>
+      <td class="inverted">●</td>
+      <td class="inverted">●</td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td>User in server</td>
+      <td class="inverted">●<a target="_self" href="#5" class="inverted"><sup>2</sup></a></td>
+      <td class="inverted">●</td>
+      <td class="inverted">●</td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td>User not in server</td>
+      <td></td>
+      <td class="inverted">●</td>
+      <td></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td>Emoji</td>
+      <td class="inverted">●</td>
+      <td class="inverted">●</td>
+      <td class="inverted">●<a target="_self" href="#3" class="inverted"><sup>3</sup></a></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td>Message</td>
+      <td></td>
+      <td class="inverted">●<a target="_self" href="#4" class="inverted"><sup>4</sup></a></td>
+      <td></td>
+      <td class="inverted">●</td>
+    </tr>
+
+    <tr>
+      <td>Invite Link</td>
+      <td></td>
+      <td class="inverted">●<a target="_self" href="#5" class="inverted"><sup>5</sup></a></td>
+      <td></td>
+      <td class="inverted">●</td>
+    </tr>
+
+    <tr>
+      <td>Template</td>
+      <td></td>
+      <td class="inverted">●<a target="_self" href="#5" class="inverted"><sup>5</sup></a></td>
+      <td></td>
+      <td class="inverted">●</td>
+    </tr>
+  </table>
+  <p>
+    To summarize the table above, using <a target="_self" href="6">ID codes</a>
+    is the most versatile option. If not accessible, use a combination of URLs and names/mentions.
+  </p>
+
+  <hr noshade>
+  <h2>Footnotes</h2>
+  <p id="f1">1 "Channel" includes text, voice and stage channels.</p><br>
+  <p id="f2">
+    2 You may supply the<span class="code">name</span>,<span class="code">name#discriminator</span>or<span class="code">nickname</span>.
+  </p><br>
+  <p id="f3">3 To "mention" the emoji, use it by wrapping it in colons, e.g.<span class="code">:emojiname:</span>.</p><br>
+  <p id="f4">4 Channel-message IDs<span class="code">12345678901234567-23456789012345678</span>are recommended. Simple message IDs
+  <span class="code">23456789012345678</span>can only be used if the command is used in the same channel as the message.</p><br>
+  <p id="f5">5 The ID is the unique alphanumeric code at the end of the URL.</p><br>
+  <p id="f6">6 ID codes can be enabled by going to User Settings › Advanced › Developer Mode. Copy an onject's ID by right-clicking on it and
+  clicking on "Copy ID".</p><br>
+</body>
+
+</html>

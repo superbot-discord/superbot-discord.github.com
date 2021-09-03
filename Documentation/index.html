@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <title>SuperBot Documentation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" id="mystyle" href="../style.css">
+  <base target="_blank">
+</head>
+
+<body>
+  <button type="button" onclick="location.href='/'"
+    class="button3 rbutton">SuperBot Homepage</button>
+  <button type="button" onclick="location.href='/Documentation'"
+    class="button3 rbutton">Documentation Homepage</button>
+  <button type="button" onclick="location.href='/Documentation/Arguments'"
+    class="button3 rbutton">How to supply arguments?</button>
+
+  <script src="./script.js"></script>
+  <h1>SuperBot Official Documentation</h1>
+  <table style="width: 205%;">
+    <colgroup>
+      <col span="1" style="width: 15%;">
+      <col span="1" style="width: 30%;">
+      <col span="1" style="width: 70%;">
+      <col span="1" style="width: 30%;">
+      <col span="1" style="width: 30%;">
+      <col span="1" style="width: 30%;">
+    </colgroup>
+
+    <tr>
+      <th class="big" colspan="6">Basic commands</th>
+    </tr>
+
+    <tr>
+      <th rowspan="2">Command</th>
+      <th rowspan="2">Argument(s)</th>
+      <th rowspan="2">Description</th>
+      <th rowspan="2">Alias(es)</th>
+      <th colspan="2">Permissions required</th>
+    </tr>
+
+    <tr>
+      <th>By bot</th>
+      <th>By you</th>
+    </tr>
+
+    <tr>
+      <td class="code">help</td>
+      <td rowspan="4"></td>
+      <td>Sends a list of commands. Does not support in-depth help.</td>
+      <td><span class="code">commands</span></td>
+      <td rowspan="2">Embed links</td>
+      <td rowspan="4"></td>
+    </tr>
+
+    <tr>
+      <td class="code">invite</td>
+      <td>Sends a link for you to invite the bot to your own server.</td>
+      <td rowspan="2"></td>
+    </tr>
+
+    <tr>
+      <td class="code">prefix</td>
+      <td>Reminds you of the prefix of the bot (Equal sign <span class="code">=</span>).</td>
+      <td rowspan="3"></td>
+    </tr>
+
+    <tr>
+      <td class="code">ping</td>
+      <td>Checks whether the bot is online and tells you the response speed.</td>
+      <td><span class="code">status</span><span class="code">online</span></td>
+    </tr>
+
+    <tr>
+      <td class="code">botpurge</td>
+      <td>No. of messages to delete</td>
+      <td>Deletes the most recent message(s) sent by the bot. Useful for cleanup.</td>
+      <td></td>
+      <td>Manage messages</td>
+    </tr>
+  </table>
+  <br><br>
+
+  <table style="width: 205%;">
+    <colgroup>
+      <col span="1" style="width: 15%;">
+      <col span="1" style="width: 30%;">
+      <col span="1" style="width: 70%;">
+      <col span="1" style="width: 30%;">
+      <col span="1" style="width: 30%;">
+      <col span="1" style="width: 30%;">
+    </colgroup>
+
+    <tr>
+      <th class="big" colspan="6">Discord Information commands</th>
+    </tr>
+
+    <tr>
+      <th rowspan="2">Command</th>
+      <th rowspan="2">Argument(s)</th>
+      <th rowspan="2">Description</th>
+      <th rowspan="2">Alias(es)</th>
+      <th colspan="2">Permissions required</th>
+    </tr>
+
+    <tr>
+      <th>By bot</th>
+      <th>By you</th>
+    </tr>
+
+    <tr>
+      <td class="code">server</td>
+      <td rowspan="2"></td>
+      <td>Views information about the server: channels, roles, ID and more.</td>
+      <td><span class="code">guild</span></td>
+      <td>Embed links</td>
+      <td rowspan="13"></td>
+    </tr>
+
+    <tr>
+      <td class="code">server mod</td>
+      <td>Views moderator information about the server: bans and invite links.</td>
+      <td><span class="code">guild mod</span></td>
+      <td style="font-size: 1.3vw;">Embed links, manage invites*, ban members*</td>
+    </tr>
+
+    <tr>
+      <td class="code">role</td>
+      <td><span class="inverted">Role in the server</span></td>
+      <td>Views information about the role: members, position and more.</td>
+      <td rowspan="6"></td>
+      <td rowspan="9">Embed links</td>
+    </tr>
+
+    <tr>
+      <td class="code">channel</td>
+      <td><span class="inverted">Channel in the server</span></td>
+      <td>Views information about the text, voice or stage channel.</td>
+    </tr>
+
+    <tr>
+      <td class="code">user</td>
+      <td rowspan="3"><span class="inverted">User in the server</span></td>
+      <td>Views information about the user: avatar, permissions, status and more.</td>
+    </tr>
+
+    <tr>
+      <td class="code">avatar</td>
+      <td>Views the avatar (user icon) of a user.</td>
+    </tr>
+
+    <tr>
+      <td class="code">status</td>
+      <td>Views in-depth information about the status of the user.</td>
+    </tr>
+
+    <tr>
+      <td class="code">leftuser</td>
+      <td>Any Discord User</td>
+      <td>Views limited information about the user who is not in the server.</td>
+    </tr>
+
+    <tr>
+      <td class="code">message</td>
+      <td rowspan="3">Message in the server</td>
+      <td>Views information about the message: sender, ID and more.</td>
+      <td class="code">msg</td>
+    </tr>
+
+    <tr>
+      <td class="code">raw</td>
+      <td>Views the raw content of the message, including formatting symbols.</td>
+      <td rowspan="4"></td>
+    </tr>
+
+    <tr>
+      <td class="code">reactions</td>
+      <td>Views information and a pie chart about the message's reactions.</td>
+    </tr>
+
+    <tr>
+      <td class="code">emojiinfo</td>
+      <td>Custom or Unicode emoji</td>
+      <td>Views information about the custom/unicode emoji.</td>
+      <td>Embed links, manage emojis*</td>
+    </tr>
+
+    <tr>
+      <td class="code">template</td>
+      <td>Template in the server</td>
+      <td>Views information about the server template.</td>
+      <td>Embed links</td>
+    </tr>
+
+  </table>
+
+  <br><br>
+
+  <table style="width: 205%;">
+    <colgroup>
+      <col span="1" style="width: 15%;">
+      <col span="1" style="width: 30%;">
+      <col span="1" style="width: 70%;">
+      <col span="1" style="width: 30%;">
+      <col span="1" style="width: 30%;">
+      <col span="1" style="width: 30%;">
+    </colgroup>
+
+    <tr>
+      <th class="big" colspan="6">Discord commands</th>
+    </tr>
+
+    <tr>
+      <th rowspan="2">Command</th>
+      <th rowspan="2">Argument(s)</th>
+      <th rowspan="2">Description</th>
+      <th rowspan="2">Alias(es)</th>
+      <th colspan="2">Permissions required</th>
+    </tr>
+
+    <tr>
+      <th>By bot</th>
+      <th>By you</th>
+    </tr>
+
+    <tr>
+      <td class="code">react</td>
+      <td>Message, <em>Custom</em> Emoji</td>
+      <td>Temporarily reacts with the emoji. Useful when replacing Nitro.</td>
+      <td></td>
+      <td>Add emojis</td>
+      <td rowspan="2"></td>
+    </tr>
+
+    <tr>
+      <td class="code" rowspan="2">snipe</td>
+      <td></td>
+      <td>Fetches the 5 most recently deleted messages.</td>
+      <td rowspan="2"><span class="code">sniper</span></td>
+      <td>Embed links, add reactions</td>
+    </tr>
+
+    <tr>
+      <td class="code">0 or 1</td>
+      <td>Enables or disables sniping (storing deleted messages).</td>
+      <td rowspan="2"></td>
+      <td rowspan="2">Manage channel</td>
+    </tr>
+
+    <tr>
+      <td class="code">clearsnipe</td>
+      <td></td>
+      <td>Clears snipe data (deleted messages).</td>
+      <td rowspan="5"></td>
+    </tr>
+
+    <tr>
+      <td class="code">pretend</td>
+      <td rowspan="2">User, Text+</td>
+      <td>Sends a fake message as the user.</td>
+      <td rowspan="2">Manage webhooks</td>
+      <td rowspan="8"></td>
+    </tr>
+
+    <tr>
+      <td class="code" style="font-size: 1.9vw;">pretendembed</td>
+      <td>Sends a fake embed as the user. See <a target="_self" href="/Appendices/A1">Appendix A1</a></td>
+    </tr>
+
+    <tr>
+      <td class="code">embed</td>
+      <td rowspan="4">Text+</td>
+      <td>Sends an embed. See <a target="_self" href="/Appendices/A1">Appendix A1</a></td>
+      <td rowspan="4">Embed links</td>
+    </tr>
+
+    <tr>
+      <td class="code">editembed</td>
+      <td>Edits an embed previously sent by<span class="code">embed</span>. See <a target="_self" href="/Appendices/A1">Appendix A1</a></td>
+    </tr>
+
+    <tr>
+      <td class="code small">simpleembed</td>
+      <td>An easier version of<span class="code">embed</span>. See <a target="_self" href="/Appendices/A1#A">Appendix A1 (a)</a></td>
+      <td><span class="code small">simpembed</span><span class="code small">simplembed</span></td>
+    </tr>
+
+    <tr>
+      <td class="code small">quickembed</td>
+      <td>The simplest version of<span class="code">embed</span>. See <a target="_self" href="/Appendices/A1#B">Appendix A1 (b))</a></td>
+      <td rowspan="3"></td>
+    </tr>
+
+    <tr>
+      <td class="code">ett</td>
+      <td>Message</td>
+      <td>Convert a previously sent message to be in the<span class="code">embed</span>format.</td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td class="code">tts</td>
+      <td>Text+</td>
+      <td>Sends a message similarly to<span class="code">/tts</span>.</td>
+      <td>Send text-to-speech messages</td>
+    </tr>
+  </table>
+</body>
+
+</html>
