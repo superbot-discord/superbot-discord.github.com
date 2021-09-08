@@ -1,9 +1,16 @@
 var bgcolor = localStorage.getItem('b') || "#ffffff";
 var focolor = localStorage.getItem('f') || "#000000";
+var dark = localStorage.getItem('dark') || false
 var mysheet = document.getElementById("mystyle").sheet;
 
 document.body.style.backgroundColor = bgcolor;
 document.getElementsByTagName('body')[0].style.color = focolor;
+if (dark == "true") {
+  document.getElementById('discord').src = "https://discord.com/widget?id=805441351033552916&theme=dark";
+} else {
+  document.getElementById('discord').src = "https://discord.com/widget?id=805441351033552916&theme=light";
+}
+
 links = document.getElementsByTagName('a')
 for (var i = 0; i < links.length; i++) {
   links[i].style.color = focolor;

@@ -10,19 +10,16 @@
 </head>
 
 <body onload=setcolor()>
-  <button type="button" onclick="location.href='/'"
-    class="button3 rbutton">SuperBot Homepage</button>
-  <button type="button" onclick="location.href='/Documentation'"
-    class="button3 rbutton">Documentation Homepage</button>
-  <button type="button" onclick="location.href='/Documentation/Arguments'"
-    class="button3 rbutton">How to supply arguments?</button>
+  <button type="button" onclick="location.href='/Documentation'" class="button3 rbutton">Documentation Homepage</button>
+  <button type="button" onclick="location.href='/Support'" class="button3 rbutton">Support Server Info</button>
+  <button type="button" onclick="location.href='/Map'" class="button3 rbutton">Site Map</button>
   <h1>SuperBot Official Website</h1>
 
   <p>Change the theme!</p>
 
   <div style="width:100%; float: right;">
     <button type="button" onclick="theme(0,0,false)" class="mbutton">White</button>
-    <button type="button" onclick="theme(1,1,true)" class="mbutton">Light</button>
+    <button type="button" onclick="theme(1,1,false)" class="mbutton">Light</button>
     <button type="button" onclick="theme(2,2,false)" class="mbutton">Blue</button>
     <button type="button" onclick="theme(3,3,false)" class="mbutton">Ocean</button>
     <button type="button" onclick="theme(4,4,false)" class="mbutton">Purple</button>
@@ -36,7 +33,7 @@
     <button type="button" onclick="theme(12,12,false)" class="mbutton">Olive</button>
     <button type="button" onclick="theme(13,13,false)" class="mbutton">Green</button><br>
     <button type="button" onclick="theme(0,0,true)" class="mbutton">Black</button>
-    <button type="button" onclick="theme(1,1,false)" class="mbutton">Dark</button>
+    <button type="button" onclick="theme(1,1,true)" class="mbutton">Dark</button>
     <button type="button" onclick="theme(2,2,true)" class="mbutton">Blue</button>
     <button type="button" onclick="theme(3,3,true)" class="mbutton">Ocean</button>
     <button type="button" onclick="theme(4,4,true)" class="mbutton">Purple</button>
@@ -62,15 +59,24 @@
   <p>Check whether the bot is online:<span class="code inverted">=ping</span></p><br>
   <p>Join the support server!<span class="code inverted">=server</span></p><br>
   <p>Invite the bot to other servers!<span class="code inverted">=invite</span></p><br>
-  <button type="button" onclick="location.href='https://johann-lau.github.io/superbot-website/Documentation'"
+  <button type="button" onclick="location.href='/Documentation'"
     class="rbutton">All commands</button>
   <h2>What's on?</h2>
+  <div class="card">
+    <div class="cardl">
+      <p class="card1">Count polls</p>
+    </div>
+    <div class="cardr">
+      <p class="card2">Beta • After a long development process, SuperBot can finally count your polls automatically when your
+        add or remove a reaction. If moderators accidentally removed the placeholder reaction, it will add the reactions back.</p>
+    </div>
+  </div>
   <div class="card">
     <div class="cardl">
       <p class="card1">Split files</p>
     </div>
     <div class="cardr">
-      <p class="card2"><span class="beta">Beta</span> • We're testing out split files on our bot! We've tested it on 4
+      <p class="card2">Testing • We're testing out split files on our bot! We've tested it on 4
         commands but we're definitely going to roll this out. This would mean a significant drop in file size and deploy
         speed.</p>
     </div>

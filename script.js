@@ -1,8 +1,8 @@
 var bgcolor = localStorage.getItem('b') || "#ffffff";
 var focolor = localStorage.getItem('f') || "#000000";
 var mysheet = document.getElementById("mystyle").sheet;
-blist = ["#FFFFFF", "#37393E", "#76D3F9", "#7DA8F7", "#AA90F7", "#D798F8", "#DE799D", "#F19286", "#F3A884", "#F7C783", "#FAD885", "#FFF8A2", "#EDF29B", "#BADD95"];
-flist = ["#000000", "#DCDDDE", "#1D4C63", "#0A3075", "#170F4F", "#3F1556", "#4F1729", "#791E0E", "#732F10", "#744C16", "#74581A", "#8C8529", "#717524", "#3F5623"];
+blist = ["#FFFFFF", "#DCDDDE", "#76D3F9", "#7DA8F7", "#AA90F7", "#D798F8", "#DE799D", "#F19286", "#F3A884", "#F7C783", "#FAD885", "#FFF8A2", "#EDF29B", "#BADD95"];
+flist = ["#000000", "#37393E", "#1D4C63", "#0A3075", "#170F4F", "#3F1556", "#4F1729", "#791E0E", "#732F10", "#744C16", "#74581A", "#8C8529", "#717524", "#3F5623"];
 
 function setcolor() {
   document.body.style.backgroundColor = bgcolor;
@@ -14,7 +14,7 @@ function setcolor() {
   mysheet.insertRule(`
 body, a {
   color: `+ focolor + `;
-  font-family: Font3, Arial, Helvetica, sans-serif;
+  font-family: Font3a, Arial, Helvetica, sans-serif;
   scroll-behavior: smooth;
   position: relative;
 }`, mysheet.cssRules.length)
@@ -74,6 +74,7 @@ hr {
   localStorage.setItem('f', focolor);
 }
 function theme(bgindex, foindex, inverted) {
+  localStorage.setItem('dark', String(inverted))
   if (inverted) {
     bgcolor = flist[bgindex];
     focolor = blist[foindex];
