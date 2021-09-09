@@ -1,13 +1,18 @@
 var bgcolor = localStorage.getItem('b') || "#ffffff";
 var focolor = localStorage.getItem('f') || "#000000";
+var dark = localStorage.getItem('dark') || false
 var mysheet = document.getElementById("mystyle").sheet;
-blist = ["#FFFFFF", "#DCDDDE", "#76D3F9", "#7DA8F7", "#AA90F7", "#D798F8", "#DE799D", "#F19286", "#F3A884", "#F7C783", "#FAD885", "#FFF8A2", "#EDF29B", "#BADD95"];
+blist = ["#FFFFFF", "#F2F3F5", "#76D3F9", "#7DA8F7", "#AA90F7", "#D798F8", "#DE799D", "#F19286", "#F3A884", "#F7C783", "#FAD885", "#FFF8A2", "#EDF29B", "#BADD95"];
 flist = ["#000000", "#37393E", "#1D4C63", "#0A3075", "#170F4F", "#3F1556", "#4F1729", "#791E0E", "#732F10", "#744C16", "#74581A", "#8C8529", "#717524", "#3F5623"];
+
+function adjust(color, amount) {
+  return '#' + color.replace(/^#/, '').replace(/../g, color => ('0'+Math.min(255, Math.max(0, parseInt(color, 16) + amount)).toString(16)).substr(-2));
+}
 
 function setcolor() {
   document.body.style.backgroundColor = bgcolor;
   document.getElementsByTagName('body')[0].style.color = focolor;
-  for (var i = 1; i < 7; i++) {
+  for (var i = 1; i < 8; i++) {
     mysheet.deleteRule(mysheet.cssRules.length - 1);
   }
 
@@ -73,6 +78,26 @@ hr {
   localStorage.setItem('b', bgcolor);
   localStorage.setItem('f', focolor);
 }
+
+if (dark) {
+  adjusted_bg = adjust(bgcolor, -20);
+  adjusted_fo = adjust(focolor, -20);
+} else {
+  adjusted_bg = adjust(bgcolor, 20);
+  adjusted_fo = adjust(focolor, 20);
+}
+
+mysheet.insertRule(`
+div.code {
+  font-size: 1.8vw;
+  margin-left: 1vw;
+  margin-top: 1vw;
+  margin-bottom: 1vw;
+  overflow-x: scroll;
+  background-color: `+adjusted_bg+`;
+  color: `+adjusted_fo+`
+}`, mysheet.cssRules.length)
+
 function theme(bgindex, foindex, inverted) {
   localStorage.setItem('dark', String(inverted))
   if (inverted) {

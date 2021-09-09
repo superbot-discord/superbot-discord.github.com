@@ -15,8 +15,12 @@ links = document.getElementsByTagName('a')
 for (var i = 0; i < links.length; i++) {
   links[i].style.color = focolor;
 }
-for (var i = 1; i < 7; i++) {
+for (var i = 1; i < 8; i++) {
   mysheet.deleteRule(mysheet.cssRules.length - 1);
+}
+
+function adjust(color, amount) {
+  return '#' + color.replace(/^#/, '').replace(/../g, color => ('0'+Math.min(255, Math.max(0, parseInt(color, 16) + amount)).toString(16)).substr(-2));
 }
 
 mysheet.insertRule(`
@@ -78,6 +82,25 @@ hr {
   margin-top: 5vw;
   margin-bottom: 2vw;
 }`, mysheet.cssRules.length);
+
+if (dark) {
+  adjusted_bg = adjust(bgcolor, -20);
+  adjusted_fo = adjust(focolor, -20);
+} else {
+  adjusted_bg = adjust(bgcolor, 20);
+  adjusted_fo = adjust(focolor, 20);
+}
+
+mysheet.insertRule(`
+div.code {
+  font-size: 1.8vw;
+  margin-left: 1vw;
+  margin-top: 1vw;
+  margin-bottom: 1vw;
+  overflow-x: scroll;
+  background-color: `+adjusted_bg+`;
+  color: `+adjusted_fo+`
+}`, mysheet.cssRules.length)
 
 localStorage.setItem('b', bgcolor);
 localStorage.setItem('f', focolor);

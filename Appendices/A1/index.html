@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <title>SuperBot Documentation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" id="mystyle" href="/style.css">
+  <base target="_blank">
+</head>
+
+<body>
+  <button type="button" onclick="location.href='/'" class="button3 rbutton">SuperBot Homepage</button>
+  <button type="button" onclick="location.href='/Support'" class="button3 rbutton">Support Server info</button>
+  <button type="button" onclick="location.href='Arguments'" class="button3 rbutton">Arguments guide?</button>
+
+  <script src="/script_generic.js"></script>
+  <h1 style="font-size: 5.2vw;">SuperBot Documentation - Appendix 1</h1>
+  <h2>Sending Embed messages with<span class="code">embed</span></h2>
+  <p><span class="code">=embed</span>takes in 11 arguments spread over 11 lines:</p>
+  <div class="code">
+    =embed Title<br>
+    Description<br>
+    Color<br>
+    Title URL<br>
+    Author<br>
+    Footer<br>
+    Author URL<br>
+    Image Link<br>
+    Thumbnail Image Link<br>
+    Author Image Link<br>
+    Footer Image Link<br>
+  </div>
+  <h3>Adding fields</h3>
+  <p>For every field, insert 3 lines to the bottom of your command:</p>
+  <div class="code">
+    Field Title<br>
+    Field Description<br>
+    Field Inline
+  </div>
+  <p>
+    Field Inline defines whether the field can be placed in a horizontal row with other fields. Use<span class="code">y</span>for 'yes' and
+    any other value for 'no'. This only has an effect if there are more than 1 field.
+  </p>
+  <h2>Using simplified<span class="code">simpembed</span></h2>
+  <p><span class="code">=simpembed</span>only takes in 4 arguments for convenience:</p>
+  <div class="code">
+    =simpembed Title<br>
+    Description<br>
+    Color<br>
+    Image Link
+  </div>
+  <p>Similar to<span class="code">embed</span>, you can insert field by appending lines to the command.</p>
+
+  <h2>Notes</h2>
+  <p>
+    Color only takes in a decimal value! Use<span class="code">=color</span>to fetch the decimal value.<br>
+    Images are larger than Thumbnails while author/footer images are extremely small.<br><br>
+    If you leave a line empty, it will not be processed. If you leave the color empty, it will be automatic based on light/dark theme.<br><br>
+
+    To add Masked URLS into embed/field description, use<span class="code">[Mask](URL)</span>,
+    such as<span class="code antiwrap">[Wiki](https://wikpedia.com)</span>.<br>
+
+    To add a new line to embed/field descriptions, use<span class="code">{{{newline}}}</span>.
+  </p>
+  <h3>Limits</h3>
+  <p>There are certain limits when creating embeds:</p>
+  <table style="width: 40%;">
+  <colgroup>
+    <col span="1" style="width: 40%;">
+    <col span="1" style="width: 20%;">
+    <col span="1" style="width: 30%;">
+  </colgroup>
+
+  <tr>
+    <th class="big" colspan="3">Embed limits</th>
+  </tr>
+
+  <tr>
+    <th>Item</th>
+    <th>Limit</th>
+    <th>Unit</th>
+  </tr>
+
+  <tr>
+    <td>Title</td>
+    <td rowspan="3">256</td>
+    <td rowspan="7">Characters</td>
+  </tr>
+
+  <tr>
+    <td>Author name</td>
+  </tr>
+
+  <tr>
+    <td>Field title</td>
+  </tr>
+
+  <tr>
+    <td>Description</td>
+    <td rowspan="3">2048</td>
+  </tr>
+
+  <tr>
+    <td>Footer</td>
+  </tr>
+
+  <tr>
+    <td>Field text</td>
+  </tr>
+
+  <tr>
+    <td rowspan="2">Entire embed</td>
+    <td>6000</td>
+  </tr>
+
+  <tr>
+    <td>25</td>
+    <td>Fields</td>
+  </tr>
+
+  </table>
+</body>
+
+</html>
