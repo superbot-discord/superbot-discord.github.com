@@ -61,7 +61,7 @@
     </tr>
 
     <tr>
-      <td class="code" style="font-size: 1.5vw;">msg.author.roles.count(await msg.guild.get_role(12345678901234567))==1</td>
+      <td class="code" style="font-size: 1.4vw;">await msg.guild.get_role(12345678901234567) in msg.author.roles</td>
       <td>Messages sent by anyone with a role</td>
       <td>Remember to put the actual role ID.</td>
     </tr>
@@ -103,8 +103,16 @@
       <td>Messages that have been edited</td>
       <td>Use == instead of != for messages that haven't been edited.</td>
     </tr>
+
+    <tr>
+      <td class="code small">msg.reference!=None</td>
+      <td>Messages that are replies to other messages</td>
+      <td>Use == instead of != for messages that aren't replies.</td>
+    </tr>
   </table>
   </div>
+
+  <p>To use the script, run<span class="code">purgepy Number(Integer) Script(Text+)</span>.</p>
 </body>
 
 </html>
