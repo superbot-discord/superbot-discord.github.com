@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <title>SuperBot - Using Python and Regex</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" id="mystyle" href="/style.css">
+  <base target="_blank">
+</head>
+
+<body>
+  <button type="button" onclick="location.href='/'" class="button3 rbutton">SuperBot Homepage</button>
+  <button type="button" onclick="location.href='/Support'" class="button3 rbutton">Support Server info</button>
+  <button type="button" onclick="location.href='Arguments'" class="button3 rbutton">Arguments guide?</button>
+
+  <script src="/script_generic.js"></script>
+  <h1 style="font-size: 5.2vw;">SuperBot Documentation - Appendix 2</h1>
+  <h2>Advanced purging with<span class="code">purgepy</span></h2>
+  <p>At this moment,<span class="code">purge</span>can only purge the most recent messages, making it impossible to purge, say, pinned
+  messages only. To fill the gap,<span class="code">purgepy</span>has born.</p>
+  <p class="bold">We strongly recommend you to learn Python (especially discord.py) beforehand.</p>
+
+  <div class="overflow">
+  <table style="width: 125%;">
+    <colgroup>
+      <col span="1" style="width: 40%;">
+      <col span="1" style="width: 50%;">
+      <col span="1" style="width: 35%;">
+    </colgroup>
+
+    <tr>
+      <th class="big" colspan="3">Python examples</th>
+    </tr>
+
+    <tr>
+      <th>Script</th>
+      <th>Will find…</th>
+      <th>Remarks</th>
+    </tr>
+
+    <tr>
+      <td class="code small">msg.author.bot</td>
+      <td>Messages sent by bots</td>
+      <td rowspan="4"></td>
+    </tr>
+
+    <tr>
+      <td class="code small">not msg.author.bot</td>
+      <td>Messages sent by humans</td>
+    </tr>
+
+    <tr>
+      <td class="code small">msg.author.name=="John"</td>
+      <td>Messages sent by anyone with username "John"</td>
+    </tr>
+
+    <tr>
+      <td class="code small">msg.author.discriminator=="1234"</td>
+      <td>Messages sent by anyone with discriminator 1234</td>
+    </tr>
+
+    <tr>
+      <td class="code" style="font-size: 1.5vw;">msg.author.roles.count(await msg.guild.get_role(12345678901234567))==1</td>
+      <td>Messages sent by anyone with a role</td>
+      <td>Remember to put the actual role ID.</td>
+    </tr>
+
+    <tr>
+      <td class="code small">len(msg.author.embeds)==0</td>
+      <td>Messages with no embeds</td>
+      <td rowspan="5">len(list) returns the length of the list</td>
+    </tr>
+
+    <tr>
+      <td class="code small">len(msg.author.role_mentions)>0</td>
+      <td>Messages with at least one @Role mention</td>
+    </tr>
+
+    <tr>
+      <td class="code small">len(msg.reactions)>1</td>
+      <td>Messages with at least two reactions</td>
+    </tr>
+
+    <tr>
+      <td class="code small">len(msg.stickers)>2</td>
+      <td>Messages with at least three stickers</td>
+    </tr>
+
+    <tr>
+      <td class="code small">len(msg.mentions)>3</td>
+      <td>Messages that notified at least four members</td>
+    </tr>
+
+    <tr>
+      <td class="code small">msg.pinned</td>
+      <td>Messages that are pinned</td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td class="code small">msg.edited!=None</td>
+      <td>Messages that have been edited</td>
+      <td>Use == instead of != for messages that haven't been edited.</td>
+    </tr>
+  </table>
+  </div>
+</body>
+
+</html>

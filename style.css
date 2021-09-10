@@ -115,6 +115,10 @@ table {
   border-collapse: collapse;
 }
 
+.overflow {
+  overflow-x: scroll;
+}
+
 .cardl {
   width: 25%;
   height: inherit;
