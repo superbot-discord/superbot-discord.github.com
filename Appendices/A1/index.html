@@ -52,6 +52,17 @@
   </div>
   <p>Similar to<span class="code">embed</span>, you can insert field by appending lines to the command.</p>
 
+  <h2>Skipping things with<span class="code">quickembed</span></h2>
+  <p><span class="code">=quickembed</span>has the same arguments as<span class="code">simpembed</span>, but the order is different:</p>
+  <div class="code">
+    =quickembed Title<br>
+    Color<br>
+    Image Link<br>
+    Description
+  </div>
+  <p>At the price of not being able to add fields, you don't have to use<span class="code">{{{newline}}}</span>for lines. You can simply
+  append lines to the back.</p>
+
   <h2>Notes</h2>
   <p>
     Color only takes in a decimal value! Use<span class="code">=color</span>to fetch the decimal value.<br>
@@ -63,11 +74,12 @@
 
     To add a new line to embed/field descriptions, use<span class="code">{{{newline}}}</span>.
   </p>
+
   <h3>Limits</h3>
   <p>There are certain limits when creating embeds:</p>
-  <table style="width: 40%;">
+  <table style="width: 35%;">
   <colgroup>
-    <col span="1" style="width: 40%;">
+    <col span="1" style="width: 45%;">
     <col span="1" style="width: 20%;">
     <col span="1" style="width: 30%;">
   </colgroup>
