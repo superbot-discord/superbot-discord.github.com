@@ -10,15 +10,29 @@ function adjust(color, amount) {
 }
 
 function setcolor() {
-  document.body.style.backgroundColor = bgcolor;
-  document.getElementsByTagName('body')[0].style.color = focolor;
-  for (var i = 1; i < 8; i++) {
+  localStorage.setItem('b', bgcolor);
+  localStorage.setItem('f', focolor);
+
+  if (dark) {
+    adjusted_bg = adjust(bgcolor, -20);
+    adjusted_bg2 = adjust(bgcolor, -10);
+    adjusted_bg3 = adjust(bgcolor, 10);
+    adjusted_fo = adjust(focolor, -20);
+  } else {
+    adjusted_bg = adjust(bgcolor, 20);
+    adjusted_bg2 = adjust(bgcolor, 10);
+    adjusted_bg3 = adjust(bgcolor, -10);
+    adjusted_fo = adjust(focolor, 20);
+  }
+
+  for (var i = 1; i < 12; i++) {
     mysheet.deleteRule(mysheet.cssRules.length - 1);
   }
 
   mysheet.insertRule(`
 body, a {
   color: `+ focolor + `;
+  background-color: `+ bgcolor +`;
   font-family: Font3a, Arial, Helvetica, sans-serif;
   scroll-behavior: smooth;
   position: relative;
@@ -75,19 +89,8 @@ hr {
   margin-top: 5vw;
   margin-bottom: 2vw;
 }`, mysheet.cssRules.length);
-  localStorage.setItem('b', bgcolor);
-  localStorage.setItem('f', focolor);
-}
 
-if (dark) {
-  adjusted_bg = adjust(bgcolor, -20);
-  adjusted_fo = adjust(focolor, -20);
-} else {
-  adjusted_bg = adjust(bgcolor, 20);
-  adjusted_fo = adjust(focolor, 20);
-}
-
-mysheet.insertRule(`
+  mysheet.insertRule(`
 div.code {
   font-size: 1.8vw;
   margin-left: 1vw;
@@ -97,6 +100,30 @@ div.code {
   background-color: `+adjusted_bg+`;
   color: `+adjusted_fo+`
 }`, mysheet.cssRules.length)
+
+mysheet.insertRule("#nav,#nav a {background-color: "+ adjusted_bg3 +";}", mysheet.cssRules.length)
+
+  mysheet.insertRule(`
+#nav a {
+  float: left;
+  display: block;
+  color: `+ focolor +`;
+  text-align: center;
+  padding: 1.2vw;
+  width: 10vw;
+  text-decoration: none;
+}`, mysheet.cssRules.length)
+
+  mysheet.insertRule(`
+#nav a:hover:not(.active) {
+  background-color: `+ adjusted_bg2 +`;
+}`, mysheet.cssRules.length)
+
+  mysheet.insertRule(`
+#nav a.active {
+  background-color: ` + adjusted_bg + `;
+}`, mysheet.cssRules.length)
+}
 
 function theme(bgindex, foindex, inverted) {
   localStorage.setItem('dark', String(inverted))

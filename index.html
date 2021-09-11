@@ -10,21 +10,24 @@
 
   <meta property="og:title"       content="SuperBot Website">
   <meta property="og:type"        content="website">
-  <meta property="og:url"         content="https://super-bot.github.com">
+  <meta property="og:url"         content="https://super-bot.github.io">
   <meta property="og:description" content="This is a companion static website for SuperBot. This is currently
   not finished.">
-  <meta name="theme-color" content="#FF0000">
+  <!--<meta name="theme-color" content="#0000">-->
 </head>
 
 <body onload=setcolor()>
-  <button type="button" onclick="location.href='/Documentation'" class="button3 rbutton">Documentation</button>
-  <button type="button" onclick="location.href='/Support'" class="button3 rbutton">Support Server Info</button>
-  <button type="button" onclick="location.href='/Why'" class="button3 rbutton">Why (not) SuperBot?</button>
+  <div id="nav">
+    <a target="_self" href="/" class="active">Homepage</a>
+    <a target="_self" href="/Documentation">Documentation</a>
+    <a target="_self" href="/Support">Support Server</a>
+    <a target="_self" href="/Why">Why SuperBot?</a>
+    <a target="_self" href="/Map" style="float: right;">Site Map</a>
+  </div>
+
   <h1>SuperBot Official Website</h1>
-
   <p>Change the theme!</p>
-
-  <div style="width:100%; float: right;">
+  <div style="width:100%;">
     <button type="button" onclick="theme(0,0,false)" class="mbutton">White</button>
     <button type="button" onclick="theme(1,1,false)" class="mbutton">Light</button>
     <button type="button" onclick="theme(2,2,false)" class="mbutton">Blue</button>

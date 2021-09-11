@@ -1,21 +1,28 @@
 @font-face {
   font-family: "Font1";
-  src: url("font1.ttf") format("truetype");
+  src: url("fonts/font1.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Font2";
-  src: url("font2.ttf") format("truetype");
+  src: url("fonts/font2.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Font3a";
-  src: url("font3a.ttf") format("truetype");
+  src: url("fonts/font3a.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Font3b";
-  src: url("font3b.ttf") format("truetype");
+  src: url("fonts/font3b.ttf") format("truetype");
+}
+
+#nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
 }
 
 .code {
@@ -80,13 +87,13 @@ td, .small {
   font-size: 2vw;
 }
 
-ul li,ol li {
+ul li, ol li {
   font-size: 2vw;
   margin-left: 1vw;
   padding-bottom: 0.5vw;
 }
 
-ul ul li,ol ol li {
+ul ul li, ol ol li {
   font-size: 1.8vw;
   margin-left: 1vw;
 }
@@ -154,7 +161,7 @@ table {
 }
 
 .button3 {
-  width: 31.75vw;
+  width: 31%;
 }
 
 .mbutton {
@@ -218,6 +225,10 @@ hr {
   margin-bottom: 2vw;
 }
 
+#nav,#nav a {
+  background-color: #fff;
+}
+
 div.code {
   font-size: 1.8vw;
   margin-left: 1vw;
@@ -225,5 +236,23 @@ div.code {
   margin-bottom: 1vw;
   overflow-x: scroll;
   background-color: #ebebeb;
-  color: #141414;
+  color: #000;
+}
+
+#nav a {
+  float: left;
+  display: block;
+  color: #000;
+  text-align: center;
+  padding: 1.2vw;
+  width: 10vw;
+  text-decoration: none;
+}
+
+#nav a:hover:not(.active) {
+  background-color: #f6f6f6;
+}
+
+#nav a.active {
+  background-color: #ebebeb;
 }

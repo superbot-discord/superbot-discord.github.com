@@ -3,32 +3,39 @@ var focolor = localStorage.getItem('f') || "#000000";
 var dark = localStorage.getItem('dark') || false
 var mysheet = document.getElementById("mystyle").sheet;
 
-document.body.style.backgroundColor = bgcolor;
-document.getElementsByTagName('body')[0].style.color = focolor;
 if (dark == "true") {
   document.getElementById('discord').src = "https://discord.com/widget?id=805441351033552916&theme=dark";
 } else {
   document.getElementById('discord').src = "https://discord.com/widget?id=805441351033552916&theme=light";
 }
 
-links = document.getElementsByTagName('a')
-for (var i = 0; i < links.length; i++) {
-  links[i].style.color = focolor;
-}
-for (var i = 1; i < 8; i++) {
-  mysheet.deleteRule(mysheet.cssRules.length - 1);
-}
-
 function adjust(color, amount) {
   return '#' + color.replace(/^#/, '').replace(/../g, color => ('0'+Math.min(255, Math.max(0, parseInt(color, 16) + amount)).toString(16)).substr(-2));
 }
 
+for (var i = 1; i < 12; i++) {
+    mysheet.deleteRule(mysheet.cssRules.length - 1);
+}
+
+if (dark) {
+  adjusted_bg = adjust(bgcolor, -20);
+  adjusted_bg2 = adjust(bgcolor, -10);
+  adjusted_bg3 = adjust(bgcolor, 10);
+  adjusted_fo = adjust(focolor, -20);
+} else {
+  adjusted_bg = adjust(bgcolor, 20);
+  adjusted_bg2 = adjust(bgcolor, 10);
+  adjusted_bg3 = adjust(bgcolor, -10);
+  adjusted_fo = adjust(focolor, 20);
+}
+
 mysheet.insertRule(`
 body, a {
-  color: `+ focolor + `;
-  font-family: Font3a, Arial, Helvetica, sans-serif;
-  scroll-behavior: smooth;
-  position: relative;
+color: `+ focolor + `;
+background-color: `+ bgcolor +`;
+font-family: Font3a, Arial, Helvetica, sans-serif;
+scroll-behavior: smooth;
+position: relative;
 }`, mysheet.cssRules.length)
 
 mysheet.insertRule(`
@@ -77,30 +84,44 @@ border-color: `+ focolor + ";}", mysheet.cssRules.length);
 
 mysheet.insertRule(`
 hr {
-  border-color: `+ focolor +`;
-  width: 98vw;
-  margin-top: 5vw;
-  margin-bottom: 2vw;
+border-color: `+ focolor + `;
+width: 98vw;
+margin-top: 5vw;
+margin-bottom: 2vw;
 }`, mysheet.cssRules.length);
-
-if (dark) {
-  adjusted_bg = adjust(bgcolor, -20);
-  adjusted_fo = adjust(focolor, -20);
-} else {
-  adjusted_bg = adjust(bgcolor, 20);
-  adjusted_fo = adjust(focolor, 20);
-}
+localStorage.setItem('b', bgcolor);
+localStorage.setItem('f', focolor);
 
 mysheet.insertRule(`
 div.code {
-  font-size: 1.8vw;
-  margin-left: 1vw;
-  margin-top: 1vw;
-  margin-bottom: 1vw;
-  overflow-x: scroll;
-  background-color: `+adjusted_bg+`;
-  color: `+adjusted_fo+`
+font-size: 1.8vw;
+margin-left: 1vw;
+margin-top: 1vw;
+margin-bottom: 1vw;
+overflow-x: scroll;
+background-color: `+adjusted_bg+`;
+color: `+adjusted_fo+`
 }`, mysheet.cssRules.length)
 
-localStorage.setItem('b', bgcolor);
-localStorage.setItem('f', focolor);
+mysheet.insertRule("#nav,#nav a {background-color: "+ adjusted_bg3 +";}", mysheet.cssRules.length)
+
+mysheet.insertRule(`
+#nav a {
+float: left;
+display: block;
+color: `+ focolor +`;
+text-align: center;
+padding: 1.2vw;
+width: 10vw;
+text-decoration: none;
+}`, mysheet.cssRules.length)
+
+mysheet.insertRule(`
+#nav a:hover:not(.active) {
+background-color: `+ adjusted_bg2 +`;
+}`, mysheet.cssRules.length)
+
+mysheet.insertRule(`
+#nav a.active {
+background-color: ` + adjusted_bg + `;
+}`, mysheet.cssRules.length)
