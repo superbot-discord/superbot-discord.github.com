@@ -13,7 +13,7 @@ function adjust(color, amount) {
   return '#' + color.replace(/^#/, '').replace(/../g, color => ('0'+Math.min(255, Math.max(0, parseInt(color, 16) + amount)).toString(16)).substr(-2));
 }
 
-for (var i = 1; i < 12; i++) {
+for (var i = 1; i < 14; i++) {
     mysheet.deleteRule(mysheet.cssRules.length - 1);
 }
 
@@ -112,7 +112,7 @@ display: block;
 color: `+ focolor +`;
 text-align: center;
 padding: 1.2vw;
-width: 10vw;
+width: 9.5vw;
 text-decoration: none;
 }`, mysheet.cssRules.length)
 
@@ -124,4 +124,20 @@ background-color: `+ adjusted_bg2 +`;
 mysheet.insertRule(`
 #nav a.active {
 background-color: ` + adjusted_bg + `;
+}`, mysheet.cssRules.length)
+
+mysheet.insertRule(`
+#search {
+  width: 96vw;
+  font-size: 2vw;
+  padding: 0.5vw 1vw;
+  margin-bottom: 1vw;
+  background-color: `+ adjusted_bg2 +`;
+  border: 0.1vw solid `+ focolor +`;
+  color: `+ focolor +`;
+}`, mysheet.cssRules.length)
+
+mysheet.insertRule(`
+#search::placeholder {
+  color: `+ adjusted_fo2 +`;
 }`, mysheet.cssRules.length)

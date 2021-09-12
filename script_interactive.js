@@ -5,13 +5,16 @@ var mysheet = document.getElementById("mystyle").sheet;
 
 function filter() {
   var name
-  var filter = document.getElementById("search").value.toLowerCase();
+  var element = document.getElementById("search")
+  element.value = element.value.replace(/[^A-z]/g,'');
+  var input = element.value
+  var lowered = input.toLowerCase();
   var rows = document.getElementById("search_results").getElementsByTagName("tr");
 
   for (var i = 3; i < rows.length; i++) {
     name = rows[i].getElementsByTagName("td")[0]
     cmd_name = name.textContent || name.innerText;
-    if (cmd_name.includes(filter)) {
+    if (cmd_name.includes(lowered)) {
       rows[i].style.display = "";
     } else {
       rows[i].style.display = "none";
@@ -124,7 +127,7 @@ display: block;
 color: `+ focolor +`;
 text-align: center;
 padding: 1.2vw;
-width: 10vw;
+width: 9.5vw;
 text-decoration: none;
 }`, mysheet.cssRules.length)
 

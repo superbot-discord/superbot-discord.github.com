@@ -17,7 +17,7 @@
     <a target="_self" href="/Why">Why SuperBot?</a>
     <a target="_self" href="/Map" style="float: right;">Site Map</a>
     <a target="_self" href="/Documentation/Arguments" style="float: right;">Arguments</a>
-    <a target="_self" href="/Documentation/Interactive" style="float: right;">Interactive Docs</a>
+    <a target="_self" href="/Documentation/Interactive" style="float: right; width: 10vw;">Interactive Docs</a>
   </div>
 
   <script src="/script_generic.js"></script>
@@ -80,7 +80,7 @@
     <tr>
       <td class="code">botpurge</td>
       <td>No. of messages to delete</td>
-      <td>Deletes the most recent message(s) sent by the bot. Useful for cleanup.</td>
+      <td>Deletes the most recent message(s) sent by the bot in the current channel.</td>
       <td></td>
       <td>Manage messages</td>
     </tr>
@@ -313,7 +313,7 @@
       <td>Send text-to-speech messages</td>
     </tr>
   </table>
-  </div>
+  </div><br><br>
 
   <div class="overflow">
   <table style="width: 205%;">
@@ -347,7 +347,7 @@
       <td class="code">kick</td>
       <td rowspan="3">Member, <span class="inverted">Reason</span></td>
       <td>Kicks a member.</td>
-      <td rowspan="3"></td>
+      <td rowspan="6"></td>
       <td colspan="2">Kick members</td>
     </tr>
 
@@ -359,7 +359,26 @@
 
     <tr>
       <td class="code">unban</td>
-      <td>Unans a member.</td>
+      <td>Unbans a member.</td>
+    </tr>
+
+    <tr>
+      <td class="code" rowspan="2">slowmode</td>
+      <td></td>
+      <td>Sets slowmode for the current channel.</td>
+      <td rowspan="2" colspan="2">Manage channels</td>
+    </tr>
+
+    <tr>
+      <td>Channels in the server</td>
+      <td>Sets slowmode for one or more channels.</td>
+    </tr>
+
+    <tr>
+      <td class="code">purge</td>
+      <td>No. of messages to delete</td>
+      <td>Deletes the most recent message(s) in the current channel. Useful for cleanup.</td>
+      <td colspan="2">Manage messages</td>
     </tr>
   </table>
   </div>
