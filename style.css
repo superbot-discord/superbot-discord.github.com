@@ -18,6 +18,28 @@
   src: url("fonts/font3b.ttf") format("truetype");
 }
 
+@media only screen and (max-width: 1000px) {
+  #discord {
+    width: 100%;
+    float: none;
+  }
+  #support-text {
+    width: 100%;
+    float: none;
+  }
+}
+
+@media only screen and (min-width: 1001px) {
+  #discord {
+    width: 25%;
+    float: right;
+  }
+  #support-text {
+    width: 72%;
+    float: left;
+  }
+}
+
 #nav {
   list-style-type: none;
   margin: 0;
@@ -226,7 +248,7 @@ hr {
   margin-bottom: 2vw;
 }
 
-#nav,#nav a {
+#nav, #nav a {
   background-color: #fff;
 }
 
