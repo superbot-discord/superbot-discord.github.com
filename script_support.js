@@ -125,3 +125,19 @@ mysheet.insertRule(`
 #nav a.active {
 background-color: ` + adjusted_bg + `;
 }`, mysheet.cssRules.length)
+
+mysheet.insertRule(`
+#search {
+  width: 96vw;
+  font-size: 2vw;
+  padding: 0.5vw 1vw;
+  margin-bottom: 1vw;
+  background-color: `+ adjusted_bg2 +`;
+  border: 0.1vw solid `+ focolor +`;
+  color: `+ focolor +`;
+}`, mysheet.cssRules.length)
+
+mysheet.insertRule(`
+#search::placeholder {
+  color: `+ adjusted_fo2 +`;
+}`, mysheet.cssRules.length)
