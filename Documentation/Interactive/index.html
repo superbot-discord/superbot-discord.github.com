@@ -339,9 +339,134 @@
     <tr>
       <td class="code">unban</td>
       <td>Member, <span class="inverted">Reason</span></td>
-      <td>Unans a member.</td>
+      <td>Unbans a member.</td>
       <td></td>
       <td colspan="2">Ban members</td>
+    </tr>
+
+    <tr>
+      <td class="code" rowspan="2">slowmode</td>
+      <td></td>
+      <td>Sets slowmode for the current channel.</td>
+      <td></td>
+      <td rowspan="2" colspan="2">Manage channels</td>
+    </tr>
+
+    <tr>
+      <td>Channels in the server</td>
+      <td>Sets slowmode for one or more channels.</td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td class="code">purge</td>
+      <td>No. of messages to delete</td>
+      <td>Deletes the most recent message(s) in the current channel. Useful for cleanup.</td>
+      <td></td>
+      <td colspan="2">Manage messages</td>
+    </tr>
+
+    <tr>
+      <td class="code">purgeuser</td>
+      <td>No. of messages, user</td>
+      <td>Deletes the most recent message(s) in the current channel sent by the user.</td>
+      <td></td>
+      <td colspan="2">Manage messages</td>
+    </tr>
+
+    <tr>
+      <td class="code">purgeregex</td>
+      <td>No. of messages, regex</td>
+      <td>Selectively deletes messages based on a regular expression. See <a target="_self" href="/Appendices/A2">Appendix A2</a></td>
+      <td></td>
+      <td colspan="2">Manage messages</td>
+    </tr>
+
+    <tr>
+      <td class="code">purgepy</td>
+      <td>No. of messages, python script</td>
+      <td>Selectively deletes messages based on a python script. See <a target="_self" href="/Appendices/A2">Appendix A2</a></td>
+      <td></td>
+      <td colspan="2">Manage messages</td>
+    </tr>
+
+    <tr>
+      <td class="code">purgepyrex</td>
+      <td>No. of msg's, regex, py. script</td>
+      <td>Selectively deletes messages based on a regex and py. script. See <a target="_self" href="/Appendices/A2">Ap. A2</a></td>
+      <td></td>
+      <td colspan="2">Manage messages</td>
+    </tr>
+
+    <tr>
+      <td class="code">makeinvite</td>
+      <td>Valid duration, <span class="inverted">max. users</span></td>
+      <td>Generates an invite for the server. Defaults to infinite users if not set.</td>
+      <td></td>
+      <td colspan="2">Create invite</td>
+    </tr>
+  
+    <tr>
+      <td class="code">poll</td>
+      <td>Title, space-separated pairs</td>
+      <td>Starts a poll (vote). Example of 1 pair:<span class="code">yes:green_check_mark:</span></td>
+      <td>vote</td>
+      <td>Add reaction</td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td class="code">insert</td>
+      <td>Emoji, Text+</td>
+      <td>Replaces spaces in the text with emojis &#x1f600; just &#x1f600; like &#x1f600; this.</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td class="code">spoiler</td>
+      <td>Text+</td>
+      <td>Generates an annoying piece of spoiler text.</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td class="code">rawspoiler</td>
+      <td>Text+</td>
+      <td>Generates an annoying piece of spoiler text to copy and paste.</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td class="code" style="font-size: 1.6vw;">rawrawspoiler</td>
+      <td>Text+</td>
+      <td>Similar to<span class="code">rawspoiler</span>, but the recursion depth is 2.</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td class="code">reverse</td>
+      <td>Text+</td>
+      <td>Reverses a piece of text.</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td class="code">emoji</td>
+      <td>Text+</td>
+      <td>Turns text into regional indicators and other emoji symbols.</td>
+      <td></td>
+      <td></td>
+      <td></td>
     </tr>
   </table>
   </div>

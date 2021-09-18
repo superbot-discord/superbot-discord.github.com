@@ -267,7 +267,7 @@
       <td rowspan="2">User, Text+</td>
       <td>Sends a fake message as the user.</td>
       <td rowspan="2">Manage webhooks</td>
-      <td rowspan="8"></td>
+      <td rowspan="9"></td>
     </tr>
 
     <tr>
@@ -312,6 +312,14 @@
       <td>Sends a message similarly to<span class="code">/tts</span>.</td>
       <td>Send text-to-speech messages</td>
     </tr>
+
+    <tr>
+      <td class="code">unix</td>
+      <td>Text</td>
+      <td style="font-size: 1.4vw;">Generates Discord timestamps. Argument examples:<span class="code small">now</span><span class="code small">2021y12M31d12h0m0s</span></td>
+      <td class="code">timestamp</td>
+      <td></td>
+    </tr>
   </table>
   </div><br><br>
 
@@ -327,7 +335,7 @@
     </colgroup>
 
     <tr>
-      <th class="big" colspan="6">Discord commands</th>
+      <th class="big" colspan="6">Moderation commands</th>
     </tr>
 
     <tr>
@@ -347,7 +355,7 @@
       <td class="code">kick</td>
       <td rowspan="3">Member, <span class="inverted">Reason</span></td>
       <td>Kicks a member.</td>
-      <td rowspan="6"></td>
+      <td rowspan="11"></td>
       <td colspan="2">Kick members</td>
     </tr>
 
@@ -378,7 +386,109 @@
       <td class="code">purge</td>
       <td>No. of messages to delete</td>
       <td>Deletes the most recent message(s) in the current channel. Useful for cleanup.</td>
-      <td colspan="2">Manage messages</td>
+      <td colspan="2" rowspan="5">Manage messages</td>
+    </tr>
+
+    <tr>
+      <td class="code">purgeuser</td>
+      <td>No. of messages, user</td>
+      <td>Deletes the most recent message(s) in the current channel sent by the user.</td>
+    </tr>
+
+    <tr>
+      <td class="code">purgeregex</td>
+      <td>No. of messages, regex</td>
+      <td rowspan="3">Selectively deletes the most recent message(s) in the current channel based on a regular expression, python script or both. See <a target="_self" href="/Appendices/A2">Appendix A2</a></td>
+    </tr>
+
+    <tr>
+      <td class="code">purgepy</td>
+      <td>No. of messages, python script</td>
+    </tr>
+
+    <tr>
+      <td class="code">purgepyrex</td>
+      <td>No. of msg's, regex, py. script</td>
+    </tr>
+
+    <tr>
+      <td class="code">makeinvite</td>
+      <td>Valid duration, <span class="inverted">max. users</span></td>
+      <td>Generates an invite for the server. Defaults to infinite users if not set.</td>
+      <td colspan="2">Create invite</td>
+    </tr>
+  </table>
+  </div><br><br>
+
+  <div class="overflow">
+  <table style="width: 205%;">
+    <colgroup>
+      <col span="1" style="width: 15%;">
+      <col span="1" style="width: 30%;">
+      <col span="1" style="width: 70%;">
+      <col span="1" style="width: 30%;">
+      <col span="1" style="width: 30%;">
+      <col span="1" style="width: 30%;">
+    </colgroup>
+
+    <tr>
+      <th class="big" colspan="6">Text commands</th>
+    </tr>
+
+    <tr>
+      <th rowspan="2">Command</th>
+      <th rowspan="2">Argument(s)</th>
+      <th rowspan="2">Description</th>
+      <th rowspan="2">Alias(es)</th>
+      <th colspan="2">Permissions required</th>
+    </tr>
+
+    <tr>
+      <th>By bot</th>
+      <th>By you</th>
+    </tr>
+
+    <tr>
+      <td class="code">poll</td>
+      <td>Title, space-separated pairs</td>
+      <td>Starts a poll (vote). Example of 1 pair:<span class="code">yes:green_check_mark:</span></td>
+      <td>vote</td>
+      <td>Add reaction</td>
+      <td rowspan="7"></td>
+    </tr>
+
+    <tr>
+      <td class="code">insert</td>
+      <td>Emoji, Text+</td>
+      <td>Replaces spaces in the text with emojis &#x1f600; just &#x1f600; like &#x1f600; this.</td>
+      <td rowspan="6"></td>
+      <td rowspan="6"></td>
+    </tr>
+
+    <tr>
+      <td class="code">spoiler</td>
+      <td rowspan="5">Text+</td>
+      <td>Generates an annoying piece of spoiler text.</td>
+    </tr>
+
+    <tr>
+      <td class="code">rawspoiler</td>
+      <td>Generates an annoying piece of spoiler text to copy and paste.</td>
+    </tr>
+
+    <tr>
+      <td class="code" style="font-size: 1.6vw;">rawrawspoiler</td>
+      <td>Similar to<span class="code">rawspoiler</span>, but the recursion depth is 2.</td>
+    </tr>
+
+    <tr>
+      <td class="code">reverse</td>
+      <td>Reverses a piece of text.</td>
+    </tr>
+
+    <tr>
+      <td class="code">emoji</td>
+      <td>Turns text into regional indicators and other emoji symbols.</td>
     </tr>
   </table>
   </div>
