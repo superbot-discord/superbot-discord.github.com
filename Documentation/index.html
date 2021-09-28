@@ -398,7 +398,7 @@
     <tr>
       <td class="code">purgeregex</td>
       <td>No. of messages, regex</td>
-      <td rowspan="3">Selectively deletes the most recent message(s) in the current channel based on a regular expression, python script or both. See <a target="_self" href="/Appendices/A2">Appendix A2</a></td>
+      <td rowspan="3">Selectively deletes the most recent message(s) in the current channel based on a regular expression, python script or both. See <a target="_self" href="/Appendices/A2">Appendix A2</a>.</td>
     </tr>
 
     <tr>
@@ -452,8 +452,8 @@
       <td class="code">poll</td>
       <td>Title, space-separated pairs</td>
       <td>Starts a poll (vote). Example of 1 pair:<span class="code">yes:green_check_mark:</span></td>
-      <td>vote</td>
-      <td>Add reaction</td>
+      <td class="code">vote</td>
+      <td>Add reactions, Embed links</td>
       <td rowspan="7"></td>
     </tr>
 
@@ -489,6 +489,111 @@
     <tr>
       <td class="code">emoji</td>
       <td>Turns text into regional indicators and other emoji symbols.</td>
+    </tr>
+  </table>
+  </div><br><br>
+
+  <div class="overflow">
+  <table style="width: 205%;">
+    <colgroup>
+      <col span="1" style="width: 15%;">
+      <col span="1" style="width: 30%;">
+      <col span="1" style="width: 70%;">
+      <col span="1" style="width: 30%;">
+      <col span="1" style="width: 30%;">
+      <col span="1" style="width: 30%;">
+    </colgroup>
+
+    <tr>
+      <th class="big" colspan="6">Information commands</th>
+    </tr>
+
+    <tr>
+      <th rowspan="2">Command</th>
+      <th rowspan="2">Argument(s)</th>
+      <th rowspan="2">Description</th>
+      <th rowspan="2">Alias(es)</th>
+      <th colspan="2">Permissions required</th>
+    </tr>
+
+    <tr>
+      <th>By bot</th>
+      <th>By you</th>
+    </tr>
+
+    <tr>
+      <td class="code">color</td>
+      <td>#HEX or R G B or Decimal (Text+)</td>
+      <td>Shows information about a color.</td>
+      <td class="code">colour</td>
+      <td>Upload files, Embed links</td>
+      <td rowspan="12"></td>
+    </tr>
+
+    <tr>
+      <td class="code">simplecolor</td>
+      <td><a href="Colors.jpeg" target="_blank">Color name</a></td>
+      <td>Shows information about a gradient or color.</td>
+      <td class="code">simplecolour</td>
+      <td>Upload files</td>
+    </tr>
+
+    <tr>
+      <td class="code">translate</td>
+      <td>Language code, Text+</td>
+      <td>Translates the text to the language.</td>
+      <td class="code" rowspan="10"></td>
+      <td rowspan="10"></td>
+    </tr>
+
+    <tr>
+      <td class="code">definition</td>
+      <td>Text</td>
+      <td>Looks up the word in a dictionary.</td>
+    </tr>
+
+    <tr>
+      <td class="code">calc</td>
+      <td>Text+</td>
+      <td>Calculates a formula. See <a target="_self" href="/Appendices/A3">Appendix A3</a>.</td>
+    </tr>
+
+    <tr>
+      <td class="code">rtimer</td>
+      <td rowspan="5">Text</td>
+      <td>Starts a timer with beautiful regional indicators. See <a target="_self" href="/Appendices/A3">Appendix A3</a>.</td>
+    </tr>
+
+    <tr>
+      <td class="code">ttimer</td>
+      <td>Starts a timer in plain text. See <a target="_self" href="/Appendices/A3">Appendix A3</a>.</td>
+    </tr>
+
+    <tr>
+      <td class="code">terminate</td>
+      <td>Terminates a timer given its code. See <a target="_self" href="/Appendices/A3">Appendix A3</a>.</td>
+    </tr>
+
+    <tr>
+      <td class="code">terminate</td>
+      <td>Unscrambles a piece of text. Useful when playing Scrabble.</td>
+    </tr>
+
+    <tr>
+      <td class="code">unicode</td>
+      <td>Looks up unicode characters based on their names.</td>
+    </tr>
+
+    <tr>
+      <td class="code">random</td>
+      <td>Integer, Integer</td>
+      <td>Draws a random integer between the two arguments.</td>
+    </tr>
+
+     <tr>
+      <td class="code">choice</td>
+      <td>Text*</td>
+      <td>Draws a random choice out of the arguments.</td>
     </tr>
   </table>
   </div>
