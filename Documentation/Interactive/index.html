@@ -21,13 +21,13 @@
   </div>
 
   <h1>SuperBot Official Documentation (Interactive)</h1>
-  <input type="text" id="search" oninput="filter()" placeholder="Search commands…" pattern="[A-Za-z]*">
+  <input type="text" id="search" oninput="filter()" placeholder="Search commands…" pattern="[A-Za-z\s]*">
 
   <div class="overflow">
-  <table style="width: 205%;" id="search_results">
+  <table style="width: 220%;" id="search_results">
     <colgroup>
       <col span="1" style="width: 15%;">
-      <col span="1" style="width: 30%;">
+      <col span="1" style="width: 45%;">
       <col span="1" style="width: 70%;">
       <col span="1" style="width: 30%;">
       <col span="1" style="width: 30%;">
@@ -61,6 +61,15 @@
     </tr>
 
     <tr>
+      <td class="code">inter_help</td>
+      <td></td>
+      <td>Sends in-depth help with the help of select menus.</td>
+      <td></td>
+      <td>Embed links</td>
+      <td></td>
+    </tr>
+
+    <tr>
       <td class="code">invite</td>
       <td></td>
       <td>Sends a link for you to invite the bot to your own server.</td>
@@ -89,7 +98,7 @@
 
     <tr>
       <td class="code">botpurge</td>
-      <td>No. of messages to delete</td>
+      <td>Number of messages to delete (Integer)</td>
       <td>Deletes the most recent message(s) sent by the bot. Useful for cleanup.</td>
       <td></td>
       <td></td>
@@ -114,8 +123,17 @@
     </tr>
 
     <tr>
+      <td class="code">statuses</td>
+      <td></td>
+      <td>Views a pie chart about all statuses of users in the server.</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+
+    <tr>
       <td class="code">role</td>
-      <td><span class="inverted">Role in the server</span></td>
+      <td><span class="inverted">Role in the server (Role)</span></td>
       <td>Views information about the role: members, position and more.</td>
       <td></td>
       <td>Embed links</td>
@@ -124,7 +142,7 @@
 
     <tr>
       <td class="code">channel</td>
-      <td><span class="inverted">Channel in the server</span></td>
+      <td><span class="inverted">Channel in the server (Text/Voice/Stage Channel)</span></td>
       <td>Views information about the text, voice or stage channel.</td>
       <td></td>
       <td>Embed links</td>
@@ -133,7 +151,7 @@
 
     <tr>
       <td class="code">user</td>
-      <td><span class="inverted">User in the server</span></td>
+      <td><span class="inverted">Member in the server (Member)</span></td>
       <td>Views information about the user: avatar, permissions, status and more.</td>
       <td></td>
       <td>Embed links</td>
@@ -142,7 +160,7 @@
 
     <tr>
       <td class="code">avatar</td>
-      <td><span class="inverted">User in the server</span></td>
+      <td><span class="inverted">Member in the server (Member)</span></td>
       <td>Views the avatar (user icon) of a user.</td>
       <td></td>
       <td>Embed links</td>
@@ -151,7 +169,7 @@
 
     <tr>
       <td class="code">status</td>
-      <td><span class="inverted">User in the server</span></td>
+      <td><span class="inverted">Member in the server (Member)</span></td>
       <td>Views in-depth information about the status of the user.</td>
       <td></td>
       <td>Embed links</td>
@@ -159,8 +177,26 @@
     </tr>
 
     <tr>
+      <td class="code">banner</td>
+      <td><span class="inverted">Member in the server (Member)</span></td>
+      <td>Views the banner of the user.</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td class="code">banner</td>
+      <td></td>
+      <td>Views the banner of the server.</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+
+    <tr>
       <td class="code">leftuser</td>
-      <td>Any Discord User</td>
+      <td>Any Discord User (User)</td>
       <td>Views limited information about the user who is not in the server.</td>
       <td></td>
       <td>Embed links</td>
@@ -169,7 +205,7 @@
 
     <tr>
       <td class="code">message</td>
-      <td>Message in the server</td>
+      <td>Message (Message)</td>
       <td>Views information about the message: sender, ID and more.</td>
       <td class="code">msg</td>
       <td>Embed links</td>
@@ -178,7 +214,7 @@
 
     <tr>
       <td class="code">raw</td>
-      <td>Message in the server</td>
+      <td>Message (Message)</td>
       <td>Views the raw content of the message, including formatting symbols.</td>
       <td></td>
       <td>Embed links</td>
@@ -187,7 +223,7 @@
 
     <tr>
       <td class="code">reactions</td>
-      <td>Message in the server</td>
+      <td>Message (Message)</td>
       <td>Views information and a pie chart about the message's reactions.</td>
       <td></td>
       <td>Embed links</td>
@@ -196,7 +232,7 @@
 
     <tr>
       <td class="code">emojiinfo</td>
-      <td>Custom or Unicode emoji</td>
+      <td>Custom Emoji (Emoji) or Unicode emoji (Text+)</td>
       <td>Views information about the custom/unicode emoji.</td>
       <td></td>
       <td>Embed links, manage emojis*</td>
@@ -205,8 +241,17 @@
 
     <tr>
       <td class="code">template</td>
-      <td>Template in the server</td>
+      <td>Any Discord template (Template)</td>
       <td>Views information about the server template.</td>
+      <td></td>
+      <td>Embed links</td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td class="code">permissions</td>
+      <td></td>
+      <td>Views static information about permission integers.</td>
       <td></td>
       <td>Embed links</td>
       <td></td>
@@ -214,7 +259,7 @@
   
     <tr>
       <td class="code">react</td>
-      <td>Message, <em>Custom</em> Emoji</td>
+      <td>Message (Message), Custom Emoji (Emoji)</td>
       <td>Temporarily reacts with the emoji. Useful when replacing Nitro.</td>
       <td></td>
       <td>Add emojis</td>
@@ -250,7 +295,7 @@
 
     <tr>
       <td class="code">pretend</td>
-      <td>User, Text+</td>
+      <td>Member (Member), Contents (Text+)</td>
       <td>Sends a fake message as the user.</td>
       <td></td>
       <td>Manage webhooks</td>
@@ -259,7 +304,7 @@
 
     <tr>
       <td class="code" style="font-size: 1.9vw;">pretendembed</td>
-      <td>User, Text+</td>
+      <td>Member (Member), Embed contents (Text+)</td>
       <td>Sends a fake embed as the user. See <a target="_self" href="/Appendices/A1">Appendix A1</a></td>
       <td></td>
       <td>Manage webhooks</td>
@@ -268,7 +313,7 @@
 
     <tr>
       <td class="code">embed</td>
-      <td>Text+</td>
+      <td>Line-separated embed contents (Text+)</td>
       <td>Sends an embed. See <a target="_self" href="/Appendices/A1">Appendix A1</a></td>
       <td></td>
       <td>Embed links</td>
@@ -277,7 +322,7 @@
 
     <tr>
       <td class="code">editembed</td>
-      <td>Text+</td>
+      <td>Line-separated embed contents (Text+)</td>
       <td>Edits an embed previously sent by<span class="code">embed</span>. See <a target="_self" href="/Appendices/A1">Appendix A1</a></td>
       <td></td>
       <td>Embed links</td>
@@ -286,7 +331,7 @@
 
     <tr>
       <td class="code small">simpleembed</td>
-      <td>Text+</td>
+      <td>Line-separated embed contents (Text+)</td>
       <td>An easier version of<span class="code">embed</span>. See <a target="_self" href="/Appendices/A1#A">Appendix A1 (a)</a></td>
       <td><span class="code small">simpembed</span><span class="code small">simplembed</span></td>
       <td>Embed links</td>
@@ -295,8 +340,8 @@
 
     <tr>
       <td class="code small">quickembed</td>
-      <td>Text+</td>
-      <td>The simplest version of<span class="code">embed</span>. See <a target="_self" href="/Appendices/A1#B">Appendix A1 (b))</a></td>
+      <td>Line-separated embed contents (Text+)</td>
+      <td>The simplest version of<span class="code">embed</span>. See <a target="_self" href="/Appendices/A1#B">Appendix A1 (b)</a></td>
       <td></td>
       <td>Embed links</td>
       <td></td>
@@ -304,7 +349,7 @@
 
     <tr>
       <td class="code">ett</td>
-      <td>Message</td>
+      <td>Message (Message)</td>
       <td>Convert a previously sent message to be in the<span class="code">embed</span>format.</td>
       <td></td>
       <td></td>
@@ -313,16 +358,25 @@
 
     <tr>
       <td class="code">tts</td>
-      <td>Text+</td>
+      <td>Message contents (Text+)</td>
       <td>Sends a message similarly to<span class="code">/tts</span>.</td>
       <td></td>
       <td>Send text-to-speech messages</td>
       <td></td>
     </tr>
+
+    <tr>
+      <td class="code">unix</td>
+      <td>Time (Text+)</td>
+      <td style="font-size: 1.4vw;">Generates Discord timestamps. Argument examples:<span class="code small">now</span><span class="code small">2021y12M31d12h0m0s</span></td>
+      <td class="code">timestamp</td>
+      <td></td>
+      <td></td>
+    </tr>
   
     <tr>
       <td class="code">kick</td>
-      <td>Member, <span class="inverted">Reason</span></td>
+      <td>Member (Member), <span class="inverted">Reason (Text+)</span></td>
       <td>Kicks a member.</td>
       <td></td>
       <td colspan="2">Kick members</td>
@@ -330,7 +384,7 @@
 
     <tr>
       <td class="code">ban</td>
-      <td>Member, <span class="inverted">Reason</span></td>
+      <td>Member (Member), <span class="inverted">Reason (Text+)</span></td>
       <td>Bans a member.</td>
       <td></td>
       <td colspan="2">Ban members</td>
@@ -338,7 +392,7 @@
 
     <tr>
       <td class="code">unban</td>
-      <td>Member, <span class="inverted">Reason</span></td>
+      <td>User (User), <span class="inverted">Reason (Text+)</span></td>
       <td>Unbans a member.</td>
       <td></td>
       <td colspan="2">Ban members</td>
@@ -393,7 +447,7 @@
     </tr>
 
     <tr>
-      <td class="code">purgepyrex</td>
+      <td class="code">purgepygex</td>
       <td>No. of msg's, regex, py. script</td>
       <td>Selectively deletes messages based on a regex and py. script. See <a target="_self" href="/Appendices/A2">Ap. A2</a></td>
       <td></td>

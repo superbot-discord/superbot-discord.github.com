@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <title>SuperBot - Using LCD & LED</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" id="mystyle" href="/style.css">
+  <link rel="stylesheet" id="lcd_led_style" href="style.css">
+  <base target="_blank">
+</head>
+
+<body>
+  <div id="nav">
+    <a target="_self" href="/">Homepage</a>
+    <a target="_self" href="/Documentation">Documentation</a>
+    <a target="_self" href="/Support">Support Server</a>
+    <a target="_self" href="/Why">Why SuperBot?</a>
+    <a target="_self" href="/Map" style="float: right;">Site Map</a>
+    <a target="_self" href="/Appendices/A1" style="float: right;">Appendix A1</a>
+    <a target="_self" href="/Appendices/A2" style="float: right;" class="active">Appendix A2</a>
+  </div>
+
+  <script src="/script_generic.js"></script>
+  <h1 style="font-size: 5.2vw;">SuperBot Appendix 3</h1>
+  <h2>Making LCD/LED Screens (for free)</h2>
+  <p>The <span class="code">lcd</span><span class="code">led</span><span class="code">led2</span><span class="code">led3</span><span class="code">led4</span>
+  commands allow you to create retro screens. There is a comprehensive font family including 7-segments, 14-segments,
+  large matrices and small matrices. The default font is regular or 2.</p>
+
+  <div class="overflow">
+  <table style="width: 150%;">
+    <colgroup>
+      <col span="1" style="width: 25%;">
+      <col span="1" style="width: 25%;">
+      <col span="1" style="width: 25%;">
+      <col span="1" style="width: 25%;">
+      <col span="1" style="width: 25%;">
+      <col span="1" style="width: 25%;">
+    </colgroup>
+
+    <tr>
+      <th class="big" colspan="6">LCD Fonts</th>
+    </tr>
+
+    <tr>
+      <th class="bigger code" colspan="6">=lcd</th>
+    </tr>
+
+    <tr>
+      <td><span style="font-family: lcd;       font-size: 5vw;">AaMmZz18</span><br><span class="lcd_led_small">regular</span></td>
+      <td><span style="font-family: lcd_calc;  font-size: 3vw;">AaMmZz18</span><br><span class="lcd_led_small">calc</span></td>
+      <td><span style="font-family: lcd_dense; font-size: 4vw;">AaMmZz18</span><br><span class="lcd_led_small">dense</span></td>
+      <td><span style="font-family: lcd_mono;  font-size: 4vw;">AaMmZz18</span><br><span class="lcd_led_small">mono</span></td>
+      <td></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <th class="bigger code" colspan="6">=lcd2</th>
+    </tr>
+
+    <tr>
+      <td><span style="font-family: lcd2_1;  font-size: 3.5vw;">AaMmZz18</span><br><span class="lcd_led_small">1</span></td>
+      <td><span style="font-family: lcd2_1i; font-size: 3.5vw;">AaMmZz18</span><br><span class="lcd_led_small">1i</span></td>
+      <td><span style="font-family: lcd2_2;  font-size: 3.5vw;">AaMmZz18</span><br><span class="lcd_led_small">2</span></td>
+      <td><span style="font-family: lcd2_2i; font-size: 3.5vw;">AaMmZz18</span><br><span class="lcd_led_small">2i</span></td>
+      <td><span style="font-family: lcd2_3;  font-size: 3.5vw;">AaMmZz18</span><br><span class="lcd_led_small">3</span></td>
+      <td><span style="font-family: lcd2_3i; font-size: 3.5vw;">AaMmZz18</span><br><span class="lcd_led_small">3i</span></td>
+    </tr>
+
+    <tr>
+      <th class="bigger code" colspan="6">=lcd3</th>
+    </tr>
+
+    <tr>
+      <td><span style="font-family: lcd3_1;  font-size: 3.5vw;">AaMmZz18</span><br><span class="lcd_led_small">1</span></td>
+      <td><span style="font-family: lcd3_1i; font-size: 3.5vw;">AaMmZz18</span><br><span class="lcd_led_small">1i</span></td>
+      <td><span style="font-family: lcd3_2;  font-size: 3.5vw;">AaMmZz18</span><br><span class="lcd_led_small">2</span></td>
+      <td><span style="font-family: lcd3_2i; font-size: 3.5vw;">AaMmZz18</span><br><span class="lcd_led_small">2i</span></td>
+      <td><span style="font-family: lcd3_3;  font-size: 3.5vw;">AaMmZz18</span><br><span class="lcd_led_small">3</span></td>
+      <td><span style="font-family: lcd3_3i; font-size: 3.5vw;">AaMmZz18</span><br><span class="lcd_led_small">3i</span></td>
+    </tr>
+  </table>
+  </div>
+  <br>
+
+  <div class="overflow">
+  <table style="width: 150%;">
+    <colgroup>
+      <col span="1" style="width: 25%;">
+      <col span="1" style="width: 25%;">
+      <col span="1" style="width: 25%;">
+      <col span="1" style="width: 25%;">
+      <col span="1" style="width: 25%;">
+      <col span="1" style="width: 25%;">
+    </colgroup>
+
+    <tr>
+      <th class="big" colspan="6">LED Fonts</th>
+    </tr>
+
+    <tr>
+      <th class="bigger code" colspan="6">=led</th>
+    </tr>
+
+    <tr>
+      <td><span style="font-family: led;       font-size: 4vw;"  >AaMmZz18</span><br><span class="lcd_led_small">regular</span></td>
+      <td><span style="font-family: led_bold;  font-size: 3.2vw;">AaMmZz18</span><br><span class="lcd_led_small">bold</span></td>
+      <td><span style="font-family: led_caps;  font-size: 4vw;"  >AaMmZz18</span><br><span class="lcd_led_small">caps</span></td>
+      <td><span style="font-family: led_mono;  font-size: 3.8vw;">AaMmZz18</span><br><span class="lcd_led_small">mono</span></td>
+      <td><span style="font-family: led_serif; font-size: 3.2vw;">AaMmZz18</span><br><span class="lcd_led_small">serif</span></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <th class="bigger code" colspan="6">=led2</th>
+    </tr>
+
+    <tr>
+      <td><span style="font-family: led2;       font-size: 4vw;"  >AaMmZz18</span><br><span class="lcd_led_small">regular</span></td>
+      <td><span style="font-family: led2_bold;  font-size: 2.3vw;">AaMmZz18</span><br><span class="lcd_led_small">bold</span></td>
+      <td><span style="font-family: led2_caps;  font-size: 6vw;"  >AaMmZz18</span><br><span class="lcd_led_small">caps</span></td>
+      <td><span style="font-family: led2_fat;   font-size: 4.5vw;">AaMmZz18</span><br><span class="lcd_led_small">fat</span></td>
+      <td><span style="font-family: led2_modern;font-size: 4vw;"  >AaMmZz18</span><br><span class="lcd_led_small">modern</span></td>
+      <td><span style="font-family: led2_serif; font-size: 3.6vw;">AaMmZz18</span><br><span class="lcd_led_small">serif</span></td>
+    </tr>
+
+    <tr>
+      <th class="bigger code" colspan="6">=led3</th>
+    </tr>
+
+    <tr>
+      <td><span style="font-family: led3_1;  font-size: 3.5vw;">AaMmZz18</span><br><span class="lcd_led_small">1</span></td>
+      <td><span style="font-family: led3_1i; font-size: 3.5vw;">AaMmZz18</span><br><span class="lcd_led_small">1i</span></td>
+      <td><span style="font-family: led3_2;  font-size: 3.5vw;">AaMmZz18</span><br><span class="lcd_led_small">2</span></td>
+      <td><span style="font-family: led3_2i; font-size: 3.5vw;">AaMmZz18</span><br><span class="lcd_led_small">2i</span></td>
+      <td><span style="font-family: led3_3;  font-size: 3.5vw;">AaMmZz18</span><br><span class="lcd_led_small">3</span></td>
+      <td><span style="font-family: led3_3i; font-size: 3.5vw;">AaMmZz18</span><br><span class="lcd_led_small">3i</span></td>
+    </tr>
+
+    <tr>
+      <th class="bigger code" colspan="6">=led4</th>
+    </tr>
+
+    <tr>
+      <td><span style="font-family: led4_1;  font-size: 3.5vw;">AaMmZz18</span><br><span class="lcd_led_small">1</span></td>
+      <td><span style="font-family: led4_1i; font-size: 3.5vw;">AaMmZz18</span><br><span class="lcd_led_small">1i</span></td>
+      <td><span style="font-family: led4_2;  font-size: 3.5vw;">AaMmZz18</span><br><span class="lcd_led_small">2</span></td>
+      <td><span style="font-family: led4_2i; font-size: 3.5vw;">AaMmZz18</span><br><span class="lcd_led_small">2i</span></td>
+      <td><span style="font-family: led4_3;  font-size: 3.5vw;">AaMmZz18</span><br><span class="lcd_led_small">3</span></td>
+      <td><span style="font-family: led4_3i; font-size: 3.5vw;">AaMmZz18</span><br><span class="lcd_led_small">3i</span></td>
+    </tr>
+  </table>
+  </div><br>
+
+  <p>These commands also come with a large number of color schemes that try to simulate the retro screens.</p>
+
+  <div class="overflow">
+  <table style="width: 100%;">
+    <colgroup>
+      <col span="1" style="width: 3%;">
+      <col span="1" style="width: 21%;">
+      <col span="1" style="width: 3%;">
+      <col span="1" style="width: 3%;">
+      <col span="1" style="width: 21%;">
+      <col span="1" style="width: 3%;">
+      <col span="1" style="width: 3%;">
+      <col span="1" style="width: 21%;">
+      <col span="1" style="width: 3%;">
+      <col span="1" style="width: 3%;">
+      <col span="1" style="width: 21%;">
+      <col span="1" style="width: 3%;">
+    </colgroup>
+
+    <tr>
+      <th class="big" colspan="12">Color Schemes</th>
+    </tr>
+
+    <tr>
+      <th class="bigger" colspan="12">RGB & Mixtures</th>
+    </tr>
+
+    <tr style="height: 3vw;">
+      <td style="background-color: #000;" rowspan="3"></td>
+      <td style="font-family: led; background-color: #300000; color: #D83030;">red</td>
+      <td style="background-color: #fff;" rowspan="3"></td>
+      <td style="background-color: #000;" rowspan="3"></td>
+      <td style="font-family: led; background-color: #D83030; color: #300000;">ired</td>
+      <td style="background-color: #fff;" rowspan="3"></td>
+      <td style="background-color: #000;" rowspan="3"></td>
+      <td style="font-family: led; background-color: #003000; color: #30D830;">green</td>
+      <td style="background-color: #fff;" rowspan="3"></td>
+      <td style="background-color: #000;" rowspan="3"></td>
+      <td style="font-family: led; background-color: #30D830; color: #003000;">igreen</td>
+      <td style="background-color: #fff;" rowspan="3"></td>
+    </tr>
+
+    <tr style="height: 3vw;">
+      <td style="font-family: led; background-color: #000030; color: #3030D8;">blue</td>
+      <td style="font-family: led; background-color: #3030D8; color: #000030;">iblue</td>
+      <td style="font-family: led; background-color: #300030; color: #D870D8;">purple</td>
+      <td style="font-family: led; background-color: #D870D8; color: #300030;">ipurple</td>
+    </tr>
+
+    <tr style="height: 3vw;">
+      <td style="font-family: led; background-color: #303000; color: #D8D870;">yellow</td>
+      <td style="font-family: led; background-color: #D8D870; color: #303000;">iyellow</td>
+      <td style="font-family: led; background-color: #003030; color: #70D8D8;">teal</td>
+      <td style="font-family: led; background-color: #70D8D8; color: #003030;">iteal</td>
+    </tr>
+
+    <tr>
+      <th class="bigger" colspan="12">Retro</th>
+    </tr>
+
+    <tr style="height: 3vw;">
+      <td style="background-color: #000;"></td>
+      <td style="font-family: led; background-color: #A8C64E; color: #3C3E2C;">cyan/crystal</td>
+      <td style="background-color: #fff;"></td>
+      <td style="background-color: #000;"></td>
+      <td style="font-family: led; background-color: #101400; color: #A8C64E;">icyan/icrystal</td>
+      <td style="background-color: #fff;"></td>
+      <td style="background-color: #000;"></td>
+      <td style="font-family: led; background-color: #A19953; color: #412C3C;">amber</td>
+      <td style="background-color: #fff;"></td>
+      <td style="background-color: #000;"></td>
+      <td style="font-family: led; background-color: #412C3C; color: #A19953;">iamber</td>
+      <td style="background-color: #fff;"></td>
+    </tr>
+
+    <tr>
+      <th class="bigger" colspan="12">Theme simulation</th>
+    </tr>
+
+    <tr style="height: 3vw;">
+      <td style="background-color: #000;" rowspan="2"></td>
+      <td style="font-family: led; background-color: #000; color: #fff;">black</td>
+      <td style="background-color: #fff;" rowspan="2"></td>
+      <td style="background-color: #000;" rowspan="2"></td>
+      <td style="font-family: led; background-color: #fff; color: #000;">white</td>
+      <td style="background-color: #fff;" rowspan="2"></td>
+      <td style="background-color: #000;"></td>
+      <td style="font-family: led; background-color: #37393e; color: #fff;">dark</td>
+      <td style="background-color: #fff;"></td>
+      <td style="background-color: #000;"></td>
+      <td style="font-family: led; background-color: #fff; color: #2e3337;">light</td>
+      <td style="background-color: #fff;"></td>
+    </tr>
+
+    <tr style="height: 3vw;">
+      <td style="font-family: led; background-color: #000; color: #E9EDEF;">wdark</td>
+      <td style="font-family: led; background-color: #BDE3E6; color: #0F181D;">wlight</td>
+      <td colspan="6" style="font-size: 1.6vw;">Prefix these monochrome colors with<span class="code" style="font-size: 1.4vw;">t</span>to get a transparent image.</td>
+    </tr>
+  </table>
+  </div>
+</body>
+
+</html>

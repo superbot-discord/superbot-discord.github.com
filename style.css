@@ -236,6 +236,7 @@ button:hover {
 }
 
 table, th, td {
+  table-layout: fixed;
   border-style: solid;
   border-width: 0.1vw;
   border-color: #000;
@@ -281,7 +282,7 @@ div.code {
 }
 
 #search {
-  width: 90vw;
+  width: 96.5vw;
   font-size: 2vw;
   padding: 0.5vw 1vw;
   margin-bottom: 1vw;

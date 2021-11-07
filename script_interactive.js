@@ -6,7 +6,7 @@ var mysheet = document.getElementById("mystyle").sheet;
 function filter() {
   var name
   var element = document.getElementById("search")
-  element.value = element.value.replace(/[^A-z]/g,'');
+  element.value = element.value.replace(/[^A-z\s]/g,'');
   var input = element.value
   var lowered = input.toLowerCase();
   var rows = document.getElementById("search_results").getElementsByTagName("tr");
@@ -143,7 +143,7 @@ background-color: ` + adjusted_bg + `;
 
 mysheet.insertRule(`
 #search {
-  width: 96vw;
+  width: 96.5vw;
   font-size: 2vw;
   padding: 0.5vw 1vw;
   margin-bottom: 1vw;

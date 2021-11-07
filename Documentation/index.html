@@ -23,10 +23,10 @@
   <script src="/script_generic.js"></script>
   <h1>SuperBot Official Documentation</h1>
   <div class="overflow">
-  <table style="width: 205%;">
+  <table style="width: 220%;">
     <colgroup>
       <col span="1" style="width: 15%;">
-      <col span="1" style="width: 30%;">
+      <col span="1" style="width: 45%;">
       <col span="1" style="width: 70%;">
       <col span="1" style="width: 30%;">
       <col span="1" style="width: 30%;">
@@ -52,17 +52,22 @@
 
     <tr>
       <td class="code">help</td>
-      <td rowspan="4"></td>
+      <td rowspan="5"></td>
       <td>Sends a list of commands. Does not support in-depth help.</td>
       <td><span class="code">commands</span></td>
-      <td rowspan="2">Embed links</td>
-      <td rowspan="4"></td>
+      <td rowspan="3">Embed links</td>
+      <td rowspan="5"></td>
+    </tr>
+
+    <tr>
+      <td class="code">inter_help</td>
+      <td>Sends in-depth help with the help of select menus.</td>
+      <td rowspan="3"></td>
     </tr>
 
     <tr>
       <td class="code">invite</td>
       <td>Sends a link for you to invite the bot to your own server.</td>
-      <td rowspan="2"></td>
     </tr>
 
     <tr>
@@ -79,7 +84,7 @@
 
     <tr>
       <td class="code">botpurge</td>
-      <td>No. of messages to delete</td>
+      <td>No. of messages to delete (Integer)</td>
       <td>Deletes the most recent message(s) sent by the bot in the current channel.</td>
       <td></td>
       <td>Manage messages</td>
@@ -89,10 +94,10 @@
   <br><br>
 
   <div class="overflow">
-  <table style="width: 205%;">
+  <table style="width: 220%;">
     <colgroup>
       <col span="1" style="width: 15%;">
-      <col span="1" style="width: 30%;">
+      <col span="1" style="width: 45%;">
       <col span="1" style="width: 70%;">
       <col span="1" style="width: 30%;">
       <col span="1" style="width: 30%;">
@@ -118,11 +123,11 @@
 
     <tr>
       <td class="code">server</td>
-      <td rowspan="2"></td>
+      <td rowspan="3"></td>
       <td>Views information about the server: channels, roles, ID and more.</td>
       <td><span class="code">guild</span></td>
       <td>Embed links</td>
-      <td rowspan="13"></td>
+      <td rowspan="25"></td>
     </tr>
 
     <tr>
@@ -133,22 +138,28 @@
     </tr>
 
     <tr>
+      <td class="code">statuses</td>
+      <td>Views a pie chart about all statuses of users in the server.</td>
+      <td rowspan="9"></td>
+      <td></td>
+    </tr>
+
+    <tr>
       <td class="code">role</td>
-      <td><span class="inverted">Role in the server</span></td>
+      <td><span class="inverted">Role in the server (Role)</span></td>
       <td>Views information about the role: members, position and more.</td>
-      <td rowspan="6"></td>
-      <td rowspan="9">Embed links</td>
+      <td rowspan="5">Embed links</td>
     </tr>
 
     <tr>
       <td class="code">channel</td>
-      <td><span class="inverted">Channel in the server</span></td>
+      <td><span class="inverted">Channel in the server (Text/Voice/Stage Channel)</span></td>
       <td>Views information about the text, voice or stage channel.</td>
     </tr>
 
     <tr>
       <td class="code">user</td>
-      <td rowspan="3"><span class="inverted">User in the server</span></td>
+      <td rowspan="4"><span class="inverted">Member in the server (Member)</span></td>
       <td>Views information about the user: avatar, permissions, status and more.</td>
     </tr>
 
@@ -163,14 +174,26 @@
     </tr>
 
     <tr>
+      <td class="code" rowspan="2">banner</td>
+      <td>Views the banner of the user.</td>
+      <td rowspan="2"></td>
+    </tr>
+
+    <tr>
+      <td></td>
+      <td>Views the banner of the server.</td>
+    </tr>
+
+    <tr>
       <td class="code">leftuser</td>
-      <td>Any Discord User</td>
+      <td>Any Discord User (User)</td>
       <td>Views limited information about the user who is not in the server.</td>
+      <td rowspan="3">Embed Links</td>
     </tr>
 
     <tr>
       <td class="code">message</td>
-      <td rowspan="3">Message in the server</td>
+      <td rowspan="3">Message (Message)</td>
       <td>Views information about the message: sender, ID and more.</td>
       <td class="code">msg</td>
     </tr>
@@ -178,36 +201,88 @@
     <tr>
       <td class="code">raw</td>
       <td>Views the raw content of the message, including formatting symbols.</td>
-      <td rowspan="4"></td>
+      <td rowspan="5"></td>
     </tr>
 
     <tr>
       <td class="code">reactions</td>
       <td>Views information and a pie chart about the message's reactions.</td>
+      <td></td>
     </tr>
 
     <tr>
       <td class="code">emojiinfo</td>
-      <td>Custom or Unicode emoji</td>
+      <td>Custom Emoji (Emoji) or Unicode emoji (Text+)</td>
       <td>Views information about the custom/unicode emoji.</td>
       <td>Embed links, manage emojis*</td>
     </tr>
 
     <tr>
+      <td class="code">sticker</td>
+      <td>Message with sticker (Message)</td>
+      <td>Views information about the sticker.</td>
+      <td rowspan="4">Embed links</td>
+    </tr>
+
+    <tr>
       <td class="code">template</td>
-      <td>Template in the server</td>
+      <td>Any Discord template (Template)</td>
       <td>Views information about the server template.</td>
-      <td>Embed links</td>
+    </tr>
+
+    <tr>
+      <td class="code">permissions</td>
+      <td><span class="inverted">Perm. Integer (Integer) or Member (Member)</span></td>
+      <td>Views information about permission integers.</td>
+      <td class="code">perms</td>
+    </tr>
+
+    <tr>
+      <td class="code">badges</td>
+      <td><span class="inverted">Badge Integer (Integer) or Member (Member)</span></td>
+      <td>Views information about badge integers.</td>
+      <td class="code">badge</td>
+    </tr>
+
+    <tr>
+      <td class="code">stickers</td>
+      <td rowspan="2"></td>
+      <td>Views all stickers in the server.</td>
+      <td rowspan="6"></td>
+      <td rowspan="6"></td>
+    </tr>
+
+    <tr>
+      <td class="code">emojis</td>
+      <td>Views all emojis in the server.</td>
+    </tr>
+
+    <tr>
+      <td class="code">led_server</td>
+      <td rowspan="4"><span class="inverted">Font (Text), Color (Text), Alignment (Text)</span></td>
+      <td rowspan="4">Views the server's channels in an LED font. See <a target="_self" href="/Appendices/A3">Appendix A3</a></td>
+    </tr>
+
+    <tr>
+      <td class="code">led2_server</td>
+    </tr>
+
+    <tr>
+      <td class="code">led3_server</td>
+    </tr>
+
+    <tr>
+      <td class="code">led4_server</td>
     </tr>
   </table>
   </div>
   <br><br>
 
   <div class="overflow">
-  <table style="width: 205%;">
+  <table style="width: 220%;">
     <colgroup>
       <col span="1" style="width: 15%;">
-      <col span="1" style="width: 30%;">
+      <col span="1" style="width: 45%;">
       <col span="1" style="width: 70%;">
       <col span="1" style="width: 30%;">
       <col span="1" style="width: 30%;">
@@ -233,7 +308,7 @@
 
     <tr>
       <td class="code">react</td>
-      <td>Message, <em>Custom</em> Emoji</td>
+      <td>Message (Message), Custom Emoji (Emoji)</td>
       <td>Temporarily reacts with the emoji. Useful when replacing Nitro.</td>
       <td></td>
       <td>Add emojis</td>
@@ -264,7 +339,7 @@
 
     <tr>
       <td class="code">pretend</td>
-      <td rowspan="2">User, Text+</td>
+      <td>Member (Member), Contents (Text+)</td>
       <td>Sends a fake message as the user.</td>
       <td rowspan="2">Manage webhooks</td>
       <td rowspan="9"></td>
@@ -272,12 +347,13 @@
 
     <tr>
       <td class="code" style="font-size: 1.9vw;">pretendembed</td>
+      <td>Member (Member), Embed contents (Text+)</td>
       <td>Sends a fake embed as the user. See <a target="_self" href="/Appendices/A1">Appendix A1</a></td>
     </tr>
 
     <tr>
       <td class="code">embed</td>
-      <td rowspan="4">Text+</td>
+      <td rowspan="4">Line-separated embed contents (Text+); See appendices for more information.</td>
       <td>Sends an embed. See <a target="_self" href="/Appendices/A1">Appendix A1</a></td>
       <td rowspan="4">Embed links</td>
     </tr>
@@ -295,27 +371,27 @@
 
     <tr>
       <td class="code small">quickembed</td>
-      <td>The simplest version of<span class="code">embed</span>. See <a target="_self" href="/Appendices/A1#B">Appendix A1 (b))</a></td>
+      <td>The simplest version of<span class="code">embed</span>. See <a target="_self" href="/Appendices/A1#B">Appendix A1 (b)</a></td>
       <td rowspan="3"></td>
     </tr>
 
     <tr>
       <td class="code">ett</td>
-      <td>Message</td>
+      <td>Message (Message)</td>
       <td>Convert a previously sent message to be in the<span class="code">embed</span>format.</td>
       <td></td>
     </tr>
 
     <tr>
       <td class="code">tts</td>
-      <td>Text+</td>
+      <td>Message contents (Text+)</td>
       <td>Sends a message similarly to<span class="code">/tts</span>.</td>
       <td>Send text-to-speech messages</td>
     </tr>
 
     <tr>
       <td class="code">unix</td>
-      <td>Text</td>
+      <td>Time (Text+)</td>
       <td style="font-size: 1.4vw;">Generates Discord timestamps. Argument examples:<span class="code small">now</span><span class="code small">2021y12M31d12h0m0s</span></td>
       <td class="code">timestamp</td>
       <td></td>
@@ -324,10 +400,10 @@
   </div><br><br>
 
   <div class="overflow">
-  <table style="width: 205%;">
+  <table style="width: 220%;">
     <colgroup>
       <col span="1" style="width: 15%;">
-      <col span="1" style="width: 30%;">
+      <col span="1" style="width: 45%;">
       <col span="1" style="width: 70%;">
       <col span="1" style="width: 30%;">
       <col span="1" style="width: 30%;">
@@ -353,7 +429,7 @@
 
     <tr>
       <td class="code">kick</td>
-      <td rowspan="3">Member, <span class="inverted">Reason</span></td>
+      <td rowspan="2">Member (Member), <span class="inverted">Reason (Text+)</span></td>
       <td>Kicks a member.</td>
       <td rowspan="11"></td>
       <td colspan="2">Kick members</td>
@@ -367,53 +443,54 @@
 
     <tr>
       <td class="code">unban</td>
+      <td>User (User), <span class="inverted">Reason (Text+)</span></td>
       <td>Unbans a member.</td>
     </tr>
 
     <tr>
       <td class="code" rowspan="2">slowmode</td>
-      <td></td>
+      <td>Delay (Text+)</td>
       <td>Sets slowmode for the current channel.</td>
       <td rowspan="2" colspan="2">Manage channels</td>
     </tr>
 
     <tr>
-      <td>Channels in the server</td>
+      <td>Delay (Text+), Channels in the server (Channels*)</td>
       <td>Sets slowmode for one or more channels.</td>
     </tr>
 
     <tr>
       <td class="code">purge</td>
-      <td>No. of messages to delete</td>
+      <td>Number of messages to delete (Integer)</td>
       <td>Deletes the most recent message(s) in the current channel. Useful for cleanup.</td>
       <td colspan="2" rowspan="5">Manage messages</td>
     </tr>
 
     <tr>
       <td class="code">purgeuser</td>
-      <td>No. of messages, user</td>
+      <td>Number of messages (Integer), User (User)</td>
       <td>Deletes the most recent message(s) in the current channel sent by the user.</td>
     </tr>
 
     <tr>
       <td class="code">purgeregex</td>
-      <td>No. of messages, regex</td>
+      <td>Number of messages (Integer), Regex (Text+)</td>
       <td rowspan="3">Selectively deletes the most recent message(s) in the current channel based on a regular expression, python script or both. See <a target="_self" href="/Appendices/A2">Appendix A2</a>.</td>
     </tr>
 
     <tr>
       <td class="code">purgepy</td>
-      <td>No. of messages, python script</td>
+      <td>No. of messages (Integer), Python script (Text+)</td>
     </tr>
 
     <tr>
-      <td class="code">purgepyrex</td>
-      <td>No. of msg's, regex, py. script</td>
+      <td class="code">purgepygex</td>
+      <td>No. of messages (Integer), Regex (Text), Python script (Text+)</td>
     </tr>
 
     <tr>
       <td class="code">makeinvite</td>
-      <td>Valid duration, <span class="inverted">max. users</span></td>
+      <td>Valid duration (Text), <span class="inverted">Max. users (Integer)</span></td>
       <td>Generates an invite for the server. Defaults to infinite users if not set.</td>
       <td colspan="2">Create invite</td>
     </tr>
@@ -421,10 +498,10 @@
   </div><br><br>
 
   <div class="overflow">
-  <table style="width: 205%;">
+  <table style="width: 220%;">
     <colgroup>
       <col span="1" style="width: 15%;">
-      <col span="1" style="width: 30%;">
+      <col span="1" style="width: 45%;">
       <col span="1" style="width: 70%;">
       <col span="1" style="width: 30%;">
       <col span="1" style="width: 30%;">
@@ -450,7 +527,7 @@
 
     <tr>
       <td class="code">poll</td>
-      <td>Title, space-separated pairs</td>
+      <td>Space-separated pairs (Text*), Title (Text+)</td>
       <td>Starts a poll (vote). Example of 1 pair:<span class="code">yes:green_check_mark:</span></td>
       <td class="code">vote</td>
       <td>Add reactions, Embed links</td>
@@ -459,7 +536,7 @@
 
     <tr>
       <td class="code">insert</td>
-      <td>Emoji, Text+</td>
+      <td>Emoji (Text), Text to work on (Text+)</td>
       <td>Replaces spaces in the text with emojis &#x1f600; just &#x1f600; like &#x1f600; this.</td>
       <td rowspan="6"></td>
       <td rowspan="6"></td>
@@ -467,7 +544,7 @@
 
     <tr>
       <td class="code">spoiler</td>
-      <td rowspan="5">Text+</td>
+      <td rowspan="5">Text to work on (Text+)</td>
       <td>Generates an annoying piece of spoiler text.</td>
     </tr>
 
@@ -494,10 +571,10 @@
   </div><br><br>
 
   <div class="overflow">
-  <table style="width: 205%;">
+  <table style="width: 220%;">
     <colgroup>
       <col span="1" style="width: 15%;">
-      <col span="1" style="width: 30%;">
+      <col span="1" style="width: 45%;">
       <col span="1" style="width: 70%;">
       <col span="1" style="width: 30%;">
       <col span="1" style="width: 30%;">
@@ -526,41 +603,34 @@
       <td>#HEX or R G B or Decimal (Text+)</td>
       <td>Shows information about a color.</td>
       <td class="code">colour</td>
-      <td>Upload files, Embed links</td>
+      <td>Embed links</td>
       <td rowspan="12"></td>
     </tr>
 
     <tr>
       <td class="code">simplecolor</td>
-      <td><a href="Colors.jpeg" target="_blank">Color name</a></td>
+      <td><a href="Colors.jpeg" target="_blank">Color name (Text)</a></td>
       <td>Shows information about a gradient or color.</td>
       <td class="code">simplecolour</td>
-      <td>Upload files</td>
+      <td rowspan="11"></td>
     </tr>
 
     <tr>
       <td class="code">translate</td>
-      <td>Language code, Text+</td>
+      <td>Language code (Text), Sentence (Text+)</td>
       <td>Translates the text to the language.</td>
       <td class="code" rowspan="10"></td>
-      <td rowspan="10"></td>
     </tr>
 
     <tr>
       <td class="code">definition</td>
-      <td>Text</td>
+      <td>Word (Text)</td>
       <td>Looks up the word in a dictionary.</td>
     </tr>
 
     <tr>
-      <td class="code">calc</td>
-      <td>Text+</td>
-      <td>Calculates a formula. See <a target="_self" href="/Appendices/A3">Appendix A3</a>.</td>
-    </tr>
-
-    <tr>
       <td class="code">rtimer</td>
-      <td rowspan="5">Text</td>
+      <td rowspan="2">Duration (Text)</td>
       <td>Starts a timer with beautiful regional indicators. See <a target="_self" href="/Appendices/A3">Appendix A3</a>.</td>
     </tr>
 
@@ -571,29 +641,43 @@
 
     <tr>
       <td class="code">terminate</td>
+      <td>Timer ID (Text)</td>
       <td>Terminates a timer given its code. See <a target="_self" href="/Appendices/A3">Appendix A3</a>.</td>
     </tr>
 
     <tr>
-      <td class="code">terminate</td>
+      <td class="code">unscramble</td>
+      <td>Alphabets (Text)</td>
       <td>Unscrambles a piece of text. Useful when playing Scrabble.</td>
     </tr>
 
     <tr>
       <td class="code">unicode</td>
+      <td>Query (Text+)</td>
       <td>Looks up unicode characters based on their names.</td>
     </tr>
 
     <tr>
       <td class="code">random</td>
-      <td>Integer, Integer</td>
+      <td>Lower (Integer), Upper (Integer)</td>
       <td>Draws a random integer between the two arguments.</td>
     </tr>
 
-     <tr>
+    <tr>
       <td class="code">choice</td>
-      <td>Text*</td>
+      <td>Possible choices (Text*)</td>
       <td>Draws a random choice out of the arguments.</td>
+    </tr>
+
+    <tr>
+      <td class="code">raffle</td>
+      <td rowspan="2">Lower (Integer), Upper (Integer), Times (Integer)</td>
+      <td>Draws random integers between the bounds for multiple times.</td>
+    </tr>
+
+    <tr>
+      <td class="code">pick</td>
+      <td>Similar to <span class="code">raffle</span>, but entries do not repeat.</td>
     </tr>
   </table>
   </div>

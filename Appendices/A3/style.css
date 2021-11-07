@@ -1,0 +1,46 @@
+@font-face {font-family: "lcd";         src: url("Fonts/lcd.ttf")         format("truetype");}
+@font-face {font-family: "lcd_calc";    src: url("Fonts/lcd_calc.ttf")    format("truetype");}
+@font-face {font-family: "lcd_dense";   src: url("Fonts/lcd_dense.otf")   format("opentype");}
+@font-face {font-family: "lcd_mono";    src: url("Fonts/lcd_mono.otf")    format("opentype");}
+@font-face {font-family: "lcd2_1";      src: url("Fonts/lcd2_1.ttf")      format("truetype");}
+@font-face {font-family: "lcd2_1i";     src: url("Fonts/lcd2_1i.ttf")     format("truetype");}
+@font-face {font-family: "lcd2_2";      src: url("Fonts/lcd2_2.ttf")      format("truetype");}
+@font-face {font-family: "lcd2_2i";     src: url("Fonts/lcd2_2i.ttf")     format("truetype");}
+@font-face {font-family: "lcd2_3";      src: url("Fonts/lcd2_3.ttf")      format("truetype");}
+@font-face {font-family: "lcd2_3i";     src: url("Fonts/lcd2_3i.ttf")     format("truetype");}
+@font-face {font-family: "lcd3_1";      src: url("Fonts/lcd3_1.ttf")      format("truetype");}
+@font-face {font-family: "lcd3_1i";     src: url("Fonts/lcd3_1i.ttf")     format("truetype");}
+@font-face {font-family: "lcd3_2";      src: url("Fonts/lcd3_2.ttf")      format("truetype");}
+@font-face {font-family: "lcd3_2i";     src: url("Fonts/lcd3_2i.ttf")     format("truetype");}
+@font-face {font-family: "lcd3_3";      src: url("Fonts/lcd3_3.ttf")      format("truetype");}
+@font-face {font-family: "lcd3_3i";     src: url("Fonts/lcd3_3i.ttf")     format("truetype");}
+
+@font-face {font-family: "led";         src: url("Fonts/led.ttf")         format("truetype");}
+@font-face {font-family: "led_bold";    src: url("Fonts/led_bold.ttf")    format("truetype");}
+@font-face {font-family: "led_caps";    src: url("Fonts/led_caps.ttf")    format("truetype");}
+@font-face {font-family: "led_mono";    src: url("Fonts/led_mono.ttf")    format("truetype");}
+@font-face {font-family: "led_serif";   src: url("Fonts/led_serif.ttf")   format("truetype");}
+@font-face {font-family: "led2";        src: url("Fonts/led2.ttf")        format("truetype");}
+@font-face {font-family: "led2_bold";   src: url("Fonts/led2_bold.ttf")   format("truetype");}
+@font-face {font-family: "led2_caps";   src: url("Fonts/led2_caps.ttf")   format("truetype");}
+@font-face {font-family: "led2_fat";    src: url("Fonts/led2_fat.ttf")    format("truetype");}
+@font-face {font-family: "led2_modern"; src: url("Fonts/led2_modern.ttf") format("truetype");}
+@font-face {font-family: "led2_serif";  src: url("Fonts/led2_serif.ttf")  format("truetype");}
+@font-face {font-family: "led3_1";      src: url("Fonts/led3_1.ttf")      format("truetype");}
+@font-face {font-family: "led3_1i";     src: url("Fonts/led3_1i.ttf")     format("truetype");}
+@font-face {font-family: "led3_2";      src: url("Fonts/led3_2.ttf")      format("truetype");}
+@font-face {font-family: "led3_2i";     src: url("Fonts/led3_2i.ttf")     format("truetype");}
+@font-face {font-family: "led3_3";      src: url("Fonts/led3_3.ttf")      format("truetype");}
+@font-face {font-family: "led3_3i";     src: url("Fonts/led3_3i.ttf")     format("truetype");}
+@font-face {font-family: "led4_1";      src: url("Fonts/led4_1.ttf")      format("truetype");}
+@font-face {font-family: "led4_1i";     src: url("Fonts/led4_1i.ttf")     format("truetype");}
+@font-face {font-family: "led4_2";      src: url("Fonts/led4_2.ttf")      format("truetype");}
+@font-face {font-family: "led4_2i";     src: url("Fonts/led4_2i.ttf")     format("truetype");}
+@font-face {font-family: "led4_3";      src: url("Fonts/led4_3.ttf")      format("truetype");}
+@font-face {font-family: "led4_3i";     src: url("Fonts/led4_3i.ttf")     format("truetype");}
+
+.lcd_led_small {
+  font-size: 3vw;}
+
+.bigger {
+  font-size: 3vw;}
