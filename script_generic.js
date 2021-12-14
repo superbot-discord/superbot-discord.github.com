@@ -1,26 +1,28 @@
 var bgcolor = localStorage.getItem('b') || "#ffffff";
 var focolor = localStorage.getItem('f') || "#000000";
-var dark = localStorage.getItem('dark') || false
+var dark = localStorage.getItem('dark')===true || false
 var mysheet = document.getElementById("mystyle").sheet;
 
 function adjust(color, amount) {
   return '#' + color.replace(/^#/, '').replace(/../g, color => ('0'+Math.min(255, Math.max(0, parseInt(color, 16) + amount)).toString(16)).substr(-2));
 }
 
-for (var i = 1; i < 14; i++) {
-  mysheet.deleteRule(mysheet.cssRules.length - 1);
-}
-
 if (dark) {
+  adjusted_bg = adjust(bgcolor, 40);
+  adjusted_bg2 = adjust(bgcolor, 10);
+  adjusted_bg3 = adjust(bgcolor, 10);
+  adjusted_fo = adjust(focolor, -5);
+  adjusted_fo2 = adjust(focolor, 40);
+} else {
   adjusted_bg = adjust(bgcolor, -20);
   adjusted_bg2 = adjust(bgcolor, -10);
-  adjusted_bg3 = adjust(bgcolor, 10);
-  adjusted_fo = adjust(focolor, -20);
-} else {
-  adjusted_bg = adjust(bgcolor, 20);
-  adjusted_bg2 = adjust(bgcolor, 10);
-  adjusted_bg3 = adjust(bgcolor, -10);
+  adjusted_bg3 = adjust(bgcolor, -5);
   adjusted_fo = adjust(focolor, 20);
+  adjusted_fo2 = adjust(focolor, -40);
+}
+
+for (var i = 1; i < 14; i++) {
+  mysheet.deleteRule(mysheet.cssRules.length - 1);
 }
 
 mysheet.insertRule(`
@@ -48,16 +50,14 @@ cursor: pointer;
 color: ` + focolor + `;
 border-color: ` + focolor + `;
 background-color: ` + bgcolor + `;
-}
-`, mysheet.cssRules.length);
+}`, mysheet.cssRules.length);
 
 mysheet.insertRule(`
 button:hover {
 color: ` + bgcolor + `;
 border-color: ` + focolor + `;
 background-color: ` + focolor + `;
-}
-`, mysheet.cssRules.length);
+}`, mysheet.cssRules.length);
 
 mysheet.insertRule(`
 .card {
@@ -66,8 +66,7 @@ border-style: solid;
 border-radius: 0.6vw;
 border-color: `+ focolor + `;
 margin-top: 4vw;
-}
-`, mysheet.cssRules.length);
+}`, mysheet.cssRules.length);
 
 mysheet.insertRule(`
 table, th, td {
@@ -83,8 +82,6 @@ width: 98vw;
 margin-top: 5vw;
 margin-bottom: 2vw;
 }`, mysheet.cssRules.length);
-localStorage.setItem('b', bgcolor);
-localStorage.setItem('f', focolor);
 
 mysheet.insertRule(`
 div.code {
@@ -97,7 +94,9 @@ background-color: `+adjusted_bg+`;
 color: `+adjusted_fo+`
 }`, mysheet.cssRules.length)
 
-mysheet.insertRule("#nav,#nav a {background-color: "+ adjusted_bg3 +";}", mysheet.cssRules.length)
+mysheet.insertRule(`#nav,#nav a {
+  background-color: `+ adjusted_bg3 +`;
+}`, mysheet.cssRules.length)
 
 mysheet.insertRule(`
 #nav a {

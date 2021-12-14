@@ -1,6 +1,6 @@
 var bgcolor = localStorage.getItem('b') || "#ffffff";
 var focolor = localStorage.getItem('f') || "#000000";
-var dark = localStorage.getItem('dark') || false
+var dark = localStorage.getItem('dark')===true || false
 var mysheet = document.getElementById("mystyle").sheet;
 
 function filter() {
@@ -31,15 +31,15 @@ for (var i = 1; i < 14; i++) {
 }
 
 if (dark) {
-  adjusted_bg = adjust(bgcolor, -20);
-  adjusted_bg2 = adjust(bgcolor, -10);
+  adjusted_bg = adjust(bgcolor, 40);
+  adjusted_bg2 = adjust(bgcolor, 10);
   adjusted_bg3 = adjust(bgcolor, 10);
-  adjusted_fo = adjust(focolor, -20);
+  adjusted_fo = adjust(focolor, -5);
   adjusted_fo2 = adjust(focolor, 40);
 } else {
-  adjusted_bg = adjust(bgcolor, 20);
-  adjusted_bg2 = adjust(bgcolor, 10);
-  adjusted_bg3 = adjust(bgcolor, -10);
+  adjusted_bg = adjust(bgcolor, -20);
+  adjusted_bg2 = adjust(bgcolor, -10);
+  adjusted_bg3 = adjust(bgcolor, -5);
   adjusted_fo = adjust(focolor, 20);
   adjusted_fo2 = adjust(focolor, -40);
 }

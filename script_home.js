@@ -1,6 +1,6 @@
 var bgcolor = localStorage.getItem('b') || "#ffffff";
 var focolor = localStorage.getItem('f') || "#000000";
-var dark = localStorage.getItem('dark') || false
+var dark = localStorage.getItem('dark')===true || false
 var mysheet = document.getElementById("mystyle").sheet;
 blist = ["#FFFFFF", "#F2F3F5", "#76D3F9", "#7DA8F7", "#AA90F7", "#D798F8", "#DE799D", "#F19286", "#F3A884", "#F7C783", "#FAD885", "#FFF8A2", "#EDF29B", "#BADD95"];
 flist = ["#000000", "#37393E", "#1D4C63", "#0A3075", "#170F4F", "#3F1556", "#4F1729", "#791E0E", "#732F10", "#744C16", "#74581A", "#8C8529", "#717524", "#3F5623"];
@@ -12,17 +12,18 @@ function adjust(color, amount) {
 function setcolor() {
   localStorage.setItem('b', bgcolor);
   localStorage.setItem('f', focolor);
-
   if (dark) {
+    adjusted_bg = adjust(bgcolor, 40);
+    adjusted_bg2 = adjust(bgcolor, 10);
+    adjusted_bg3 = adjust(bgcolor, 10);
+    adjusted_fo = adjust(focolor, -5);
+    adjusted_fo2 = adjust(focolor, 40);
+  } else {
     adjusted_bg = adjust(bgcolor, -20);
     adjusted_bg2 = adjust(bgcolor, -10);
-    adjusted_bg3 = adjust(bgcolor, 10);
-    adjusted_fo = adjust(focolor, -20);
-  } else {
-    adjusted_bg = adjust(bgcolor, 20);
-    adjusted_bg2 = adjust(bgcolor, 10);
-    adjusted_bg3 = adjust(bgcolor, -10);
+    adjusted_bg3 = adjust(bgcolor, -5);
     adjusted_fo = adjust(focolor, 20);
+    adjusted_fo2 = adjust(focolor, -40);
   }
 
   for (var i = 1; i < 14; i++) {
@@ -31,19 +32,19 @@ function setcolor() {
 
   mysheet.insertRule(`
 body, a {
-  color: `+ focolor + `;
-  background-color: `+ bgcolor +`;
-  font-family: Font3a, Arial, Helvetica, sans-serif;
-  scroll-behavior: smooth;
-  position: relative;
+color: `+ focolor + `;
+background-color: `+ bgcolor +`;
+font-family: Font3a, Arial, Helvetica, sans-serif;
+scroll-behavior: smooth;
+position: relative;
 }`, mysheet.cssRules.length)
 
-  mysheet.insertRule(`
+mysheet.insertRule(`
 .inverted {
 background-color: ` + focolor + `;
 color: `+ bgcolor + "}", mysheet.cssRules.length);
 
-  mysheet.insertRule(`
+mysheet.insertRule(`
 button {
 text-align: center;
 display: inline-block;
@@ -54,77 +55,76 @@ cursor: pointer;
 color: ` + focolor + `;
 border-color: ` + focolor + `;
 background-color: ` + bgcolor + `;
-}
-`, mysheet.cssRules.length);
+}`, mysheet.cssRules.length);
 
-  mysheet.insertRule(`
+mysheet.insertRule(`
 button:hover {
 color: ` + bgcolor + `;
 border-color: ` + focolor + `;
 background-color: ` + focolor + `;
-}
-`, mysheet.cssRules.length);
+}`, mysheet.cssRules.length);
 
-  mysheet.insertRule(`
+mysheet.insertRule(`
 .card {
 height: 8vw;
 border-style: solid;
 border-radius: 0.6vw;
 border-color: `+ focolor + `;
 margin-top: 4vw;
-}
-`, mysheet.cssRules.length);
+}`, mysheet.cssRules.length);
 
-  mysheet.insertRule(`
+mysheet.insertRule(`
 table, th, td {
 table-layout: fixed;
 border-style: solid;
 border-width: 0.1vw;
 border-color: `+ focolor + ";}", mysheet.cssRules.length);
 
-  mysheet.insertRule(`
+mysheet.insertRule(`
 hr {
-  border-color: `+ focolor + `;
-  width: 98vw;
-  margin-top: 5vw;
-  margin-bottom: 2vw;
+border-color: `+ focolor + `;
+width: 98vw;
+margin-top: 5vw;
+margin-bottom: 2vw;
 }`, mysheet.cssRules.length);
 
-  mysheet.insertRule(`
+mysheet.insertRule(`
 div.code {
-  font-size: 1.8vw;
-  margin-left: 1vw;
-  margin-top: 1vw;
-  margin-bottom: 1vw;
-  overflow-x: scroll;
-  background-color: `+adjusted_bg+`;
-  color: `+adjusted_fo+`
+font-size: 1.8vw;
+margin-left: 1vw;
+margin-top: 1vw;
+margin-bottom: 1vw;
+overflow-x: scroll;
+background-color: `+adjusted_bg+`;
+color: `+adjusted_fo+`
 }`, mysheet.cssRules.length)
 
-mysheet.insertRule("#nav,#nav a {background-color: "+ adjusted_bg3 +";}", mysheet.cssRules.length)
+mysheet.insertRule(`#nav,#nav a {
+  background-color: `+ adjusted_bg3 +`;
+}`, mysheet.cssRules.length)
 
-  mysheet.insertRule(`
+mysheet.insertRule(`
 #nav a {
-  float: left;
-  display: block;
-  color: `+ focolor +`;
-  text-align: center;
-  padding: 1.2vw;
-  width: 9.5vw;
-  text-decoration: none;
+float: left;
+display: block;
+color: `+ focolor +`;
+text-align: center;
+padding: 1.2vw;
+width: 9.5vw;
+text-decoration: none;
 }`, mysheet.cssRules.length)
 
-  mysheet.insertRule(`
+mysheet.insertRule(`
 #nav a:hover:not(.active) {
-  background-color: `+ adjusted_bg2 +`;
+background-color: `+ adjusted_bg2 +`;
 }`, mysheet.cssRules.length)
 
-  mysheet.insertRule(`
+mysheet.insertRule(`
 #nav a.active {
-  background-color: ` + adjusted_bg + `;
+background-color: ` + adjusted_bg + `;
 }`, mysheet.cssRules.length)
 
-  mysheet.insertRule(`
+mysheet.insertRule(`
 #search {
   width: 96vw;
   font-size: 2vw;
@@ -135,7 +135,7 @@ mysheet.insertRule("#nav,#nav a {background-color: "+ adjusted_bg3 +";}", myshee
   color: `+ focolor +`;
 }`, mysheet.cssRules.length)
 
-  mysheet.insertRule(`
+mysheet.insertRule(`
 #search::placeholder {
   color: `+ adjusted_fo2 +`;
 }`, mysheet.cssRules.length)
@@ -143,6 +143,7 @@ mysheet.insertRule("#nav,#nav a {background-color: "+ adjusted_bg3 +";}", myshee
 
 function theme(bgindex, foindex, inverted) {
   localStorage.setItem('dark', String(inverted))
+  dark = inverted
   if (inverted) {
     bgcolor = flist[bgindex];
     focolor = blist[foindex];
