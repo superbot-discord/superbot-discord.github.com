@@ -983,9 +983,9 @@
     </tr>
 
     <tr>
-      <td class="code">youtube</td>
-      <td>URL/Query (Text+)</td>
-      <td>Captures a screenshot of the website.</td>
+      <td class="code">rss</td>
+      <td>URL (Text)</td>
+      <td>Views an RSS feed and generates an HTML file.</td>
       <td></td>
       <td></td>
       <td></td>
@@ -994,7 +994,34 @@
     <tr>
       <td class="code">wiki</td>
       <td>Query (Text+)</td>
-      <td>Looks for an entry on Wikipedia.</td>
+      <td>Views a Wikipedia article and generates an HTML file.</td>
+      <td></td>
+      <td>Embed links</td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td class="code">wiki_search</td>
+      <td>Query (Text+)</td>
+      <td>Looks for related Wikipedia articles.</td>
+      <td></td>
+      <td>Embed links</td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td class="code">youtube</td>
+      <td>URL (Text+)</td>
+      <td>Looks for a video on YouTube.</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td class="code">youtube</td>
+      <td>the text "search", then Query (Text+)</td>
+      <td>Looks for a video on YouTube. (e.g.<span class="code">=youtube search query</span>)</td>
       <td></td>
       <td></td>
       <td></td>
@@ -1005,7 +1032,7 @@
       <td>Query (Text+)</td>
       <td>Looks for an entry in the Minecraft Wiki.</td>
       <td></td>
-      <td></td>
+      <td>Embed links</td>
       <td></td>
     </tr>
 
@@ -1013,6 +1040,60 @@
       <td class="code">engrave</td>
       <td>Product (Text), Text (Text+)</td>
       <td>Engraves a piece of text on an Apple product. See <a target="_self" href="/Appendices/A5">Appendix A5</a></td>
+      <td></td>
+      <td>Embed links</td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td class="code">covid</td>
+      <td><span class="inverted">Country name in the <a href="https://www.worldometers.info/coronavirus/" class="inverted">Worldometer</a> table</span></td>
+      <td>Checks the number of coronavirus cases in a country and generate a pie chart.</td>
+      <td></td>
+      <td>Embed links</td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td class="code">population</td>
+      <td><span class="inverted">Country name in the <a href="https://www.worldometers.info/coronavirus/" class="inverted">Worldometer</a> table</span></td>
+      <td>Checks the population size of a country.</td>
+      <td></td>
+      <td>Embed links</td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td class="code">states</td>
+      <td><span class="inverted"><a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#Officially_assigned_code_elements">2-digit country code</a></td>
+      <td>Checks the administrative divisions (states/provinces/districts) of a country.</td>
+      <td><span class="code small">provinces</span><span class="code small">districts</span></td>
+      <td></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td class="code">map</td>
+      <td>Long. (No.), Lat. (No.), <span class="inverted">Zoom (Integer), Lock (Bool)</td>
+      <td>Generates a map based on the coordinates. Zoom level can be between 0 and 18 inclusive (0: broadest; 18: finest). Optionally locks the zoom level.</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    
+    <tr>
+      <td class="code">weather</td>
+      <td>Location (Text+)</td>
+      <td>Checks the current weather of a location.</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td class="code">forecast</td>
+      <td>Location (Text+)</td>
+      <td>Checks the weather forecast of a location and generates an HTML file.</td>
       <td></td>
       <td></td>
       <td></td>

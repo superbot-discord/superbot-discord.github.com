@@ -25,7 +25,7 @@
 
   <p>Please see these information on how to provide arguments for the bot to parse.</p>
 
-  <h3>How to supply <span class="code">text</span>?</h3>
+  <h3>How to supply <span class="code">Text</span>?</h3>
   <p>
     <span class="code">text</span>is simply a piece of "arbitrary" text which can contain anything but not spaces, new lines or
     straight double quotes(<span class="code">"</span>). For comparison, these are curved double quotes:
@@ -39,7 +39,7 @@
     <span class="inverted code">"Good morning"</span>
   </p>
 
-  <h3>How to supply <span class="code">text*</span>?</h3>
+  <h3>How to supply <span class="code">Text*</span>?</h3>
   <p>
     <span class="code">text*</span>allows you to provide as many arguments
     as you want, separated by spaces. In fact, you can provide no arguments at all (by providing nothing).
@@ -52,12 +52,19 @@
     <span class="inverted code">argument-1 "Very long argument 2" argument-3</span>
   </p>
 
-  <h3>How to supply <span class="code">text+</span>?</h3>
+  <h3>How to supply <span class="code">Text+</span>?</h3>
   <p>
     <span class="code">text+</span>allows you to supply any character, including spaces, extra lines and
     quotes. This is always the last argument of each command.
     <br>
     You do not need to wrap the argument in double quotes. If you do so, they will be parsed with the quotes.
+  </p>
+
+  <h3>How to supply <span class="code">Boolean</span>?</h3>
+  <p>
+    <span class="code">Boolean</span>can only contain one of two values: Yes or No. It will be interpreted as a "yes" if
+    your input is either of 1, ok, yes, ye, yeah, enable, on, enabled, tic, true. (Case-insensitive) Any other value will
+    be interpreted as "no".
   </p>
 
   <h3>How to supply other Discord objects?</h3>
