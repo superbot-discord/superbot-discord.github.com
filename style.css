@@ -9,6 +9,11 @@
 }
 
 @font-face {
+  font-family: "Font2b";
+  src: url("fonts/font2b.ttf") format("truetype");
+}
+
+@font-face {
   font-family: "Font3a";
   src: url("fonts/font3a.ttf") format("truetype");
 }
@@ -110,6 +115,10 @@ td, .small {
   font-size: 2vw;
 }
 
+.smaller {
+  font-size: 1.8vw;
+}
+
 ul li, ol li {
   font-size: 2vw;
   margin-left: 1vw;
@@ -169,6 +178,7 @@ table {
 
 .card2 {
   font-size: 2vw;
+  vertical-align: middle;
   margin-top: 0vw;
 }
 
@@ -194,6 +204,14 @@ table {
   border-radius: 0.6vw;
   border-width: 0.3vw;
   margin: 0.5vw 0.3vw;
+}
+
+.th {
+  position: sticky;
+  left: 5px;
+  right: 5px;
+  width: 99%;
+  background-color: #fff;
 }
 
 body, a {
@@ -255,6 +273,8 @@ hr {
 
 div.code {
   font-size: 1.8vw;
+  font-family: Font2b;
+  font-weight: 100;
   margin-left: 1vw;
   margin-top: 1vw;
   margin-bottom: 1vw;

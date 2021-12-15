@@ -1,136 +1,151 @@
 var bgcolor = localStorage.getItem('b') || "#ffffff";
 var focolor = localStorage.getItem('f') || "#000000";
-var dark = localStorage.getItem('dark')===true || false
+var dark = localStorage.getItem('dark')==='true' || false
 var mysheet = document.getElementById("mystyle").sheet;
-
 function adjust(color, amount) {
   return '#' + color.replace(/^#/, '').replace(/../g, color => ('0'+Math.min(255, Math.max(0, parseInt(color, 16) + amount)).toString(16)).substr(-2));
 }
 
-if (dark) {
-  adjusted_bg = adjust(bgcolor, 40);
-  adjusted_bg2 = adjust(bgcolor, 10);
-  adjusted_bg3 = adjust(bgcolor, 10);
-  adjusted_fo = adjust(focolor, -5);
-  adjusted_fo2 = adjust(focolor, 40);
-} else {
-  adjusted_bg = adjust(bgcolor, -20);
-  adjusted_bg2 = adjust(bgcolor, -10);
-  adjusted_bg3 = adjust(bgcolor, -5);
-  adjusted_fo = adjust(focolor, 20);
-  adjusted_fo2 = adjust(focolor, -40);
-}
+function setcolor () {
+  console.log(localStorage.getItem('b'))
+  if (dark) {
+    adjusted_bg = adjust(bgcolor, 40);
+    adjusted_bg2 = adjust(bgcolor, 20);
+    adjusted_bg3 = adjust(bgcolor, 10);
+    adjusted_fo = adjust(focolor, -5);
+    adjusted_fo2 = adjust(focolor, 40);
+  } else {
+    adjusted_bg = adjust(bgcolor, -20);
+    adjusted_bg2 = adjust(bgcolor, -10);
+    adjusted_bg3 = adjust(bgcolor, -5);
+    adjusted_fo = adjust(focolor, 20);
+    adjusted_fo2 = adjust(focolor, -40);
+  }
 
-for (var i = 1; i < 14; i++) {
-  mysheet.deleteRule(mysheet.cssRules.length - 1);
-}
+  for (var i = 1; i < 15; i++) {
+    mysheet.deleteRule(mysheet.cssRules.length - 1);
+  }
 
-mysheet.insertRule(`
-body, a {
-color: `+ focolor + `;
-background-color: `+ bgcolor +`;
-font-family: Font3a, Arial, Helvetica, sans-serif;
-scroll-behavior: smooth;
-position: relative;
-}`, mysheet.cssRules.length)
+  mysheet.insertRule(`
+  .th {
+  position: sticky;
+  left: 5px;
+  right: 5px;
+  width: 99%;
+  background-color: ` + bgcolor + `;
+  }`, mysheet.cssRules.length)
 
-mysheet.insertRule(`
-.inverted {
-background-color: ` + focolor + `;
-color: `+ bgcolor + "}", mysheet.cssRules.length);
+  mysheet.insertRule(`
+  body, a {
+  color: `+ focolor + `;
+  background-color: `+ bgcolor +`;
+  font-family: Font3a, Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
+  position: relative;
+  }`, mysheet.cssRules.length)
 
-mysheet.insertRule(`
-button {
-text-align: center;
-display: inline-block;
-margin: 0.25vw 0.5vw;
-border-style: solid;
-transition-duration: 0.4s;
-cursor: pointer;
-color: ` + focolor + `;
-border-color: ` + focolor + `;
-background-color: ` + bgcolor + `;
-}`, mysheet.cssRules.length);
+  mysheet.insertRule(`
+  .inverted {
+  background-color: ` + focolor + `;
+  color: `+ bgcolor + "}", mysheet.cssRules.length);
 
-mysheet.insertRule(`
-button:hover {
-color: ` + bgcolor + `;
-border-color: ` + focolor + `;
-background-color: ` + focolor + `;
-}`, mysheet.cssRules.length);
+  mysheet.insertRule(`
+  button {
+  text-align: center;
+  display: inline-block;
+  margin: 0.25vw 0.5vw;
+  border-style: solid;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  color: ` + focolor + `;
+  border-color: ` + focolor + `;
+  background-color: ` + bgcolor + `;
+  }`, mysheet.cssRules.length);
 
-mysheet.insertRule(`
-.card {
-height: 8vw;
-border-style: solid;
-border-radius: 0.6vw;
-border-color: `+ focolor + `;
-margin-top: 4vw;
-}`, mysheet.cssRules.length);
+  mysheet.insertRule(`
+  button:hover {
+  color: ` + bgcolor + `;
+  border-color: ` + focolor + `;
+  background-color: ` + focolor + `;
+  }`, mysheet.cssRules.length);
 
-mysheet.insertRule(`
-table, th, td {
-table-layout: fixed;
-border-style: solid;
-border-width: 0.1vw;
-border-color: `+ focolor + ";}", mysheet.cssRules.length);
+  mysheet.insertRule(`
+  .card {
+  height: 8vw;
+  border-style: solid;
+  border-radius: 0.6vw;
+  border-color: `+ focolor + `;
+  margin-top: 4vw;
+  }`, mysheet.cssRules.length);
 
-mysheet.insertRule(`
-hr {
-border-color: `+ focolor + `;
-width: 98vw;
-margin-top: 5vw;
-margin-bottom: 2vw;
-}`, mysheet.cssRules.length);
+  mysheet.insertRule(`
+  table, th, td {
+  table-layout: fixed;
+  border-style: solid;
+  border-width: 0.1vw;
+  border-color: `+ focolor + ";}", mysheet.cssRules.length);
 
-mysheet.insertRule(`
-div.code {
-font-size: 1.8vw;
-margin-left: 1vw;
-margin-top: 1vw;
-margin-bottom: 1vw;
-overflow-x: scroll;
-background-color: `+adjusted_bg+`;
-color: `+adjusted_fo+`
-}`, mysheet.cssRules.length)
+  mysheet.insertRule(`
+  hr {
+  border-color: `+ focolor + `;
+  width: 98vw;
+  margin-top: 5vw;
+  margin-bottom: 2vw;
+  }`, mysheet.cssRules.length);
 
-mysheet.insertRule(`#nav,#nav a {
-  background-color: `+ adjusted_bg3 +`;
-}`, mysheet.cssRules.length)
-
-mysheet.insertRule(`
-#nav a {
-float: left;
-display: block;
-color: `+ focolor +`;
-text-align: center;
-padding: 1.2vw;
-width: 9.5vw;
-text-decoration: none;
-}`, mysheet.cssRules.length)
-
-mysheet.insertRule(`
-#nav a:hover:not(.active) {
-background-color: `+ adjusted_bg2 +`;
-}`, mysheet.cssRules.length)
-
-mysheet.insertRule(`
-#nav a.active {
-background-color: ` + adjusted_bg + `;
-}`, mysheet.cssRules.length)
-
-mysheet.insertRule(`
-#search {
-  width: 96vw;
-  font-size: 2vw;
-  padding: 0.5vw 1vw;
+  mysheet.insertRule(`
+  div.code {
+  font-size: 1.8vw;
+  font-family: Font2b;
+  font-weight: 100;
+  margin-left: 1vw;
+  margin-top: 1vw;
   margin-bottom: 1vw;
-  background-color: `+ adjusted_bg2 +`;
-  border: 0.1vw solid `+ focolor +`;
-  color: `+ focolor +`;
-}`, mysheet.cssRules.length)
+  overflow-x: scroll;
+  background-color: `+adjusted_bg+`;
+  color: `+adjusted_fo+`
+  }`, mysheet.cssRules.length)
 
-mysheet.insertRule(`
-#search::placeholder {
-  color: `+ adjusted_fo2 +`;
-}`, mysheet.cssRules.length)
+  mysheet.insertRule(`#nav,#nav a {
+    background-color: `+ adjusted_bg3 +`;
+  }`, mysheet.cssRules.length)
+
+  mysheet.insertRule(`
+  #nav a {
+  float: left;
+  display: block;
+  color: `+ focolor +`;
+  text-align: center;
+  padding: 1.2vw;
+  width: 9.5vw;
+  text-decoration: none;
+  }`, mysheet.cssRules.length)
+
+  mysheet.insertRule(`
+  #nav a:hover:not(.active) {
+  background-color: `+ adjusted_bg2 +`;
+  }`, mysheet.cssRules.length)
+
+  mysheet.insertRule(`
+  #nav a.active {
+  background-color: ` + adjusted_bg + `;
+  }`, mysheet.cssRules.length)
+
+  mysheet.insertRule(`
+  #search {
+    width: 96vw;
+    font-size: 2vw;
+    padding: 0.5vw 1vw;
+    margin-bottom: 1vw;
+    background-color: `+ adjusted_bg2 +`;
+    border: 0.1vw solid `+ focolor +`;
+    color: `+ focolor +`;
+  }`, mysheet.cssRules.length)
+
+  mysheet.insertRule(`
+  #search::placeholder {
+    color: `+ adjusted_fo2 +`;
+  }`, mysheet.cssRules.length)
+}
+
+setcolor()
