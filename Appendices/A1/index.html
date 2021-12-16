@@ -3,7 +3,7 @@
 <html>
 
 <head>
-  <title>SuperBot - Sending embed messages</title>
+  <title>SuperBot - Embeds</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" id="mystyle" href="/style.css">
   <base target="_blank">
@@ -20,8 +20,8 @@
 
   <script src="/script_generic.js"></script>
   <h1 style="font-size: 5.2vw;">SuperBot Appendix 1</h1>
-  <h2>Sending Embed messages with<span class="code">embed</span></h2>
-  <p><span class="code">=embed</span>takes in 11 arguments spread over 11 lines:</p>
+  <h2>Sending Embed messages with <span class="code">embed</span></h2>
+  <p><span class="code">=embed</span> takes in 11 arguments spread over 11 lines:</p>
   <div class="code">
     =embed Title<br>
     Description<br>
@@ -43,42 +43,42 @@
     Field Inline
   </div>
   <p>
-    Field Inline defines whether the field can be placed in a horizontal row with other fields. Use<span class="code">y</span>for 'yes' and
+    Field Inline defines whether the field can be placed in a horizontal row with other fields. Use <span class="code">y</span> for 'yes' and
     any other value for 'no'. This only has an effect if there are more than 1 fields.
   </p>
   <h3>Newlines</h3>
-  <p>(Field) Descriptions allow you to include newlines by typing<span class="code">{{{newline}}}</span>.</p>
-  <h2>Using simplified<span class="code">simpembed</span></h2>
-  <p><span class="code">=simpembed</span>only takes in 4 arguments for convenience:</p>
+  <p>(Field) Descriptions allow you to include newlines by typing <span class="code">{{{newline}}}</span>.</p>
+  <h2>Using simplified <span class="code">simpembed</span></h2>
+  <p><span class="code">=simpembed</span> only takes in 4 arguments for convenience:</p>
   <div class="code">
     =simpembed Title<br>
     Description<br>
     Color<br>
     Image Link
   </div>
-  <p>Similar to<span class="code">embed</span>, you can insert field by appending lines to the command.</p>
+  <p>Similar to <span class="code">embed</span>, you can insert field by appending lines to the command.</p>
 
-  <h2>Skipping things with<span class="code">quickembed</span></h2>
-  <p><span class="code">=quickembed</span>has the same arguments as<span class="code">simpembed</span>, but the order is different:</p>
+  <h2>Skipping things with <span class="code">quickembed</span></h2>
+  <p><span class="code">=quickembed</span> has the same arguments as <span class="code">simpembed</span>, but the order is different:</p>
   <div class="code">
     =quickembed Title<br>
     Color<br>
     Image Link<br>
     Description
   </div>
-  <p>At the price of not being able to add fields, you don't have to use<span class="code">{{{newline}}}</span>for lines in the description.
+  <p>At the price of not being able to add fields, you don't have to use <span class="code">{{{newline}}}</span> for lines in the description.
   You can simply append lines to the back.</p>
 
   <h2>Notes</h2>
   <p>
-    Color only takes in a decimal value! Use<span class="code">=color</span>to fetch the decimal value.<br>
+    Color only takes in a decimal value! Use <span class="code">=color</span> to fetch the decimal value.<br>
     Images are larger than Thumbnails while author/footer images are extremely small.<br><br>
     If you leave a line empty, it will not be processed. If you leave the color empty, it will be automatic based on light/dark theme.<br><br>
 
-    To add Masked URLS into embed/field description, use<span class="code">[Mask](URL)</span>,
-    such as<span class="code antiwrap">[Wiki](https://wikpedia.com)</span>.<br>
+    To add Masked URLS into embed/field description, use <span class="code">[Mask](URL)</span>,
+    such as <span class="code antiwrap">[Wiki](https://wikpedia.com)</span>.<br>
 
-    To add a new line to embed/field descriptions, use<span class="code">{{{newline}}}</span>.
+    To add a new line to embed/field descriptions, use <span class="code">{{{newline}}}</span>.
   </p>
 
   <h3>Limits</h3>

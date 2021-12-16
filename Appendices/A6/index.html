@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <title>SuperBot =table</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" id="mystyle" href="/style.css">
+  <base target="_blank">
+</head>
+
+<body>
+  <div id="nav">
+    <a target="_self" href="/">Homepage</a>
+    <a target="_self" href="/Documentation">Documentation</a>
+    <a target="_self" href="/Support">Support Server</a>
+    <a target="_self" href="/Why">Why SuperBot?</a>
+    <a target="_self" href="/Map" style="float: right;">Site Map</a>
+  </div>
+
+  <script src="/script_generic.js"></script>
+  <h1 style="font-size: 5.2vw;">SuperBot Appendix 6</h1>
+  <h2>Generating tables</h2>
+  <p>SuperBot's <span class="code">table</span> command creates plain text tables that are friendly to monospace fonts. For example,</p>
+  <div class="code">
+    =table Item,Cost<br>
+    Total,120<br>
+    Apple,30<br>
+    Banana,25<br>
+    Orange,30<br>
+    Peach,35
+  </div>
+  <p>Will give you the following table:</p>
+  <div class="code">
+    ╔═══════════════╗<br>
+    ║ &nbsp;Item &nbsp;&nbsp;&nbsp;Cost ║<br>
+    ╟───────────────╢<br>
+    ║ Apple &nbsp;&nbsp;&nbsp;&nbsp;30 &nbsp;║<br>
+    ║ Banana &nbsp;&nbsp;&nbsp;25 &nbsp;║<br>
+    ║ Orange &nbsp;&nbsp;&nbsp;30 &nbsp;║<br>
+    ║ Peach &nbsp;&nbsp;&nbsp;&nbsp;35 &nbsp;║<br>
+    ╟───────────────╢<br>
+    ║ Total &nbsp;&nbsp;&nbsp;120 &nbsp;║<br>
+    ╚═══════════════╝
+  </div>
+  <p>There are many styles you can use. Please check <a href="https://table2ascii.readthedocs.io/en/latest/styles.html">here</a> for a list.<br>
+  Use styles by prefixing the code with the style and three pipes. For example, to use the style called <span class="code">double_box</span>:</p>
+  <div class="code">
+    =table double_box|||Item,Cost<br>
+    Total,120<br>
+    Apple,30<br>
+    Banana,25<br>
+    Orange,30<br>
+    Peach,35
+  </div>
+
+  <div class="code">
+    ╔════════╦══════╗<br>
+    ║ &nbsp;Item &nbsp;║ Cost ║<br>
+    ╠════════╬══════╣<br>
+    ║ Apple &nbsp;║ &nbsp;30 &nbsp;║<br>
+    ╠════════╬══════╣<br>
+    ║ Banana ║ &nbsp;25 &nbsp;║<br>
+    ╠════════╬══════╣<br>
+    ║ Orange ║ &nbsp;30 &nbsp;║<br>
+    ╠════════╬══════╣<br>
+    ║ Peach &nbsp;║ &nbsp;35 &nbsp;║<br>
+    ╠════════╬══════╣<br>
+    ║ Total &nbsp;║ 120 &nbsp;║<br>
+    ╚════════╩══════╝
+  </div>
+  <p>So far, we've only been experimenting with tables with 2 columns. If we try to make one with more,</p>
+  <div class="code">
+    =table Index,Item,Unit price,Amount,Total price<br>
+    ,Total,,,355<br>
+    1,Apple,3,30,90<br>
+    2,Banana,4,25,100<br>
+    3,Orange,2,30,60<br>
+    4,Peach,3,35,105
+  </div>
+  <div class="code">
+    ╔════════════════════════════════════════════════════╗<br>
+    ║ Index &nbsp;&nbsp;&nbsp;Item &nbsp;&nbsp;&nbsp;Unit price &nbsp;&nbsp;Amount &nbsp;&nbsp;Total price ║<br>
+    ╟────────────────────────────────────────────────────╢<br>
+    ║ &nbsp;&nbsp;1 &nbsp;&nbsp;&nbsp;&nbsp;Apple &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;30 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;90 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;║<br>
+    ║ &nbsp;&nbsp;2 &nbsp;&nbsp;&nbsp;&nbsp;Banana &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;25 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100 &nbsp;&nbsp;&nbsp;&nbsp;║<br>
+    ║ &nbsp;&nbsp;3 &nbsp;&nbsp;&nbsp;&nbsp;Orange &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;30 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;60 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;║<br>
+    ║ &nbsp;&nbsp;4 &nbsp;&nbsp;&nbsp;&nbsp;Peach &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;35 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;105 &nbsp;&nbsp;&nbsp;&nbsp;║<br>
+    ╟────────────────────────────────────────────────────╢<br>
+    ║ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Total &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;355 &nbsp;&nbsp;&nbsp;&nbsp;║<br>
+    ╚════════════════════════════════════════════════════╝
+  </div>
+  <p>And now you want to make the first and last columns stand out. What do you do? - You just add <span class="code">$F$</span> and <span class="code">$F$</span>.
+  They stand for First (column) and Last (column) respectively.</p>
+  <div class="code">
+    =table $F$$L$Index,Item,Unit price,Amount,Total price<br>
+    ,Total,,,355<br>
+    1,Apple,3,30,90<br>
+    2,Banana,4,25,100<br>
+    3,Orange,2,30,60<br>
+    4,Peach,3,35,105
+  </div>
+  <div class="code">
+    ╔═══════╦══════════════════════════════╦═════════════╗<br>
+    ║ Index ║ &nbsp;Item &nbsp;&nbsp;&nbsp;Unit price &nbsp;&nbsp;Amount ║ Total price ║<br>
+    ╟───────╫──────────────────────────────╫─────────────╢<br>
+    ║ &nbsp;&nbsp;1 &nbsp;&nbsp;║ Apple &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;30 &nbsp;&nbsp;║ &nbsp;&nbsp;&nbsp;&nbsp;90 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;║<br>
+    ║ &nbsp;&nbsp;2 &nbsp;&nbsp;║ Banana &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;25 &nbsp;&nbsp;║ &nbsp;&nbsp;&nbsp;&nbsp;100 &nbsp;&nbsp;&nbsp;&nbsp;║<br>
+    ║ &nbsp;&nbsp;3 &nbsp;&nbsp;║ Orange &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;30 &nbsp;&nbsp;║ &nbsp;&nbsp;&nbsp;&nbsp;60 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;║<br>
+    ║ &nbsp;&nbsp;4 &nbsp;&nbsp;║ Peach &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;35 &nbsp;&nbsp;║ &nbsp;&nbsp;&nbsp;&nbsp;105 &nbsp;&nbsp;&nbsp;&nbsp;║<br>
+    ╟───────╫──────────────────────────────╫─────────────╢<br>
+    ║ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;║ Total &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;║ &nbsp;&nbsp;&nbsp;&nbsp;355 &nbsp;&nbsp;&nbsp;&nbsp;║<br>
+    ╚═══════╩══════════════════════════════╩═════════════╝
+  </div>
+  <p>Always specify themes before column headings, and $F$ before $L$!<br>E.g. <span class="code">=table ascii|||$F$$L$</span></p>
+  <p>Sometimes, you might not want headers or footers in your table. You can use:</p>
+  <div class="code">
+    =table_plain function,sin(x)<br>
+    X,π÷2<br>
+    Y,0
+  </div>
+  <div class="code">
+    ╔═══════════════════╗<br>
+    ║ function &nbsp;&nbsp;sin(x) ║<br>
+    ║ &nbsp;&nbsp;&nbsp;X &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;π÷2 &nbsp;&nbsp;║<br>
+    ║ &nbsp;&nbsp;&nbsp;Y &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0 &nbsp;&nbsp;&nbsp;║<br>
+    ╚═══════════════════╝
+  </div>
+  <p>Similarly, you can specify themes and heading columns for <span class="code"> table_plain</span>!</p>
+</body>
+
+</html>

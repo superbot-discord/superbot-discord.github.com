@@ -7,7 +7,6 @@ function adjust(color, amount) {
 }
 
 function setcolor () {
-  console.log(localStorage.getItem('b'))
   if (dark) {
     adjusted_bg = adjust(bgcolor, 40);
     adjusted_bg2 = adjust(bgcolor, 20);
@@ -22,7 +21,7 @@ function setcolor () {
     adjusted_fo2 = adjust(focolor, -40);
   }
 
-  for (var i = 1; i < 15; i++) {
+  for (var i = 1; i < 16; i++) {
     mysheet.deleteRule(mysheet.cssRules.length - 1);
   }
 
