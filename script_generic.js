@@ -24,7 +24,7 @@ function setcolor () {
   }
   adjusted_fo3 = adjust(focolor, 60);
 
-  for (var i = 1; i < 19; i++) {
+  for (var i = 1; i < 18; i++) {
     mysheet.deleteRule(mysheet.cssRules.length - 1);
   }
 
