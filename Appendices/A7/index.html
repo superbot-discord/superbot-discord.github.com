@@ -22,20 +22,28 @@
     <a target="_self" href="/Why">Why SuperBot?</a>
     <a target="_self" href="/Map" style="float: right;">Site Map</a>
   </div>
-  <script src="/script_generic.js"></script>
 
   <h1 style="font-size: 5.2vw;">SuperBot Appendix 7</h1>
   <h2>Plotting graphs</h2>
-  <input type="checkbox" onchange="hs_flipper()" style="height: 2vw; width: 2vw;"><label class="small">Hide flip button</label>
+  <label class="checkbox__">
+    <input type="checkbox" onchange="hs_flipper()" class="checkbox_">
+    <span class="checkbox"></span>
+    <p class="small" style="display: inline; float: left;">Hide flip button</p>
+  </label>
   <p><br>If you are a mathematician, you might have heard of graphs with functions, such as f(x)=2x. Now, SuperBot is able to
     make these graphs, like a graphing calculator. However, please be aware that Python syntax is different from mathematical
-    notations.<br> Using <span class="code">=graph 2*x_</span>:</p>
+    notations.<br>For example, using <span class="code">=graph 2*x_</span>:</p>
   <img src="graph1.png"/>
   <button id="flipper" class="rbutton fixbutton" style="display: block;" onpointerdown="flip()" onpointerup="flip()">Flip website colors (Hold)</button>
   <p>The math, numpy (as np) and random (as ra) modules are imported. Here shows <span class="code">=graph np.sin(x_)</span> with bounds ±6.283:</p>
   <img src="graph2.png"/>
   <p>Why limit yourself to 1 graph per image? Use <span class="code">=multigraph np.sin(x_);np.cos(x_);x_/2 -6.283 6.283</span>:</p>
+  <img src="graph3.png"/>
+  <p contenteditable="true">You might have noticed a flaw: the axes aren't equalized - the same pixel distance in both axes have different actual distances.
+    To fix this, supply a Boolean at the end, such as <span class="code">=graph np.sin(x_) -6.283 6.283 y</span>:</p>
+  <img src="graph4.png"/>
 
+  <script src="/script_generic.js"></script>
   <script src="script_a7.js"></script>
 </body>
 

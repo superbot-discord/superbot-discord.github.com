@@ -1,4 +1,9 @@
 var flipper = document.getElementById('flipper')
+var checkboxes = document.getElementsByClassName("checkbox_")
+
+for (x of checkboxes) {
+  x.checked = false;
+}
 
 function flip() {
   dark=!dark;

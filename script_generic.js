@@ -11,17 +11,20 @@ function setcolor () {
     adjusted_bg = adjust(bgcolor, 40);
     adjusted_bg2 = adjust(bgcolor, 20);
     adjusted_bg3 = adjust(bgcolor, 10);
+    adjusted_bg4 = adjust(bgcolor, 20);
     adjusted_fo = adjust(focolor, -5);
     adjusted_fo2 = adjust(focolor, 40);
   } else {
     adjusted_bg = adjust(bgcolor, -20);
     adjusted_bg2 = adjust(bgcolor, -10);
     adjusted_bg3 = adjust(bgcolor, -5);
+    adjusted_bg4 = adjust(bgcolor, 10);
     adjusted_fo = adjust(focolor, 20);
     adjusted_fo2 = adjust(focolor, -40);
   }
+  adjusted_fo3 = adjust(focolor, 60);
 
-  for (var i = 1; i < 16; i++) {
+  for (var i = 1; i < 19; i++) {
     mysheet.deleteRule(mysheet.cssRules.length - 1);
   }
 
@@ -47,6 +50,28 @@ function setcolor () {
   .inverted {
   background-color: ` + focolor + `;
   color: `+ bgcolor + "}", mysheet.cssRules.length);
+
+  mysheet.insertRule(`
+  .checkbox {
+  width: 2vw;
+  height: 2vw;
+  margin-right: 0.5vw;
+  border-color: ` + focolor + `;
+  border-style: solid;
+  display: inline;
+  float: left;
+  background-color: ` + bgcolor + `;
+  }`, mysheet.cssRules.length)
+
+  mysheet.insertRule(`
+  .checkbox__:hover input ~ .checkbox {
+  background-color: ` + adjusted_bg4 + `;
+  }`, mysheet.cssRules.length)
+
+  mysheet.insertRule(`
+  .checkbox__ input:checked ~ .checkbox {
+  background-color: ` + adjusted_fo3 + `;
+  }`, mysheet.cssRules.length)
 
   mysheet.insertRule(`
   button {

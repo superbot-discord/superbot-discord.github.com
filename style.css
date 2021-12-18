@@ -212,6 +212,24 @@ table {
   right: 5px;
 }
 
+.checkbox_ {
+  display: none;
+}
+
+.checkbox__ {
+  display:flow-root;
+}
+
+.checkbox:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.checkbox__ .checkbox_:checked ~ .checkbox:after {
+  display: block;
+}
+
 .th {
   position: sticky;
   left: 5px;
@@ -223,7 +241,7 @@ table {
 body, a {
   color: #000;
   font-family: Font3a;
-  /*, Arial, Helvetica, sans-serif;*/
+  font-family: Font3a, Arial, Helvetica, sans-serif;
   scroll-behavior: smooth;
   position: relative;
 }
@@ -231,6 +249,25 @@ body, a {
 .inverted {
   background-color: #000;
   color: #fff
+}
+
+.checkbox {
+  width: 2vw;
+  height: 2vw;
+  margin-right: 0.5vw;
+  border-color: #000;
+  border-style: solid;
+  display: inline;
+  float: left;
+  background-color: #ebebeb;
+}
+
+.checkbox:hover {
+  background-color: #ccc;
+}
+
+.checkbox__ .checkbox_:checked ~ .checkbox {
+  background-color: #2196F3;
 }
 
 button {
@@ -241,14 +278,14 @@ button {
   transition-duration: 0.4s;
   cursor: pointer;
   color: #000;
-  border-color: #4c56af;
+  border-color: #000;
   background-color: #fff;
 }
 
 button:hover {
   color: #fff;
-  border-color: #4c56af;
-  background-color: #4c56af;
+  border-color: #000;
+  background-color: #000;
 }
 
 .card {
