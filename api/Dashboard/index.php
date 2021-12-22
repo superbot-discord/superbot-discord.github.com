@@ -24,23 +24,39 @@
     $CLIENT_SE = "csnkpOhO8P5O-pU3NlM9zyrDdGYxp68S";
     // $REDIR_URI = "http://127.0.0.1:5500/api/Dashboard";
     $REDIR_URI = "https://superbot-website.vercel.app/api/Dashboard";
-    $data = array(
-      'code'          => $_GET['code'],
-      'client_id'     => $CLIENT_ID,
-      'client_secret' => $CLIENT_SE,
-      'redirect_uri'  => $REDIR_URI,
-      'grant_type'    => "authorization_code",
-    );
-   $opts = array('http'=>array(
-      'method' => "POST",
-      'content'=> http_build_query($data),
-      'header' => "Content-type: application/x-www-form-urlencoded"
-    ));
-    $context = stream_context_create($opts);
-    $auth = json_decode(file_get_contents('https://discord.com/api/v9/oauth2/token', false, $context), true);
+    if (isset($_COOKIE["ACT"])) {
+      $auth = $_COOKIE["ACT"];
+    } else {
+      if (isset($_COOKIE["RST"])) {
+        $data = array(
+          'refresh_token' => $_COOKIE["RST"],
+          'client_id'     => $CLIENT_ID,
+          'client_secret' => $CLIENT_SE,
+          'grant_type'    => "authorization_code",
+        );
+      } else {
+        $data = array(
+          'code'          => $_GET['code'],
+          'client_id'     => $CLIENT_ID,
+          'client_secret' => $CLIENT_SE,
+          'redirect_uri'  => $REDIR_URI,
+          'grant_type'    => "authorization_code",
+        );
+      }
+        $opts = array('http'=>array(
+          'method' => "POST",
+          'content'=> http_build_query($data),
+          'header' => "Content-type: application/x-www-form-urlencoded"
+        ));
+        $context = stream_context_create($opts);
+        $auth = json_decode(file_get_contents('https://discord.com/api/v9/oauth2/token', false, $context), true);
+        setcookie("ACT", $auth['access_token'], time() + $auth['expires_in'], "/api/Dashboard");
+        setcookie("RST", $auth['refresh_token'],2147483647, "/api/Dashboard");
+        $auth = $auth['access_token'];
+    }
     $opts = array('http'=>array(
       'method' => "GET",
-      'header' => "Authorization: Bearer " . $auth['access_token']
+      'header' => "Authorization: Bearer " . $auth
     ));
     $context = stream_context_create($opts);
     $servers = file_get_contents('https://discord.com/api/v9/users/@me/guilds?client_id=796686363604680755&client_secret=csnkpOhO8P5O-pU3NlM9zyrDdGYxp68S&grant_type=authorization_code', false, $context);

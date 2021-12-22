@@ -21,6 +21,14 @@ var favicons = `<link rel="apple-touch-icon" sizes="57x57" href="/favicons/apple
 <meta name="theme-color" content="#888888">`
 document.getElementsByTagName('head')[0].insertAdjacentHTML('beforeend', favicons)
 
+function random_(lb, ub) {
+  return Math.floor(((ub - lb + 1) * Math.random()) + lb)
+}
+
+function random_item(list) {
+  return list[Math.floor((list.length - 1) * Math.random())]
+}
+
 function adjust(color, amount) {
   return '#' + color.replace(/^#/, '').replace(/../g, color => ('0'+Math.min(255, Math.max(0, parseInt(color, 16) + amount)).toString(16)).substr(-2));
 }

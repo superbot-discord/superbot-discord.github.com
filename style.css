@@ -119,6 +119,10 @@ td, .small {
   font-size: 1.8vw;
 }
 
+.smallest {
+  font-size: 1.4vw;
+}
+
 ul li, ol li {
   font-size: 2vw;
   margin-left: 1vw;
@@ -238,10 +242,16 @@ table {
   background-color: #fff;
 }
 
+img {
+  margin: 0.5vw;
+  width: 18vw;
+  height:18vw;
+}
+
 div.server {
   text-align:center;
   width: 12.49%;
-  height: 11vw;
+  height: 11.5vw;
   float: left;
 }
 
