@@ -1,7 +1,6 @@
 import requests
 
 headers = {
-  #'Authorization': "Bot Nzk2Njg2MzYzNjA0NjgwNzU1.X_bh_g.6uKl_EPp5r5XZpSxCxPTIuA69aE"
   'Authorization': "Bearer vMAoIZbDfn8mRqgnthMvmPTdpJLnnZ"
 }
 
