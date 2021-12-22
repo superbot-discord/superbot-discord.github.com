@@ -1,7 +1,7 @@
+<?php ob_start(); ?>
+
 <!DOCTYPE html>
-
 <html>
-
 <head>
   <title>SuperBot Dashboard</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -54,6 +54,7 @@
         setcookie("RST", $auth['refresh_token'],2147483647, "/api/Dashboard");
         $auth = $auth['access_token'];
     }
+    ob_end_flush();
     $opts = array('http'=>array(
       'method' => "GET",
       'header' => "Authorization: Bearer " . $auth
