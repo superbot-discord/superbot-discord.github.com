@@ -22,7 +22,7 @@
   <?php
     $CLIENT_ID = "796686363604680755";
     $CLIENT_SE = "csnkpOhO8P5O-pU3NlM9zyrDdGYxp68S";
-    //$REDIR_URI = "http://127.0.0.1:5500/api/Dashboard";
+    // $REDIR_URI = "http://127.0.0.1:5500/api/Dashboard";
     $REDIR_URI = "https://superbot-website.vercel.app/api/Dashboard";
     $data = array(
       'code'          => $_GET['code'],
