@@ -13,7 +13,7 @@
   <div id="nav">
     <a target="_self" href="/">Homepage</a>
     <a target="_self" href="/Map" style="float: right;">Site Map</a>
-    <a target="_self" href="/Dashboard" style="float: right;" class="active">Dashboard</a>
+    <a target="_self" href="/api/Dashboard" style="float: right;" class="active">Dashboard</a>
   </div>
 
   <script src="/script_generic.js"></script>
@@ -22,8 +22,8 @@
   <?php
     $CLIENT_ID = "796686363604680755";
     $CLIENT_SE = "csnkpOhO8P5O-pU3NlM9zyrDdGYxp68S";
-    //$REDIR_URI = "http://127.0.0.1:5500/Dashboard";
-    $REDIR_URI = "https://superbot-website.vercel.app/Dashboard";
+    //$REDIR_URI = "http://127.0.0.1:5500/api/Dashboard";
+    $REDIR_URI = "https://superbot-website.vercel.app/api/Dashboard";
     $data = array(
       'code'          => $_GET['code'],
       'client_id'     => $CLIENT_ID,

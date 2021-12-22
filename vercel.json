@@ -1,6 +1,6 @@
 {
   "functions": {
-    "Dashboard/*.php": {
+    "api/Dashboard/*.php": {
       "runtime": "vercel-php@0.4.0"
     }
   }
