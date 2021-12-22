@@ -1,0 +1,682 @@
+[
+  {
+    "id": "81384788765712384",
+    "name": "Discord API",
+    "icon": "a363a84e969bcbe1353eb2fdfb2e50e6",
+    "owner": false,
+    "permissions": "966471831232",
+    "features": [
+      "THREE_DAY_THREAD_ARCHIVE",
+      "ANIMATED_ICON",
+      "MEMBER_PROFILES",
+      "BANNER",
+      "MEMBER_VERIFICATION_GATE_ENABLED",
+      "PRIVATE_THREADS",
+      "THREADS_ENABLED",
+      "VANITY_URL",
+      "NEW_THREAD_PERMISSIONS",
+      "ROLE_ICONS",
+      "INVITE_SPLASH",
+      "NEWS",
+      "SEVEN_DAY_THREAD_ARCHIVE",
+      "COMMUNITY",
+      "WELCOME_SCREEN_ENABLED",
+      "VIP_REGIONS",
+      "PREVIEW_ENABLED"
+    ]
+  },
+  {
+    "id": "197038439483310086",
+    "name": "Discord Testers",
+    "icon": "54e272f2ea4e797e2514eb8d5cbe9c31",
+    "owner": false,
+    "permissions": "693637547008",
+    "features": [
+      "ANIMATED_BANNER",
+      "THREE_DAY_THREAD_ARCHIVE",
+      "ANIMATED_ICON",
+      "MEMBER_PROFILES",
+      "MEMBER_VERIFICATION_GATE_ENABLED",
+      "NEW_THREAD_PERMISSIONS",
+      "DISCOVERABLE",
+      "INVITE_SPLASH",
+      "CHANNEL_BANNER",
+      "MORE_EMOJI",
+      "VANITY_URL",
+      "PREVIEW_ENABLED",
+      "SEVEN_DAY_THREAD_ARCHIVE",
+      "BANNER",
+      "PRIVATE_THREADS",
+      "VERIFIED",
+      "THREADS_ENABLED",
+      "ROLE_ICONS",
+      "NEWS",
+      "COMMUNITY",
+      "WELCOME_SCREEN_ENABLED",
+      "ENABLED_DISCOVERABLE_BEFORE"
+    ]
+  },
+  {
+    "id": "233826358369845251",
+    "name": "MathBot",
+    "icon": "13d4f2137b329291ca3b5c2dff61a8b6",
+    "owner": false,
+    "permissions": "1071698480704",
+    "features": [
+      "NEWS",
+      "COMMUNITY"
+    ]
+  },
+  {
+    "id": "238956364729155585",
+    "name": "Homework Help",
+    "icon": "a_a2c1ba6a7049cc185b16d56a675cb326",
+    "owner": false,
+    "permissions": "968619314753",
+    "features": [
+      "ANIMATED_BANNER",
+      "THREE_DAY_THREAD_ARCHIVE",
+      "ANIMATED_ICON",
+      "MEMBER_PROFILES",
+      "PARTNERED",
+      "MEMBER_VERIFICATION_GATE_ENABLED",
+      "LINKED_TO_HUB",
+      "NEW_THREAD_PERMISSIONS",
+      "DISCOVERABLE",
+      "INVITE_SPLASH",
+      "CHANNEL_BANNER",
+      "VIP_REGIONS",
+      "VANITY_URL",
+      "SEVEN_DAY_THREAD_ARCHIVE",
+      "BANNER",
+      "PRIVATE_THREADS",
+      "HAS_DIRECTORY_ENTRY",
+      "THREADS_ENABLED",
+      "ROLE_ICONS",
+      "NEWS",
+      "COMMUNITY",
+      "PREVIEW_ENABLED",
+      "ENABLED_DISCOVERABLE_BEFORE"
+    ]
+  },
+  {
+    "id": "267624335836053506",
+    "name": "Python",
+    "icon": "a_4e9268b1303488f42ad8bd967ebbdcfb",
+    "owner": false,
+    "permissions": "966471830592",
+    "features": [
+      "ANIMATED_BANNER",
+      "THREE_DAY_THREAD_ARCHIVE",
+      "ANIMATED_ICON",
+      "MEMBER_PROFILES",
+      "RELAY_ENABLED",
+      "PARTNERED",
+      "MEMBER_VERIFICATION_GATE_ENABLED",
+      "NEW_THREAD_PERMISSIONS",
+      "DISCOVERABLE",
+      "INVITE_SPLASH",
+      "CHANNEL_BANNER",
+      "VIP_REGIONS",
+      "VANITY_URL",
+      "PREVIEW_ENABLED",
+      "SEVEN_DAY_THREAD_ARCHIVE",
+      "BANNER",
+      "PRIVATE_THREADS",
+      "THREADS_ENABLED",
+      "ROLE_ICONS",
+      "NEWS",
+      "COMMUNITY",
+      "WELCOME_SCREEN_ENABLED"
+    ]
+  },
+  {
+    "id": "336642139381301249",
+    "name": "discord.py",
+    "icon": "3aa641b21acded468308a37eef43d7b3",
+    "owner": false,
+    "permissions": "966471831232",
+    "features": [
+      "ANIMATED_BANNER",
+      "THREE_DAY_THREAD_ARCHIVE",
+      "ANIMATED_ICON",
+      "MEMBER_PROFILES",
+      "MEMBER_VERIFICATION_GATE_ENABLED",
+      "NEW_THREAD_PERMISSIONS",
+      "INVITE_SPLASH",
+      "CHANNEL_BANNER",
+      "VANITY_URL",
+      "PREVIEW_ENABLED",
+      "SEVEN_DAY_THREAD_ARCHIVE",
+      "BANNER",
+      "PRIVATE_THREADS",
+      "VERIFIED",
+      "THREADS_ENABLED",
+      "ROLE_ICONS",
+      "NEWS",
+      "COMMUNITY",
+      "WELCOME_SCREEN_ENABLED",
+      "ENABLED_DISCOVERABLE_BEFORE"
+    ]
+  },
+  {
+    "id": "411477843969703936",
+    "name": "\ud83c\udf84 Parad\u00f8x & TeXit \ud83c\udf84",
+    "icon": "a_333decc06ea1ac85c09b1d981c90ba8c",
+    "owner": false,
+    "permissions": "968619003457",
+    "features": [
+      "THREE_DAY_THREAD_ARCHIVE",
+      "ANIMATED_ICON",
+      "THREADS_ENABLED",
+      "NEW_THREAD_PERMISSIONS",
+      "INVITE_SPLASH",
+      "NEWS",
+      "COMMUNITY",
+      "WELCOME_SCREEN_ENABLED"
+    ]
+  },
+  {
+    "id": "559426764531695665",
+    "name": "Not Quite Nitro Bot",
+    "icon": "7c746a04d2ad32fc570415aed68eb797",
+    "owner": false,
+    "permissions": "968619314753",
+    "features": [
+      "THREE_DAY_THREAD_ARCHIVE",
+      "ANIMATED_ICON",
+      "MEMBER_VERIFICATION_GATE_ENABLED",
+      "THREADS_ENABLED",
+      "NEW_THREAD_PERMISSIONS",
+      "DISCOVERABLE",
+      "NEWS",
+      "INVITE_SPLASH",
+      "COMMUNITY",
+      "WELCOME_SCREEN_ENABLED",
+      "ENABLED_DISCOVERABLE_BEFORE",
+      "PREVIEW_ENABLED"
+    ]
+  },
+  {
+    "id": "613425648685547541",
+    "name": "Discord Developers",
+    "icon": "a_6375907799aa6ff2499a1e729a594739",
+    "owner": false,
+    "permissions": "1002911944192",
+    "features": [
+      "ANIMATED_BANNER",
+      "THREE_DAY_THREAD_ARCHIVE",
+      "ANIMATED_ICON",
+      "MEMBER_PROFILES",
+      "MEMBER_VERIFICATION_GATE_ENABLED",
+      "NEW_THREAD_PERMISSIONS",
+      "INVITE_SPLASH",
+      "CHANNEL_BANNER",
+      "VANITY_URL",
+      "PREVIEW_ENABLED",
+      "SEVEN_DAY_THREAD_ARCHIVE",
+      "BANNER",
+      "PRIVATE_THREADS",
+      "HAS_DIRECTORY_ENTRY",
+      "VERIFIED",
+      "THREADS_ENABLED",
+      "ROLE_ICONS",
+      "NEWS",
+      "COMMUNITY",
+      "WELCOME_SCREEN_ENABLED"
+    ]
+  },
+  {
+    "id": "731510896198811671",
+    "name": "Phone Bot Support Server",
+    "icon": "dbb8c8c835e3d9596404b62b72bc499c",
+    "owner": false,
+    "permissions": "1071698529857",
+    "features": [
+      "NEWS",
+      "COMMUNITY"
+    ]
+  },
+  {
+    "id": "744160930115354630",
+    "name": "Johann & Mum",
+    "icon": "b081b653aeef178190f28ea0b42dda49",
+    "owner": true,
+    "permissions": "2199023255551",
+    "features": []
+  },
+  {
+    "id": "789032594456576001",
+    "name": "discord-interactions",
+    "icon": "719eedf706beb3fd201de80499edd278",
+    "owner": false,
+    "permissions": "968619839169",
+    "features": [
+      "ANIMATED_BANNER",
+      "THREE_DAY_THREAD_ARCHIVE",
+      "ANIMATED_ICON",
+      "MEMBER_PROFILES",
+      "MEMBER_VERIFICATION_GATE_ENABLED",
+      "NEW_THREAD_PERMISSIONS",
+      "DISCOVERABLE",
+      "INVITE_SPLASH",
+      "CHANNEL_BANNER",
+      "COMMERCE",
+      "PREVIEW_ENABLED",
+      "SEVEN_DAY_THREAD_ARCHIVE",
+      "VANITY_URL",
+      "BANNER",
+      "PRIVATE_THREADS",
+      "THREADS_ENABLED",
+      "ROLE_ICONS",
+      "NEWS",
+      "COMMUNITY",
+      "WELCOME_SCREEN_ENABLED",
+      "ENABLED_DISCOVERABLE_BEFORE"
+    ]
+  },
+  {
+    "id": "800539721428107315",
+    "name": "Emotes",
+    "icon": null,
+    "owner": false,
+    "permissions": "2199023255551",
+    "features": []
+  },
+  {
+    "id": "805441351033552916",
+    "name": "SuperBot Support",
+    "icon": "8c6f301a5099a8228e40106583509722",
+    "owner": true,
+    "permissions": "2199023255551",
+    "features": [
+      "THREADS_ENABLED",
+      "NEW_THREAD_PERMISSIONS",
+      "NEWS",
+      "COMMUNITY",
+      "WELCOME_SCREEN_ENABLED"
+    ]
+  },
+  {
+    "id": "806083349688877077",
+    "name": "Historical Community",
+    "icon": "ca8544909139bcbb8f836b47b2b1fd20",
+    "owner": false,
+    "permissions": "2199023255551",
+    "features": [
+      "NEW_THREAD_PERMISSIONS",
+      "NEWS",
+      "COMMUNITY",
+      "WELCOME_SCREEN_ENABLED",
+      "MEMBER_VERIFICATION_GATE_ENABLED",
+      "PREVIEW_ENABLED",
+      "THREADS_ENABLED"
+    ]
+  },
+  {
+    "id": "822532642704588932",
+    "name": "macOSicons.com",
+    "icon": "a_f1f5d10953ab232085343e2e3616a56c",
+    "owner": false,
+    "permissions": "1071698529857",
+    "features": [
+      "THREE_DAY_THREAD_ARCHIVE",
+      "ANIMATED_ICON",
+      "MEMBER_VERIFICATION_GATE_ENABLED",
+      "THREADS_ENABLED",
+      "NEW_THREAD_PERMISSIONS",
+      "INVITE_SPLASH",
+      "NEWS",
+      "COMMUNITY",
+      "WELCOME_SCREEN_ENABLED",
+      "PREVIEW_ENABLED"
+    ]
+  },
+  {
+    "id": "825767878942523402",
+    "name": "Bot Development",
+    "icon": "438afc5acf90c6d75560e5885bd56d7c",
+    "owner": true,
+    "permissions": "2199023255551",
+    "features": []
+  },
+  {
+    "id": "829913048033656832",
+    "name": "DOLPHINS",
+    "icon": "4a4fb8a4c934df6273fdd9241db83b62",
+    "owner": false,
+    "permissions": "1071698660929",
+    "features": [
+      "NEW_THREAD_PERMISSIONS",
+      "NEWS",
+      "COMMUNITY",
+      "THREADS_ENABLED"
+    ]
+  },
+  {
+    "id": "831412552033501185",
+    "name": "CraftBot Community",
+    "icon": "2c104ffa5ccea6844a81dbf12aeae387",
+    "owner": false,
+    "permissions": "1071698529857",
+    "features": [
+      "THREADS_ENABLED",
+      "NEW_THREAD_PERMISSIONS",
+      "NEWS",
+      "COMMUNITY",
+      "WELCOME_SCREEN_ENABLED"
+    ]
+  },
+  {
+    "id": "831646372519346186",
+    "name": "Discord Games Lab",
+    "icon": "0d21db12172ea96d3f2b26926bfa719e",
+    "owner": false,
+    "permissions": "828965456897",
+    "features": [
+      "ANIMATED_BANNER",
+      "THREE_DAY_THREAD_ARCHIVE",
+      "ANIMATED_ICON",
+      "MEMBER_PROFILES",
+      "MEMBER_VERIFICATION_GATE_ENABLED",
+      "NEW_THREAD_PERMISSIONS",
+      "DISCOVERABLE",
+      "INVITE_SPLASH",
+      "CHANNEL_BANNER",
+      "MORE_EMOJI",
+      "VIP_REGIONS",
+      "VANITY_URL",
+      "PREVIEW_ENABLED",
+      "SEVEN_DAY_THREAD_ARCHIVE",
+      "BANNER",
+      "PRIVATE_THREADS",
+      "VERIFIED",
+      "THREADS_ENABLED",
+      "ROLE_ICONS",
+      "NEWS",
+      "COMMUNITY",
+      "WELCOME_SCREEN_ENABLED",
+      "ENABLED_DISCOVERABLE_BEFORE"
+    ]
+  },
+  {
+    "id": "832884450953396224",
+    "name": "MTR Emojis (Regular)",
+    "icon": null,
+    "owner": true,
+    "permissions": "2199023255551",
+    "features": []
+  },
+  {
+    "id": "832895022902018049",
+    "name": "MTR Emojis (Flashing Stations)",
+    "icon": null,
+    "owner": true,
+    "permissions": "2199023255551",
+    "features": []
+  },
+  {
+    "id": "832902024160870400",
+    "name": "MTR Emojis (Flashing Lines 2)",
+    "icon": null,
+    "owner": true,
+    "permissions": "2199023255551",
+    "features": []
+  },
+  {
+    "id": "832903597569867776",
+    "name": "MTR Emojis (Flashing Lines 1)",
+    "icon": null,
+    "owner": true,
+    "permissions": "2199023255551",
+    "features": []
+  },
+  {
+    "id": "836809816662999060",
+    "name": "1F Class",
+    "icon": "b2d8327093a64c8f3efcf8b1ab9ea101",
+    "owner": false,
+    "permissions": "2199023255551",
+    "features": []
+  },
+  {
+    "id": "840885565742252043",
+    "name": "SMARTER THAN FELIKS TESTING",
+    "icon": "59f0568ddafe7c9f7b226ba27b20f480",
+    "owner": false,
+    "permissions": "1071698660929",
+    "features": []
+  },
+  {
+    "id": "841330908560228412",
+    "name": "Private",
+    "icon": "6d65c32280bc6431a853c44d392b1df4",
+    "owner": true,
+    "permissions": "2199023255551",
+    "features": [
+      "THREADS_ENABLED_TESTING"
+    ]
+  },
+  {
+    "id": "846649208642469938",
+    "name": "Walker Bot Community",
+    "icon": "bc1a7ef926cf03daf33868c0b2988f24",
+    "owner": false,
+    "permissions": "1071698660929",
+    "features": [
+      "NEWS",
+      "COMMUNITY"
+    ]
+  },
+  {
+    "id": "852899227004305458",
+    "name": "LSC Form 2",
+    "icon": "71df005969b393b7800c8a17ab66698a",
+    "owner": true,
+    "permissions": "2199023255551",
+    "features": [
+      "THREADS_ENABLED",
+      "NEW_THREAD_PERMISSIONS",
+      "NEWS",
+      "COMMUNITY",
+      "WELCOME_SCREEN_ENABLED"
+    ]
+  },
+  {
+    "id": "857888099908321280",
+    "name": "Keyboard Emojis",
+    "icon": null,
+    "owner": true,
+    "permissions": "2199023255551",
+    "features": []
+  },
+  {
+    "id": "857948978947686400",
+    "name": "TouchBar Emojis",
+    "icon": null,
+    "owner": true,
+    "permissions": "2199023255551",
+    "features": []
+  },
+  {
+    "id": "858336744754905119",
+    "name": "Other Apple Emojis",
+    "icon": null,
+    "owner": true,
+    "permissions": "2199023255551",
+    "features": []
+  },
+  {
+    "id": "860425591614734336",
+    "name": "Apple Devices Emojis",
+    "icon": null,
+    "owner": true,
+    "permissions": "2199023255551",
+    "features": []
+  },
+  {
+    "id": "860429441258618911",
+    "name": "Even more Apple emojis",
+    "icon": null,
+    "owner": true,
+    "permissions": "2199023255551",
+    "features": []
+  },
+  {
+    "id": "860804263018364958",
+    "name": "Keyboard Emojis 2",
+    "icon": null,
+    "owner": true,
+    "permissions": "2199023255551",
+    "features": []
+  },
+  {
+    "id": "864762394587693096",
+    "name": "Apple Arrow Emojis",
+    "icon": null,
+    "owner": true,
+    "permissions": "2199023255551",
+    "features": []
+  },
+  {
+    "id": "867962875422081024",
+    "name": "Scratch in Discord",
+    "icon": "1638ebae573595d18cf45efd61626a73",
+    "owner": false,
+    "permissions": "1081295228481",
+    "features": [
+      "WELCOME_SCREEN_ENABLED",
+      "MEMBER_VERIFICATION_GATE_ENABLED",
+      "NEWS",
+      "COMMUNITY",
+      "PREVIEW_ENABLED"
+    ]
+  },
+  {
+    "id": "868869138695745618",
+    "name": "Apple emojis HUB",
+    "icon": null,
+    "owner": true,
+    "permissions": "2199023255551",
+    "features": []
+  },
+  {
+    "id": "879638518144581642",
+    "name": "CoderZ",
+    "icon": null,
+    "owner": true,
+    "permissions": "2199023255551",
+    "features": [
+      "NEW_THREAD_PERMISSIONS",
+      "NEWS",
+      "COMMUNITY"
+    ]
+  },
+  {
+    "id": "880259958531313664",
+    "name": "Minimalistic",
+    "icon": null,
+    "owner": true,
+    "permissions": "2199023255551",
+    "features": []
+  },
+  {
+    "id": "880686520678371369",
+    "name": "\u5289\u6613\u65fb",
+    "icon": null,
+    "owner": true,
+    "permissions": "2199023255551",
+    "features": []
+  },
+  {
+    "id": "888249428455063582",
+    "name": "LSC Bots",
+    "icon": null,
+    "owner": true,
+    "permissions": "2199023255551",
+    "features": [
+      "NEW_THREAD_PERMISSIONS",
+      "NEWS",
+      "COMMUNITY",
+      "THREADS_ENABLED"
+    ]
+  },
+  {
+    "id": "891189200160976897",
+    "name": "DeLevo Group",
+    "icon": "2cc7744c4338603d9a64eba0637adf0b",
+    "owner": false,
+    "permissions": "1071698529857",
+    "features": [
+      "WELCOME_SCREEN_ENABLED",
+      "MEMBER_VERIFICATION_GATE_ENABLED",
+      "NEWS",
+      "COMMUNITY",
+      "PREVIEW_ENABLED"
+    ]
+  },
+  {
+    "id": "891214401187745823",
+    "name": "Bot Emojis Repository",
+    "icon": null,
+    "owner": true,
+    "permissions": "2199023255551",
+    "features": []
+  },
+  {
+    "id": "891319993650806834",
+    "name": "IT Club",
+    "icon": "0f556c38d81b605220fe8c096a9a4020",
+    "owner": false,
+    "permissions": "1071698529856",
+    "features": []
+  },
+  {
+    "id": "892312777065136138",
+    "name": "Test",
+    "icon": null,
+    "owner": true,
+    "permissions": "2199023255551",
+    "features": []
+  },
+  {
+    "id": "896001691047051305",
+    "name": "Unown A\u2019s flag",
+    "icon": null,
+    "owner": false,
+    "permissions": "1072772402753",
+    "features": []
+  },
+  {
+    "id": "896296235634409472",
+    "name": "Internet Culture Club",
+    "icon": "88811c4a8a21d69f2d6e2e80cff35861",
+    "owner": false,
+    "permissions": "968619314752",
+    "features": [
+      "MEMBER_VERIFICATION_GATE_ENABLED",
+      "NEWS",
+      "COMMUNITY",
+      "PREVIEW_ENABLED"
+    ]
+  },
+  {
+    "id": "899507523663564870",
+    "name": "CraftBot Emojis",
+    "icon": null,
+    "owner": false,
+    "permissions": "1071698660929",
+    "features": []
+  },
+  {
+    "id": "906837289391489074",
+    "name": "Bot Playground",
+    "icon": "525e8163137f3d3ceacfb3351dcddb18",
+    "owner": false,
+    "permissions": "1004052795073",
+    "features": [
+      "NEWS",
+      "COMMUNITY"
+    ]
+  }
+]

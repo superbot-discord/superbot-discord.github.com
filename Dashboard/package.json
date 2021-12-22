@@ -1,7 +1,0 @@
-{
-  "dependencies": {
-    "express": "^4.17.2",
-    "package-lock.json": "^1.0.0",
-    "require": "^0.4.4"
-  }
-}
