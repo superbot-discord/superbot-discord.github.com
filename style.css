@@ -234,6 +234,20 @@ table {
   display: block;
 }
 
+div.colorbox_ {
+  display: flex;
+  
+}
+
+div.colorbox {
+  width: 2vw;
+  height: 2vw;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: 1vw;
+  float: left;
+}
+
 img {
   margin: 0.5vw;
   width: 18vw;

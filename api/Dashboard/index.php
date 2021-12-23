@@ -20,13 +20,13 @@
   <h1>Web Dashboard</h1>
   <p class="smaller">Please kindly put down the ugly look for a moment and appreciate the work behind all this. Thank you!</p><br>
   <?php
-    $CLIENT_ID = "796686363604680755";
-    $CLIENT_SE = "csnkpOhO8P5O-pU3NlM9zyrDdGYxp68S";
-    $REDIR_URI = "http://127.0.0.1:5500/api/Dashboard";
-    // $REDIR_URI = "https://superbot-website.vercel.app/api/Dashboard";
     if (isset($_COOKIE["ACT"])) {
       $auth = $_COOKIE["ACT"];
     } else {
+      $CLIENT_ID = "796686363604680755";
+      $CLIENT_SE = "csnkpOhO8P5O-pU3NlM9zyrDdGYxp68S";
+      $REDIR_URI = "http://127.0.0.1:5500/api/Dashboard";
+      // $REDIR_URI = "https://superbot-website.vercel.app/api/Dashboard";
       if (isset($_COOKIE["RST"])) {
         $data = array(
           'refresh_token' => $_COOKIE["RST"],
@@ -60,15 +60,15 @@
       'header' => "Authorization: Bearer " . $auth
     ));
     $context = stream_context_create($opts);
-    $user = json_decode(file_get_contents('https://discord.com/api/v9/users/@me?client_id=796686363604680755&client_secret=csnkpOhO8P5O-pU3NlM9zyrDdGYxp68S&grant_type=authorization_code', false, $context), true);
+    $user = json_decode(file_get_contents('https://discord.com/api/v9/users/@me?' . $_ENV['CLIENTSTR'], false, $context), true);
     echo "<p>Logged in as: <span class='bold'>" . $user['username'] . "#" . $user['discriminator'] . "</span></p>";
-    $servers = json_decode(file_get_contents('https://discord.com/api/v9/users/@me/guilds?client_id=796686363604680755&client_secret=csnkpOhO8P5O-pU3NlM9zyrDdGYxp68S&grant_type=authorization_code', false, $context), true);
+    $servers = json_decode(file_get_contents('https://discord.com/api/v9/users/@me/guilds?' . $_ENV['CLIENTSTR'], false, $context), true);
     $opts = array('http'=>array(
       'method' => "GET",
       'header' => "Authorization: Bot " . $_ENV['TOKEN']
     ));
     $context = stream_context_create($opts);
-    $bot_servers = json_decode(file_get_contents('https://discord.com/api/v9/users/@me/guilds?client_id=796686363604680755&client_secret=csnkpOhO8P5O-pU3NlM9zyrDdGYxp68S&grant_type=authorization_code', false, $context), true);
+    $bot_servers = json_decode(file_get_contents('https://discord.com/api/v9/users/@me/guilds?client_id=796686363604680755&' . $_ENV['CLIENTSTR'], false, $context), true);
     $bot_server_ids = array_column($bot_servers, 'id');
     $server_ids = array_column($servers, 'id');
     $support_server_index = array_search(805441351033552916, $server_ids);
@@ -84,8 +84,8 @@
         $extra_class = "";
         $extra_bold = "";
       }
-      echo "<div class='server'><img" . $extra_class . " onclick='window.location.href = \"http://127.0.0.1:5500/api/Dashboard/Server?id=" . $x['id'] . "\"' src='";
-      // echo "<div class='server'><img" . $extra_class . " onclick='window.location.href = \"https://superbot-website.vercel.app/api/Dashboard/Server?id=" . $x['id'] . "\"' src='";
+      // echo "<div class='server'><img" . $extra_class . " onclick='window.location.href = \"http://127.0.0.1:5500/api/Dashboard/Server?id=" . $x['id'] . "\"' src='";
+      echo "<div class='server'><img" . $extra_class . " onclick='window.location.href = \"https://superbot-website.vercel.app/api/Dashboard/Server?id=" . $x['id'] . "\"' src='";
       if ($x['icon'] != null) {
         echo "https://cdn.discordapp.com/icons/" . $x['id'] . "/" . $x['icon'];
       } else {
