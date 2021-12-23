@@ -234,25 +234,10 @@ table {
   display: block;
 }
 
-.th {
-  position: sticky;
-  left: 5px;
-  right: 5px;
-  width: 99%;
-  background-color: #fff;
-}
-
 img {
   margin: 0.5vw;
   width: 18vw;
   height:18vw;
-}
-
-div.server {
-  text-align:center;
-  width: 12.49%;
-  height: 11.5vw;
-  float: left;
 }
 
 div.server img {
@@ -260,10 +245,39 @@ div.server img {
   margin-right: auto;
   width: 7vw;
   height: 7vw;
+  cursor: pointer;
 }
 
 div.server p {
-  font-size: 1.3vw;
+  font-size: 1.2vw;
+  padding-left: 0.6vw;
+  padding-right: 0.6vw;
+}
+div.server img:not(.bot_in) {
+  padding-top: 0.35vw;
+  padding-bottom: 0.35vw;
+  display: inline-block;
+}
+
+div.server img.bot_in {
+  border: 0.35vw solid #000;
+}
+
+div.server {
+  text-align:center;
+  width: 12.2%;
+  height: 12vw;
+  margin: 0.2vw;
+  border: 0.1vw solid #000;
+  float: left;
+}
+
+.th {
+  position: sticky;
+  left: 5px;
+  right: 5px;
+  width: 99%;
+  background-color: #fff;
 }
 
 body, a {

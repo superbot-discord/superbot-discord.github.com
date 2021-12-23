@@ -2,6 +2,9 @@
   "functions": {
     "api/Dashboard/*.php": {
       "runtime": "vercel-php@0.4.0"
+    },
+    "api/Dashboard/Server/*.php": {
+      "runtime": "vercel-php@0.4.0"
     }
   }
 }

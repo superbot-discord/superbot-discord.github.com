@@ -51,9 +51,26 @@ function setcolor () {
   }
   adjusted_fo3 = adjust(focolor, 60);
 
-  for (var i = 1; i < 18; i++) {
+  for (var i = 1; i < 20; i++) {
     mysheet.deleteRule(mysheet.cssRules.length - 1);
   }
+
+  console.log(mysheet.cssRules)
+
+  mysheet.insertRule(`
+  div.server img.bot_in {
+  border: 0.35vw solid ` + focolor + `;
+  }`, mysheet.cssRules.length)
+
+  mysheet.insertRule(`
+  div.server {
+  text-align:center;
+  width: 12%;
+  height: 12vw;
+  margin: 0.2vw;
+  border: 0.05vw solid ` + focolor + `;
+  float: left;
+  }`, mysheet.cssRules.length)
 
   mysheet.insertRule(`
   .th {
