@@ -1,3 +1,5 @@
 .DS_Store
 .vercel
 api/Dashboard/req.py
+api/Dashboard/discord.json
+api/Dashboard/discord2.json
