@@ -302,6 +302,11 @@ body, a {
   position: relative;
 }
 
+.emoji {
+  color: transparent;  
+  text-shadow: 0 0 0 #000;
+}
+
 .inverted {
   background-color: #000;
   color: #fff

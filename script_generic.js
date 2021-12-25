@@ -51,7 +51,7 @@ function setcolor () {
   }
   adjusted_fo3 = adjust(focolor, 60);
 
-  for (var i = 1; i < 20; i++) {
+  for (var i = 1; i < 21; i++) {
     mysheet.deleteRule(mysheet.cssRules.length - 1);
   }
 
@@ -79,6 +79,12 @@ function setcolor () {
   right: 5px;
   width: 99%;
   background-color: ` + bgcolor + `;
+  }`, mysheet.cssRules.length)
+
+  mysheet.insertRule(`
+  .emoji {
+  color: transparent;  
+  text-shadow: 0 0 0 ` + focolor + `;
   }`, mysheet.cssRules.length)
 
   mysheet.insertRule(`
