@@ -77,7 +77,7 @@
     foreach ($servers as $x) {
       if (in_array($x['id'], $bot_server_ids, true)) {
         $extra_class = " class='bot_in'";
-        $extra_url = "window.location.href=\"{$REDIR_URI}/Server?id={$x['id']}\"";
+        $extra_url = "window.location.href=\"{$REDIR_URI}/Server?id={$x['id']}&perms={$x['permissions']}\"";
         $extra_bold = " class='bold'";
       } else {
         $extra_class = "";
