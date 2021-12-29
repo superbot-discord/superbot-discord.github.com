@@ -22,6 +22,11 @@
   <?php
     // $REDIR_URI = "http://127.0.0.1:5500/api/Dashboard";
     $REDIR_URI = "https://superbot-website.vercel.app/api/Dashboard";
+    if (!isset($_GET['code'])) {
+      header('Location: ' . str_replace("/api/Dashboard", "", $REDIR_URI));
+      ob_end_flush();
+      exit();
+    }
     if (isset($_COOKIE["ACT"])) {
       $auth = $_COOKIE["ACT"];
     } else {
