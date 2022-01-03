@@ -20,8 +20,8 @@
   <h1>Web Dashboard</h1>
   <p class="smaller">Please kindly put down the ugly look for a moment and appreciate the work behind all this. Thank you!</p><br>
   <?php
-    // $REDIR_URI = "http://127.0.0.1:5500/api/Dashboard";
-    $REDIR_URI = "https://superbot-website.vercel.app/api/Dashboard";
+    $REDIR_URI = "http://127.0.0.1:5500/api/Dashboard";
+    // $REDIR_URI = "https://superbot-website.vercel.app/api/Dashboard";
     if (!isset($_GET['code'])) {
       header('Location: ' . str_replace("/api/Dashboard", "", $REDIR_URI));
       ob_end_flush();
@@ -52,10 +52,10 @@
         'header' => "Content-type: application/x-www-form-urlencoded"
       ));
       $context = stream_context_create($opts);
-      $auth = json_decode(file_get_contents('https://discord.com/api/v9/oauth2/token', false, $context), true);
-      setcookie("ACT", $auth['access_token'], time() + $auth['expires_in'], "/api/Dashboard");
-      setcookie("RST", $auth['refresh_token'],2147483647, "/api/Dashboard");
-      $auth = $auth['access_token'];
+      $auth_ = json_decode(file_get_contents('https://discord.com/api/v9/oauth2/token', false, $context), true);
+      setcookie("ACT", $auth_['access_token'], time() + $auth_['expires_in'], "/api/Dashboard");
+      setcookie("RST", $auth_['refresh_token'],2147483647, "/api/Dashboard");
+      $auth = $auth_['access_token'];
     }
     ob_end_flush();
     $opts = array('http'=>array(

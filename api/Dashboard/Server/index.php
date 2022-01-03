@@ -171,7 +171,7 @@
       (($x >> 5 ) & 1) ? $y[]="Manage Server":null;
       return $y;
     }
-    function perms_format_t($x) {
+    function perms_format_m($x) {
       $y = [];
       (($x >> 0 ) & 1) ? $y[]="Create Invites":null;
       (($x >> 26) & 1) ? $y[]="Change Nickname":null;
@@ -179,6 +179,9 @@
       (($x >> 1 ) & 1) ? $y[]="Kick Members":null;
       (($x >> 2 ) & 1) ? $y[]="Ban Members":null;
       (($x >> 40) & 1) ? $y[]="Timeout Members":null;
+      return $y;
+    }
+    function perms_format_t($x) {
       (($x >> 11) & 1) ? $y[]="Send Messages":null;
       (($x >> 38) & 1) ? $y[]="Send in Threads":null;
       (($x >> 35) & 1) ? $y[]="Create Public Threads":null;
@@ -197,7 +200,7 @@
       return $y;
     }
     function perms_format_v($x) {
-      (($x >> 20) & 1) ? $y[]="Connect (Voice)":null;
+      (($x >> 20) & 1) ? $y[]="Connect to Voice":null;
       (($x >> 21) & 1) ? $y[]="Speak (Audio)":null;
       (($x >> 9 ) & 1) ? $y[]="Use Video (Stream)":null;
       (($x >> 39) & 1) ? $y[]="Start Activities":null;
@@ -208,6 +211,10 @@
       (($x >> 24) & 1) ? $y[]="Move Members":null;
       (($x >> 32) & 1) ? $y[]="Request To Speak":null;
       return $y;
+    }
+    function verification_level_format($x) {
+      return ($x==0?["None", "unrestricted"]:($x==1?["Low","requires a verified email"]:($x==2?["Medium","requires 5 minutes of account age"]:
+      ($x==3?["High","requires 10 minutes of server member age"]:["Very High","requires a verified phone number"]))));
     }
     function id_creation($x) {
       return round(bindec(substr(decbin($x), 0, 38)) / 1000) + 1420070400;
@@ -264,6 +271,9 @@
       exit();
     }
     echo "<h2>{$server['name']}</h2>";
+    if ($server['description'] != null) {
+      echo "<p>{$server['description']}</p>";
+    }
     if ($server['icon'] != null) {
       echo "<img src='https://cdn.discordapp.com/icons/{$server['id']}/{$server['icon']}?size=1024'>";
     }
@@ -319,9 +329,13 @@
       }
     }
     echo "<h3>Your Server Permissions</h3><p><span class='bold'>Server: </span>" . join(", ", perms_format_s($_GET['perms'])) . "<br>";
+    echo "<span class='bold'>Membership: </span>" . join(", ", perms_format_m($_GET['perms'])) . "<br>";
     echo "<span class='bold'>Text: </span>" . join(", ", perms_format_t($_GET['perms'])) . "<br>";
-    echo "<span class='bold'>Voice: </span>" . join(", ", perms_format_v($_GET['perms'])) . "</p>";
-    echo "<h3>Generic Server Info</h3><p><span class='bold'>Creation: </span>" . dt_format(id_creation($server['id'])) . " (UTC)<br></p>";
+    echo "<span class='bold'>Voice: </span>" . join(", ", perms_format_v($_GET['perms'])) . "<br>";
+    echo "To view these permissions anywhere, use <span class='code'>=perms {$_GET['perms']}</span>.</p>";
+    echo "<h3>Generic Server Info</h3><p><span class='bold'>Created: </span>" . dt_format(id_creation($server['id'])) . " (UTC)<br>";
+    $verification = verification_level_format($server['verification_level']);
+    echo "<span class='bold'>Verification level: </span>{$verification[0]} - {$verification[1]}</p>";
   ?>
 </body>
 

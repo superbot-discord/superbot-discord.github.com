@@ -19,7 +19,6 @@ var favicons = `<link rel="apple-touch-icon" sizes="57x57" href="/favicons/apple
 <meta name="msapplication-TileColor" content="#888888">
 <meta name="msapplication-TileImage" content="/favicons/ms-icon-144x144.png">
 <meta name="theme-color" content="#888888">`
-document.getElementsByTagName('head')[0].insertAdjacentHTML('beforeend', favicons)
 
 function random_(lb, ub) {
   return Math.floor(((ub - lb + 1) * Math.random()) + lb)
@@ -50,12 +49,11 @@ function setcolor () {
     adjusted_fo2 = adjust(focolor, -40);
   }
   adjusted_fo3 = adjust(focolor, 60);
+  adjusted_fo4 = adjust(focolor, 35);
 
-  for (var i = 1; i < 21; i++) {
+  for (var i = 1; i < 22; i++) {
     mysheet.deleteRule(mysheet.cssRules.length - 1);
   }
-
-  console.log(mysheet.cssRules)
 
   mysheet.insertRule(`
   div.server img.bot_in {
@@ -144,6 +142,12 @@ function setcolor () {
   }`, mysheet.cssRules.length);
 
   mysheet.insertRule(`
+  button:active {
+  border-color: ` + adjusted_fo4 + `;
+  background-color: ` + adjusted_fo4 + `;
+  }`, mysheet.cssRules.length);
+
+  mysheet.insertRule(`
   .card {
   height: 8vw;
   border-style: solid;
@@ -206,7 +210,7 @@ function setcolor () {
   }`, mysheet.cssRules.length)
 
   mysheet.insertRule(`
-  #search {
+  .textbox {
     width: 96vw;
     font-size: 2vw;
     padding: 0.5vw 1vw;
@@ -217,7 +221,7 @@ function setcolor () {
   }`, mysheet.cssRules.length)
 
   mysheet.insertRule(`
-  #search::placeholder {
+  .textbox::placeholder {
     color: `+ adjusted_fo2 +`;
   }`, mysheet.cssRules.length)
 }

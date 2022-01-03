@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <title>SuperBot Documentation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" id="mystyle" href="/style.css">
+  <base target="_blank">
+</head>
+
+<body>
+  <div id="nav">
+    <a target="_self" href="/">Homepage</a>
+    <a target="_self" href="/Documentation">Documentation</a>
+    <a target="_self" href="/Support">Support Server</a>
+    <a target="_self" href="/Why">Why SuperBot?</a>
+    <a target="_self" href="/Map" style="float: right;">Site Map</a>
+    <a target="_self" href="/Security" style="float: right;">Security</a>
+    <!-- <a target="_self" href="https://discord.com/api/oauth2/authorize?client_id=796686363604680755&redirect_uri=https://superbot-website.vercel.app/api/Dashboard&response_type=code&scope=identify+guilds+guilds.members.read&prompt=none" style="float: right;">Login</a> -->
+    <a target="_self" href="https://discord.com/api/oauth2/authorize?client_id=796686363604680755&redirect_uri=http://127.0.0.1:5500/api/Dashboard&response_type=code&scope=identify+guilds+guilds.members.read&prompt=none" style="float: right;">Login</a>
+    <a target="_self" href="/Utilities" class="active" style="float: right;">Utilities</a>
+  </div>
+
+  <h1>SuperBot Utilities</h1>
+  <h3>Timestamp converter</h3>
+  <input type="text" id="timestamp_box" class="textbox" oninput="convert_1()" placeholder="Don't worry about special characters. Just paste a timestamp here…">
+  <div class="overflow">
+  <table id="table1" style="width: 110%;">
+    <colgroup>
+      <col span="1" style="width: 23%;">
+      <col span="1" style="width: 40%;">
+      <col span="1" style="width: 40%;">
+      <col span="1" style="width: 7%;">
+    </colgroup>
+
+    <tr>
+      <th class="big" colspan="4"><span class="th">Timestamp to Human Display Converter</span></th>
+    </tr>
+
+    <tr>
+      <th>Format</th>
+      <th>US Display</th>
+      <th>UK Display</th>
+      <th>Copy</th>
+    </tr>
+
+    <tr>
+      <td id="t111" class="code">&lt;t:0&gt;</td>
+      <td id="t112">January 1, 1970 12:00 AM</td>
+      <td id="t113">1 January 1970 00:00</td>
+      <td><button class="mbutton no_margin" onmousedown="copy_(this)" onmouseup="uncopy_(this)">Copy</button></td>
+    </tr>
+
+    <tr>
+      <td id="t121" class="code">&lt;t:0:F&gt;</td>
+      <td id="t122">Thursday, January 1, 1970 12:00 AM</td>
+      <td id="t123">Thursday, 1 January 1970 00:00</td>
+      <td><button class="mbutton no_margin" onmousedown="copy_(this)" onmouseup="uncopy_(this)">Copy</button></td>
+    </tr>
+
+    <tr>
+      <td id="t131" class="code">&lt;t:0:f&gt;</td>
+      <td id="t132">January 1, 1970 12:00 AM</td>
+      <td id="t133">1 January 1970 00:00</td>
+      <td><button class="mbutton no_margin" onmousedown="copy_(this)" onmouseup="uncopy_(this)">Copy</button></td>
+    </tr>
+
+    <tr>
+      <td id="t141" class="code">&lt;t:0:D&gt;</td>
+      <td id="t142">January 1, 1970</td>
+      <td id="t143">1 January 1970</td>
+      <td><button class="mbutton no_margin" onmousedown="copy_(this)" onmouseup="uncopy_(this)">Copy</button></td>
+    </tr>
+
+    <tr>
+      <td id="t151" class="code">&lt;t:0:d&gt;</td>
+      <td id="t152">01/01/1970 (M/D/Y)</td>
+      <td id="t153">01/01/1970 (D/M/Y)</td>
+      <td><button class="mbutton no_margin" onmousedown="copy_(this)" onmouseup="uncopy_(this)">Copy</button></td>
+    </tr>
+
+    <tr>
+      <td id="t161" class="code">&lt;t:0:T&gt;</td>
+      <td id="t162">12:00:00 AM</td>
+      <td id="t163">00:00:00</td>
+      <td><button class="mbutton no_margin" onmousedown="copy_(this)" onmouseup="uncopy_(this)">Copy</button></td>
+    </tr>
+
+    <tr>
+      <td id="t171" class="code">&lt;t:0:t&gt;</td>
+      <td id="t172">12:00 AM</td>
+      <td id="t173">00:00</td>
+      <td><button class="mbutton no_margin" onmousedown="copy_(this)" onmouseup="uncopy_(this)">Copy</button></td>
+    </tr>
+  </table>
+  </div><br><br>
+
+  <input type="text" id="Y_box" class="textbox" style="width: 14.2%;" oninput="convert_2()" placeholder="Year">
+  <input type="text" id="M_box" class="textbox" style="width: 14.2%;" oninput="convert_2()" placeholder="Month">
+  <input type="text" id="D_box" class="textbox" style="width: 14.2%;" oninput="convert_2()" placeholder="Day">
+  <input type="text" id="h_box" class="textbox" style="width: 14.2%;" oninput="convert_2()" placeholder="Hour">
+  <input type="text" id="m_box" class="textbox" style="width: 14.2%;" oninput="convert_2()" placeholder="Minute">
+  <input type="text" id="s_box" class="textbox" style="width: 14.2%;" oninput="convert_2()" placeholder="Second">
+  <div class="overflow">
+  <table id="table1" style="width: 110%;">
+    <colgroup>
+      <col span="1" style="width: 23%;">
+      <col span="1" style="width: 40%;">
+      <col span="1" style="width: 40%;">
+      <col span="1" style="width: 7%;">
+    </colgroup>
+
+    <tr>
+      <th class="big" colspan="4"><span class="th">Human Display to Timestamp Converter</span></th>
+    </tr>
+
+    <tr>
+      <th>Format</th>
+      <th>US Display</th>
+      <th>UK Display</th>
+      <th>Copy</th>
+    </tr>
+
+    <tr>
+      <td id="t211" class="code">&lt;t:0&gt;</td>
+      <td id="t212">January 1, 1970 12:00 AM</td>
+      <td id="t213">1 January 1970 00:00</td>
+      <td><button class="mbutton no_margin" onmousedown="copy_(this)" onmouseup="uncopy_(this)">Copy</button></td>
+    </tr>
+
+    <tr>
+      <td id="t221" class="code">&lt;t:0:F&gt;</td>
+      <td id="t222">Thursday, January 1, 1970 12:00 AM</td>
+      <td id="t223">Thursday, 1 January 1970 00:00</td>
+      <td><button class="mbutton no_margin" onmousedown="copy_(this)" onmouseup="uncopy_(this)">Copy</button></td>
+    </tr>
+
+    <tr>
+      <td id="t231" class="code">&lt;t:0:f&gt;</td>
+      <td id="t232">January 1, 1970 12:00 AM</td>
+      <td id="t233">1 January 1970 00:00</td>
+      <td><button class="mbutton no_margin" onmousedown="copy_(this)" onmouseup="uncopy_(this)">Copy</button></td>
+    </tr>
+
+    <tr>
+      <td id="t241" class="code">&lt;t:0:D&gt;</td>
+      <td id="t242">January 1, 1970</td>
+      <td id="t243">1 January 1970</td>
+      <td><button class="mbutton no_margin" onmousedown="copy_(this)" onmouseup="uncopy_(this)">Copy</button></td>
+    </tr>
+
+    <tr>
+      <td id="t251" class="code">&lt;t:0:d&gt;</td>
+      <td id="t252">01/01/1970 (M/D/Y)</td>
+      <td id="t253">01/01/1970 (D/M/Y)</td>
+      <td><button class="mbutton no_margin" onmousedown="copy_(this)" onmouseup="uncopy_(this)">Copy</button></td>
+    </tr>
+
+    <tr>
+      <td id="t261" class="code">&lt;t:0:T&gt;</td>
+      <td id="t262">12:00:00 AM</td>
+      <td id="t263">00:00:00</td>
+      <td><button class="mbutton no_margin" onmousedown="copy_(this)" onmouseup="uncopy_(this)">Copy</button></td>
+    </tr>
+
+    <tr>
+      <td id="t271" class="code">&lt;t:0:t&gt;</td>
+      <td id="t272">12:00 AM</td>
+      <td id="t273">00:00</td>
+      <td><button class="mbutton no_margin" onmousedown="copy_(this)" onmouseup="uncopy_(this)">Copy</button></td>
+    </tr>
+  </table>
+  </div>
+  <script src="/script_generic.js"></script>
+  <script src="/Utilities/script.js"></script>
+</body>
+
+</html>

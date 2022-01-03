@@ -115,6 +115,10 @@ td, .small {
   font-size: 2vw;
 }
 
+.smalle {
+  font-size: 1.85vw;
+}
+
 .smaller {
   font-size: 1.8vw;
 }
@@ -186,19 +190,11 @@ table {
   margin-top: 0vw;
 }
 
-.beta {
-  color: #c00;
-}
-
 .rbutton {
   font-size: 2.3vw;
   padding: 1vw 2vw;
   border-radius: 1vw;
   border-width: 0.4vw;
-}
-
-.button3 {
-  width: 31%;
 }
 
 .mbutton {
@@ -214,6 +210,10 @@ table {
   position: fixed;
   bottom: 5px;
   right: 5px;
+}
+
+.no_margin {
+  margin: 0px 0px 0px 0px;
 }
 
 .checkbox_ {
@@ -349,6 +349,11 @@ button:hover {
   background-color: #000;
 }
 
+button:active {
+  border-color: #ff0000;
+  background-color: #ff0000;
+}
+
 .card {
   height: 8vw;
   border-style: solid;
@@ -405,7 +410,7 @@ div.code {
   background-color: #ebebeb;
 }
 
-#search {
+.textbox {
   width: 96.5vw;
   font-size: 2vw;
   padding: 0.5vw 1vw;
@@ -415,6 +420,6 @@ div.code {
   color: #000;
 }
 
-#search::placeholder {
+.textbox::placeholder {
   color: #141414;
 }
