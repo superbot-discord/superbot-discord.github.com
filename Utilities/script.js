@@ -93,7 +93,6 @@ function convert(ts, tb_id, dt) {
       window[`elm_t${tb_id}71`].className = "code"
     }
   }
-  
   window[`elm_t${tb_id}11`].innerHTML = `&lt;t:${ts}&gt;`
   window[`elm_t${tb_id}12`].innerHTML = `${dt_[2]} ${dt_[3]}, ${dt_[0]} ${dt_12h[0]}:${dt_[7]} ${dt_12h[1]}`
   window[`elm_t${tb_id}13`].innerHTML = `${dt_[3]} ${dt_[2]} ${dt_[0]} ${dt_[6]}:${dt_[7]}`
