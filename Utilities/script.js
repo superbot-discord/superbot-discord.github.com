@@ -29,8 +29,13 @@ for (k=1; k<=2; k++) {
 var dt1
 function convert_1() {
   timestamp_box.value = timestamp_box.value.replace(/[^\d-]/g,'');
+  if (parseInt(timestamp_box.value) > 8640000000000) {
+    timestamp_box.value = "8640000000000"
+  } else if (parseInt(timestamp_box.value) < -8640000000000) {
+    timestamp_box.value = "-8640000000000"
+  }
   timestamp_i = timestamp_box.value
-  localStorage.setItem('ts', timestamp_i);
+  localStorage.setItem('timestamp', timestamp_i);
   
   if (timestamp_i == "" || timestamp_i == "-") {
     timestamp_i = "0"

@@ -1,0 +1,1562 @@
+<!DOCTYPE html>
+
+<html style="scroll-behavior: smooth;">
+
+<head>
+  <title>SuperBot Documentation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" id="mystyle" href="/style.css">
+  <base target="_blank">
+</head>
+
+<body>
+  <div id="nav">
+    <a target="_self" href="/">Homepage</a>
+    <a target="_self" href="/Documentation">Documentation</a>
+    <a target="_self" href="/Support">Support Server</a>
+    <a target="_self" href="/Why">Why SuperBot?</a>
+    <a target="_self" href="/Map" style="float: right;">Site Map</a>
+    <a target="_self" href="/Documentation/Arguments" style="float: right;">Arguments</a>
+    <a target="_self" href="/Documentation/Interactive" style="float: right; width: 10vw;">Interactive Docs</a>
+  </div>
+
+  <script src="/script_generic.js"></script>
+  <h1>SuperBot Official Documentation</h1>
+  <p>Note: The bot requires the Send Messages permission for most commands, while the Upload Files permission is required for some commands.
+    These permissions are not listed below.</p>
+  <h2>Basic Commands</h2>
+
+  <div class="card_c">
+    <p class="card_h1">help</p>
+    <p class="card_p" >Views a list of all commands. Does not support in-depth help yet.</p>
+    <p class="card_h2">Arguments</p>
+    <p class="card_p ">N/A</p>
+    <p class="card_h2">Alias</p>
+    <p class="card_p code">commands</p>
+    <p class="card_h2">Permissions (Bot)</p>
+    <p class="card_p" >The bot requires the <span class="bold">Embed Links</span> permission.</p>
+  </div>
+
+  <div class="card_c">
+    <p class="card_h1">inter_help</p>
+    <p class="card_p" >Views in-depth help.</p>
+    <p class="card_h2">Arguments</p>
+    <p class="card_p ">N/A</p>
+    <p class="card_h2">Alias</p>
+    <p class="card_p ">N/A</p>
+    <p class="card_h2">Permissions (Bot)</p>
+    <p class="card_p" >The bot requires the <span class="bold">Embed Links</span> permission.</p>
+  </div>
+
+  <div class="card_c">
+    <p class="card_h1">invite</p>
+    <p class="card_p" >Views the link to invite the bot to another server.</p>
+    <p class="card_h2">Arguments</p>
+    <p class="card_p ">N/A</p>
+    <p class="card_h2">Alias</p>
+    <p class="card_p ">N/A</p>
+    <p class="card_h2">Permissions (Bot)</p>
+    <p class="card_p" >The bot requires the <span class="bold">Embed Links</span> permission.</p>
+  </div>
+
+  <div class="card_c">
+    <p class="card_h1">prefix</p>
+    <p class="card_p" >Views the prefix of the bot (Equal sign <span class="code">=</span> ).</p>
+    <p class="card_h2">Arguments</p>
+    <p class="card_p ">N/A</p>
+    <p class="card_h2">Alias</p>
+    <p class="card_p ">N/A</p>
+  </div>
+
+  <div class="card_c">
+    <p class="card_h1">ping</p>
+    <p class="card_p" >Checks whether the bot is online and views the response speed.</p>
+    <p class="card_h2">Arguments</p>
+    <p class="card_p ">N/A</p>
+    <p class="card_h2">Alias</p>
+    <p class="card_p code">status online</p>
+  </div>
+
+  <div class="card_c">
+    <p class="card_h1">bot_purge {Number}</p>
+    <p class="card_p" >Deletes the most recent message(s) sent by the bot.</p>
+    <p class="card_h2">Arguments</p>
+    <p class="card_p "><span class="code">{Number}</span> The number of message(s) to delete. Defaults to 1.</p>
+    <p class="card_h2">Alias</p>
+    <p class="card_p ">N/A</p>
+    <p class="card_h2">Permissions (You)</p>
+    <p class="card_p" >You need the <span class="bold">Manage Messages</span> permission.</p>
+  </div>
+
+  <h2>Discord Information Commands (Server)</h2>
+
+  <div class="card_c">
+    <p class="card_h1">server</p>
+    <p class="card_p" >Views information about the server.<br>Includes a list of channels, members and roles, as well as miscellaneous information.</p>
+    <p class="card_h2">Arguments</p>
+    <p class="card_p ">N/A</p>
+    <p class="card_h2">Alias</p>
+    <p class="card_p code">guild</p>
+    <p class="card_h2">Permissions (Bot)</p>
+    <p class="card_p" >The bot requires the <span class="bold">Embed Links</span> permission.</p>
+  </div>
+
+  <div class="card_c">
+    <p class="card_h1">server mod</p>
+    <p class="card_p" >Views a list of banned members and invites of the server.</p>
+    <p class="card_h2">Arguments</p>
+    <p class="card_p ">N/A</p>
+    <p class="card_h2">Alias</p>
+    <p class="card_p code">guild mod</p>
+    <p class="card_h2">Permissions (Bot)</p>
+    <p class="card_p" >The bot requires the <span class="bold">Ban Members</span>, <span class="bold">Manage Server</span> and <span class="bold">Embed Links</span> permissions.</p>
+  </div>
+
+  <div class="card_c">
+    <p class="card_h1">statuses</p>
+    <p class="card_p" >Views a pie chart of all members organized by status.</p>
+    <p class="card_h2">Arguments</p>
+    <p class="card_p ">N/A</p>
+    <p class="card_h2">Alias</p>
+    <p class="card_p code">stu</p>
+  </div>
+
+  <div id="banner-1" class="card_c">
+    <p class="card_h1">banner</p>
+    <p class="card_p" >Views the banner of the server. Another usage of this command can be found <a href="#banner-2" target="_self">here</a>.</p>
+    <p class="card_h2">Arguments</p>
+    <p class="card_p ">N/A</p>
+    <p class="card_h2">Alias</p>
+    <p class="card_p code">bn</p>
+    <p class="card_h2">Permissions (Bot)</p>
+    <p class="card_p" >The bot requires the <span class="bold">Embed Links</span> permission.</p>
+  </div>
+
+  <div class="card_c">
+    <p class="card_h1">invitelink [Invite]</p>
+    <p class="card_p" >Views information about an invite link. Depending on whether the bot is in the server or not, it may provide extra information.<br>
+      Not to be confused with <span class="code">invite</span> which allows you to invite the bot to another server.</p>
+    <p class="card_h2">Arguments</p>
+    <p class="card_p "><span class="code">[Invite]</span> The invite link with or without <span class="code"> https://discord.gg/</span>.</p>
+    <p class="card_h2">Alias</p>
+    <p class="card_p code">il</p>
+    <p class="card_h2">Permissions (Bot)</p>
+    <p class="card_p" >The bot requires the <span class="bold">Embed Links</span> permission.</p>
+  </div>
+
+  <div class="card_c">
+    <p class="card_h1">role {Role}</p>
+    <p class="card_p" >Views information about a role.</p>
+    <p class="card_h2">Arguments</p>
+    <p class="card_p "><span class="code">{Role}</span> The role to view information about. Can be an ID, mention or name. Defaults to @everyone.</p>
+    <p class="card_h2">Alias</p>
+    <p class="card_p code">ro</p>
+    <p class="card_h2">Permissions (Bot)</p>
+    <p class="card_p" >The bot requires the <span class="bold">Embed Links</span> permission.</p>
+  </div>
+
+  <div class="card_c">
+    <p class="card_h1">channel {Channel}</p>
+    <p class="card_p" >Views information about a channel.</p>
+    <p class="card_h2">Arguments</p>
+    <p class="card_p "><span class="code">{Channel}</span> The text, voice or stage channel to view information about.
+      Can be an ID, mention or name. Defaults to the channel in which the command is used.</p>
+    <p class="card_h2">Alias</p>
+    <p class="card_p code">ch</p>
+    <p class="card_h2">Permissions (Bot)</p>
+    <p class="card_p" >The bot requires the <span class="bold">Embed Links</span> permission.</p>
+  </div>
+
+  <div class="card_c">
+    <p class="card_h1">category {Category}</p>
+    <p class="card_p" >Views information about a category.</p>
+    <p class="card_h2">Arguments</p>
+    <p class="card_p "><span class="code">{Category}</span> The category to view information about.
+      Can be an ID or name. Defaults to the category of the channel in which the command is used.</p>
+    <p class="card_h2">Alias</p>
+    <p class="card_p code">ca</p>
+    <p class="card_h2">Permissions (Bot)</p>
+    <p class="card_p" >The bot requires the <span class="bold">Embed Links</span> permission.</p>
+  </div>
+
+  <div class="card_c">
+    <p class="card_h1">overwrites {Channel/Category}</p>
+    <p class="card_p" >Views the permission overwrites of a channel or a category.</p>
+    <p class="card_h2">Arguments</p>
+    <p class="card_p "><span class="code">{Channel/Category}</span> The category or text/voice/stage channel to view the overwrites of.
+      Can be an ID, mention or name. Defaults to the channel in which the command is used.</p>
+    <p class="card_h2">Alias</p>
+    <p class="card_p code">ov</p>
+    <p class="card_h2">Permissions (Bot)</p>
+    <p class="card_p" >The bot requires the <span class="bold">Embed Links</span> permission.</p>
+  </div>
+
+  <div class="card_c">
+    <p class="card_h1">emojis</p>
+    <p class="card_p" >Views a list of emojis in the server.</p>
+    <p class="card_h2">Arguments</p>
+    <p class="card_p ">N/A</p>
+    <p class="card_h2">Alias</p>
+    <p class="card_p code">ems</p>
+    <p class="card_h2">Permissions (Bot)</p>
+    <p class="card_p" >The bot requires the <span class="bold">Embed Links</span> permission.</p>
+  </div>
+
+  <div class="card_c">
+    <p class="card_h1">stickers</p>
+    <p class="card_p" >Views a list of stickers in the server.</p>
+    <p class="card_h2">Arguments</p>
+    <p class="card_p ">N/A</p>
+    <p class="card_h2">Alias</p>
+    <p class="card_p code">sts</p>
+    <p class="card_h2">Permissions (Bot)</p>
+    <p class="card_p" >The bot requires the <span class="bold">Embed Links</span> permission.</p>
+  </div>
+
+  <div class="card_c">
+    <p class="card_h1">emojiinfo [Emoji]</p>
+    <p class="card_p" >Views information about the emoji. If the emoji is a custom one, it has to come from the server in which the command is used.
+      <br>Not to be confused with <span class="code">emoji</span> which converts plain text to emojis.</p>
+    <p class="card_h2">Arguments</p>
+    <p class="card_p "><span class="code">[Emoji]</span> The emoji to view information about. Can be a Unicode or custom emoji.</p>
+    <p class="card_h2">Alias</p>
+    <p class="card_p code">emi</p>
+    <p class="card_h2">Permissions (Bot)</p>
+    <p class="card_p" >The bot requires the <span class="bold">Embed Links</span> permission.</p>
+  </div>
+
+  <h2>Discord Information Commands (User)</h2>
+
+  <div class="card_c">
+    <p class="card_h1">user {Member}</p>
+    <p class="card_p" >Views information about the user. The user must be in the server in which the command is used.</p>
+    <p class="card_h2">Arguments</p>
+    <p class="card_p "><span class="code">{Member}</span> The user to view information about.
+      Can be an ID, mention, Name#Discriminator notation or name. Defaults to yourself.</p>
+    <p class="card_h2">Aliases</p>
+    <p class="card_p"><span class="code">member</span> ; <span class="code">us</span></p>
+    <p class="card_h2">Permissions (Bot)</p>
+    <p class="card_p" >The bot requires the <span class="bold">Embed Links</span> permission.</p>
+  </div>
+
+  <div class="card_c">
+    <p class="card_h1">leftuser {User}</p>
+    <p class="card_p" >Views limited information about any user across Discord.</p>
+    <p class="card_h2">Arguments</p>
+    <p class="card_p "><span class="code">{User}</span> The user to view information about.
+      Can be an ID, mention, Name#Discriminator notation, name or nickname. Defaults to yourself.</p>
+    <p class="card_h2">Alias</p>
+    <p class="card_p code">lu</p>
+    <p class="card_h2">Permissions (Bot)</p>
+    <p class="card_p" >The bot requires the <span class="bold">Embed Links</span> permission.</p>
+  </div>
+
+  <div class="card_c">
+    <p class="card_h1">avatar {Member}</p>
+    <p class="card_p" >Views the default, uploaded * and server * avatars of the user. The user must be in the server in which the command is used.<br>
+      * If available</p>
+    <p class="card_h2">Arguments</p>
+    <p class="card_p "><span class="code">{Member}</span> The user to view the avatar of.
+      Can be an ID, mention, Name#Discriminator notation, name or nickname. Defaults to yourself.</p>
+    <p class="card_h2">Alias</p>
+    <p class="card_p code">av</p>
+    <p class="card_h2">Permissions (Bot)</p>
+    <p class="card_p" >The bot requires the <span class="bold">Embed Links</span> permission.</p>
+  </div>
+
+  <div id="banner-2" class="card_c">
+    <p class="card_h1">banner [User]</p>
+    <p class="card_p" >Views the banner of the user. Another usage of this command can be found <a href="#banner-1" target="_self">here</a>.</p>
+    <p class="card_h2">Arguments</p>
+    <p class="card_p "><span class="code">[User]</span> The user to view the banner of.
+      Can be an ID, mention, Name#Discriminator notation, name or nickname.</p>
+    <p class="card_h2">Alias</p>
+    <p class="card_p code">bn</p>
+    <p class="card_h2">Permissions (Bot)</p>
+    <p class="card_p" >The bot requires the <span class="bold">Embed Links</span> permission.</p>
+  </div>
+
+  <div class="card_c">
+    <p class="card_h1">status {Member}</p>
+    <p class="card_p" >Views information about the status of the user. The user must be in the server in which the command is used.</p>
+    <p class="card_h2">Arguments</p>
+    <p class="card_p "><span class="code">{Member}</span> The user to view the status of.
+      Can be an ID, mention, Name#Discriminator notation, name or nickname. Defaults to yourself.</p>
+    <p class="card_h2">Alias</p>
+    <p class="card_p code">sta</p>
+    <p class="card_h2">Permissions (Bot)</p>
+    <p class="card_p" >The bot requires the <span class="bold">Embed Links</span> permission.</p>
+  </div>
+
+  <h2>Discord Information Commands (Message)</h2>
+
+  <div class="card_c">
+    <p class="card_h1">message [Message]</p>
+    <p class="card_p" >Views information about the message.</p>
+    <p class="card_h2">Arguments</p>
+    <p class="card_p "><span class="code">[Message]</span> The message to view information about. Can be a reply, ID or URL.</p>
+    <p class="card_h2">Aliases</p>
+    <p class="card_p"><span class="code">ms</span> ; <span class="code">msg</span></p>
+    <p class="card_h2">Permissions (Bot)</p>
+    <p class="card_p" >The bot requires the <span class="bold">Embed Links</span> permission.</p>
+  </div>
+
+  <div class="card_c">
+    <p class="card_h1">attachment [Message] {Number}</p>
+    <p class="card_p" >Views information about the message.</p>
+    <p class="card_h2">Arguments</p>
+    <p class="card_p "><span class="code">[Message]</span> The message containing the attachments. Can be a reply, ID or URL.<br>
+      <span class="code">{Number}</span> The index of the attachment to view information about. E.g. if the message has 6
+      attachments, then you should specify an integer between 1 and 6 here. Defaults to 1.</p>
+    <p class="card_h2">Aliases</p>
+    <p class="card_p"><span class="code">att</span> ; <span class="code">atch</span></p>
+    <p class="card_h2">Permissions (Bot)</p>
+    <p class="card_p" >The bot requires the <span class="bold">Embed Links</span> permission.</p>
+  </div>
+
+  <div class="card_c">
+    <p class="card_h1">raw [Message]</p>
+    <p class="card_p" >Views the raw contents of the message. Useful for copying messages with heavy formatting.</p>
+    <p class="card_h2">Arguments</p>
+    <p class="card_p "><span class="code">[Message]</span> The message to view the contents of. Can be a reply, ID or URL.</p>
+    <p class="card_h2">Alias</p>
+    <p class="card_p">N/A</p>
+    <p class="card_h2">Permissions (Bot)</p>
+    <p class="card_p" >The bot requires the <span class="bold">Embed Links</span> permission.</p>
+  </div>
+
+  <div class="card_c">
+    <p class="card_h1">rawraw [Message]</p>
+    <p class="card_p" >Views the raw contents of the message with formatting symbols backslashed. Useful for copying messages with heavy formatting.</p>
+    <p class="card_h2">Arguments</p>
+    <p class="card_p "><span class="code">[Message]</span> The message to view the contents of. Can be a reply, ID or URL.</p>
+    <p class="card_h2">Alias</p>
+    <p class="card_p">N/A</p>
+    <p class="card_h2">Permissions (Bot)</p>
+    <p class="card_p" >The bot requires the <span class="bold">Embed Links</span> permission.</p>
+  </div>
+
+  <div class="card_c">
+    <p class="card_h1">reactions [Message]</p>
+    <p class="card_p" >Views a pie chart based on the reactions of the message.</p>
+    <p class="card_h2">Arguments</p>
+    <p class="card_p "><span class="code">[Message]</span> The message to view the reactions of. Can be a reply, ID or URL.</p>
+    <p class="card_h2">Alias</p>
+    <p class="card_p code">rea</p>
+    <p class="card_h2">Permissions (Bot)</p>
+    <p class="card_p" >The bot requires the <span class="bold">Embed Links</span> permission.</p>
+  </div>
+
+  <div class="card_c">
+    <p class="card_h1">sticker [Message]</p>
+    <p class="card_p" >Views information about the sticker sent in the message.</p>
+    <p class="card_h2">Arguments</p>
+    <p class="card_p "><span class="code">[Message]</span> The message to view the sitcker of. Can be a reply, ID or URL.</p>
+    <p class="card_h2">Alias</p>
+    <p class="card_p code">st</p>
+    <p class="card_h2">Permissions (Bot)</p>
+    <p class="card_p" >The bot requires the <span class="bold">Embed Links</span> permission.</p>
+  </div>
+
+  <h2>Discord Information Commands (General)</h2>
+
+  <div class="card_c">
+    <p class="card_h1">template [Template]</p>
+    <p class="card_p" >Views information about any template across Discord.</p>
+    <p class="card_h2">Arguments</p>
+    <p class="card_p "><span class="code">[Template]</span> The template to view the sitcker of. Can be an ID or URL.</p>
+    <p class="card_h2">Alias</p>
+    <p class="card_p code">tm</p>
+    <p class="card_h2">Permissions (Bot)</p>
+    <p class="card_p" >The bot requires the <span class="bold">Embed Links</span> permission.</p>
+  </div>
+
+  <div class="card_c">
+    <p class="card_h1">permissions {Member/Integer}</p>
+    <p class="card_p" >Views information about the permission integer or the permissions of a user. If you specify a user, he must
+      be in the server in which the command is used.</p>
+    <p class="card_h2">Arguments</p>
+    <p class="card_p "><span class="code">{Member/Integer}</span> Either a user or an integer. If not specified, general information
+      about permission integers will be displayed.</p>
+    <p class="card_h2">Alias</p>
+    <p class="card_p code">perm(s)</p>
+    <p class="card_h2">Permissions (Bot)</p>
+    <p class="card_p" >The bot requires the <span class="bold">Embed Links</span> permission.</p>
+  </div>
+
+  <div class="card_c">
+    <p class="card_h1">badges {Member/Integer}</p>
+    <p class="card_p" >Views information about the badge integer or the badges of a user. If you specify a user, he must be in the
+      server in which the command is used.</p>
+    <p class="card_h2">Arguments</p>
+    <p class="card_p "><span class="code">{Member/Integer}</span> Either a user or an integer. If not specified, general information
+      about badge integers will be displayed.</p>
+    <p class="card_h2">Alias</p>
+    <p class="card_p code">flag(s)</p>
+    <p class="card_h2">Permissions (Bot)</p>
+    <p class="card_p" >The bot requires the <span class="bold">Embed Links</span> permission.</p>
+  </div>
+
+  <h2>Discord Commands</h2>
+
+  <div class="card_c">
+    <p class="card_h1">react [Message] [Emoji]</p>
+    <p class="card_p" >Temporarily reacts to the message with the emoji. This works for animated emojis and can replace Discord Nitro's
+      "Add Animated Reactions" feature.</p>
+    <p class="card_h2">Arguments</p>
+    <p class="card_p "><span class="code">[Message]</span> The message to react to. Can be a reply, ID or URL.<br>
+      <span class="code">[Emoji]</span> The custom emoji to react with.</p>
+    <p class="card_h2">Alias</p>
+    <p class="card_p">N/A</p>
+    <p class="card_h2">Permissions (Bot)</p>
+    <p class="card_p" >The bot requires the <span class="bold">Add Reactions</span> permission.</p>
+  </div>
+
+  <div class="card_c">
+    <p class="card_h1">snipe {Boolean}</p>
+    <p class="card_p" >If the boolean is supplied, enables or disables sniping in the current channel. Otherwise, shows the 5 most
+      recently deleted messages. Disabling snipe <span class="bold">will not</span> clear the deleted message database! If you want
+      to do so, use <a class="code" href="#clearsnipe" target="_self">clearsnipe</a>.</p>
+    <p class="card_h2">Arguments</p>
+    <p class="card_p "><span class="code">{Boolean}</span> Whether you want to enable snipe or not.</p>
+    <p class="card_h2">Alias</p>
+    <p class="card_p">N/A</p>
+    <p class="card_h2">Permissions</p>
+    <p class="card_p" >The bot requires the <span class="bold">Embed Links</span> permission.<br>
+      If you supply the Boolean argument, you will need the <span class="bold">Manage Channel</span> permission.</p>
+  </div>
+
+  <div id="clearsnipe" class="card_c">
+    <p class="card_h1">clearsnipe</p>
+    <p class="card_p" >Clears the deleted message database of the current channel.</p>
+    <p class="card_h2">Arguments</p>
+    <p class="card_p ">N/A</p>
+    <p class="card_h2">Alias</p>
+    <p class="card_p">N/A</p>
+    <p class="card_h2">Permissions (Bot)</p>
+    <p class="card_p" >You need the <span class="bold">Manage Channel</span> permission.</p>
+  </div>
+
+  <div id="clearsnipe" class="card_c">
+    <p class="card_h1">pretend [Member] [Contents]</p>
+    <p class="card_p" >Pretends as another user and send a message using the magic of webhooks. Note that fake messages sent by
+      this command can easily be distinguished from real ones by clicking on the sender's avatar.</p>
+    <p class="card_h2">Arguments</p>
+    <p class="card_p "><span class="code">[Member]</span> The user to pretend as. Can be an ID, mention, Name#Discriminator
+      notation, name or nickname.<br><span class="code">[Contents]</span> The text to send.</p>
+    <p class="card_h2">Alias</p>
+    <p class="card_p">N/A</p>
+    <p class="card_h2">Permissions (You)</p>
+    <p class="card_p" >The bot requires the <span class="bold">Manage Webhooks</span> permission.</p>
+  </div>
+
+  <div id="clearsnipe" class="card_c">
+    <p class="card_h1">pretendembed [Member] [Embed Contents]</p>
+    <p class="card_p" >Pretends as another user and send an embed using the magic of webhooks. Note that fake messages sent by
+      this command can easily be distinguished from real ones by clicking on the sender's avatar.</p>
+    <p class="card_h2">Arguments</p>
+    <p class="card_p "><span class="code">[Member]</span> The user to pretend as. Can be an ID, mention, Name#Discriminator notation,
+      name or nickname.<br><span class="code">[Embed Contents]</span> The contents of the embed. Please see
+      <a target="_blank" href="/Appendices/A1#embed">Appendix A1</a> for information on how to use them.</p>
+    <p class="card_h2">Alias</p>
+    <p class="card_p">N/A</p>
+    <p class="card_h2">Permissions (You)</p>
+    <p class="card_p" >The bot requires the <span class="bold">Manage Webhooks</span> permission.</p>
+  </div>
+
+  <div id="clearsnipe" class="card_c">
+    <p class="card_h1">embed [Embed Contents]</p>
+    <p class="card_p" >Sends an embed as the bot.</p>
+    <p class="card_h2">Arguments</p>
+    <p class="card_p "><span class="code">[Embed Contents]</span> The contents of the embed. Please see
+      <a target="_blank" href="/Appendices/A1#embed">Appendix A1</a> for information on how to use them.</p>
+    <p class="card_h2">Alias</p>
+    <p class="card_p">N/A</p>
+    <p class="card_h2">Permissions (You)</p>
+    <p class="card_p" >The bot requires the <span class="bold">Embed Links</span> permission.</p>
+  </div>
+
+  <div id="clearsnipe" class="card_c">
+    <p class="card_h1">editembed [Message] [Embed Contents]</p>
+    <p class="card_p" >Edits an embed previously sent by <span class="code">embed</span>.</p>
+    <p class="card_h2">Arguments</p>
+    <p class="card_p "><span class="code">[Message]</span> The message to edit. Can be a reply, ID or URL.<br>
+      <span class="code">[Embed Contents]</span> The contents of the embed. Please see
+      <a target="_blank" href="/Appendices/A1#embed">Appendix A1</a> for information on how to use them.</p>
+    <p class="card_h2">Alias</p>
+    <p class="card_p">N/A</p>
+    <p class="card_h2">Permissions (You)</p>
+    <p class="card_p" >The bot requires the <span class="bold">Embed Links</span> permission.</p>
+  </div>
+
+  <div id="clearsnipe" class="card_c">
+    <p class="card_h1">simpembed [Embed Contents]</p>
+    <p class="card_p" >Sends an embed as the bot with a similar interface compared to <span class="code">embed</span>.</p>
+    <p class="card_h2">Arguments</p>
+    <p class="card_p "><span class="code">[Embed Contents]</span> The contents of the embed. Please see
+      <a target="_blank" href="/Appendices/A1#simpembed">Appendix A1</a> for information on how to use them.</p>
+    <p class="card_h2">Aliases</p>
+    <p class="card_p"><span class="code">simpleembed</span> ; <span class="code">simplembed</span></p>
+    <p class="card_h2">Permissions (You)</p>
+    <p class="card_p" >The bot requires the <span class="bold">Embed Links</span> permission.</p>
+  </div>
+
+  <div id="clearsnipe" class="card_c">
+    <p class="card_h1">quickembed [Embed Contents]</p>
+    <p class="card_p" >Sends an embed as the bot with a similar interface compared to <span class="code">simpembed</span>.</p>
+    <p class="card_h2">Arguments</p>
+    <p class="card_p "><span class="code">[Embed Contents]</span> The contents of the embed. Please see
+      <a target="_blank" href="/Appendices/A1#simpembed">Appendix A1</a> for information on how to use them.</p>
+    <p class="card_h2">Alias</p>
+    <p class="card_p">N/A</p>
+    <p class="card_h2">Permissions (You)</p>
+    <p class="card_p" >The bot requires the <span class="bold">Embed Links</span> permission.</p>
+  </div>
+
+  <div id="clearsnipe" class="card_c">
+    <p class="card_h1">ett [Message]</p>
+    <p class="card_p" >Converts a previously sent embed into the <span class="code">embed</span> format. The command name is
+    short for "embed to text".</p>
+    <p class="card_h2">Arguments</p>
+    <p class="card_p "><span class="code">[Message]</span> The message to convert. Can be a reply, ID or URL.</p>
+    <p class="card_h2">Alias</p>
+    <p class="card_p">N/A</p>
+    <p class="card_h2">Permissions (You)</p>
+    <p class="card_p" >The bot requires the <span class="bold">Embed Links</span> permission.</p>
+  </div>
+
+  <div id="clearsnipe" class="card_c">
+    <p class="card_h1">tts [Contents]</p>
+    <p class="card_p" >Sends a message with text-to-speech (TTS) enabled. Same as the default slash command <span class="code">/tts</span>.</p>
+    <p class="card_h2">Arguments</p>
+    <p class="card_p "><span class="code">[Contents]</span> The message content to send.</p>
+    <p class="card_h2">Alias</p>
+    <p class="card_p">N/A</p>
+    <p class="card_h2">Permissions</p>
+    <p class="card_p" >The bot and you need the <span class="bold">Send TTS Messages</span> permission.</p>
+  </div>
+
+  <h2>Moderation Commands (Members)</h2>
+
+  <div id="clearsnipe" class="card_c">
+    <p class="card_h1">kick [Member] {Reason}</p>
+    <p class="card_p" >Kicks the user out of the server once.</p>
+    <p class="card_h2">Arguments</p>
+    <p class="card_p "><span class="code">[Member]</span> The user to kick. Can be an ID, mention, Name#Discriminator notation, name or nickname.</p>
+    <p class="card_h2">Alias</p>
+    <p class="card_p">N/A</p>
+    <p class="card_h2">Permissions</p>
+    <p class="card_p" >The bot and you need the <span class="bold">Kick Members</span> permission.</p>
+  </div>
+
+  <div id="clearsnipe" class="card_c">
+    <p class="card_h1">ban [User] {Days} {Reason}</p>
+    <p class="card_p" >Bans the user and notify him via a DM. He will not be able to rejoin until someone unbans him.</p>
+    <p class="card_h2">Arguments</p>
+    <p class="card_p "><span class="code">[User]</span> The user to ban. Can be an ID, mention, Name#Discriminator notation or name.<br>
+      <span class="code">{Days}</span> Must be an integer between 0 and 7 inclusive. After the ban, Discord will delete X days worth of
+      messages sent by the user. Defaults to 0 (don't delete any).<br><span class="code">{Reason}</span> The reason to ban the user.
+      Shows up in the audit log.</p>
+    <p class="card_h2">Alias</p>
+    <p class="card_p">N/A</p>
+    <p class="card_h2">Permissions</p>
+    <p class="card_p" >The bot and you need the <span class="bold">Ban Members</span> permission.</p>
+  </div>
+
+  <div id="clearsnipe" class="card_c">
+    <p class="card_h1">unban [User] {Reason}</p>
+    <p class="card_p" >Unans the user.</p>
+    <p class="card_h2">Arguments</p>
+    <p class="card_p "><span class="code">[User]</span> The user to unban. Can be an ID, mention, Name#Discriminator notation or name.<br>
+    <span class="code">{Reason}</span> The reason to ban the user. Shows up in the audit log.</p>
+    <p class="card_h2">Alias</p>
+    <p class="card_p">N/A</p>
+    <p class="card_h2">Permissions</p>
+    <p class="card_p" >The bot and you need the <span class="bold">Ban Members</span> permission.</p>
+  </div>
+
+  <div id="clearsnipe" class="card_c">
+    <p class="card_h1">timeout [Member] {Duration} {Reason}</p>
+    <p class="card_p" >Timeouts the user. If the duration is not set or is zero, removes the timeout.</p>
+    <p class="card_h2">Arguments</p>
+    <p class="card_p "><span class="code">[User]</span> The user to unban. Can be an ID, mention, Name#Discriminator notation or name.<br>
+    <span class="code">{Reason}</span> The reason to ban the user. Shows up in the audit log.</p>
+    <p class="card_h2">Alias</p>
+    <p class="card_p">N/A</p>
+    <p class="card_h2">Permissions</p>
+    <p class="card_p" >The bot and you need the <span class="bold">Ban Members</span> permission.</p>
+  </div>
+
+  <h2>Moderation Commands (Channel)</h2>
+
+  <div id="clearsnipe" class="card_c">
+    <p class="card_h1">slowmode {Delay} {Reason}</p>
+    <p class="card_p" >Unans the user.</p>
+    <p class="card_h2">Arguments</p>
+    <p class="card_p "><span class="code">[User]</span> The user to unban. Can be an ID, mention, Name#Discriminator notation or name.<br>
+    <span class="code">{Reason}</span> The reason to ban the user. Shows up in the audit log.</p>
+    <p class="card_h2">Alias</p>
+    <p class="card_p">N/A</p>
+    <p class="card_h2">Permissions</p>
+    <p class="card_p" >The bot and you need the <span class="bold">Ban Members</span> permission.</p>
+  </div>
+
+  <br>
+
+  <div class="overflow">
+  <table style="width: 220%;">
+    <colgroup>
+      <col span="1" style="width: 15%;">
+      <col span="1" style="width: 45%;">
+      <col span="1" style="width: 70%;">
+      <col span="1" style="width: 30%;">
+      <col span="1" style="width: 30%;">
+      <col span="1" style="width: 30%;">
+    </colgroup>
+
+    <tr>
+      <th rowspan="2">Command</th>
+      <th rowspan="2">Argument(s)</th>
+      <th rowspan="2">Description</th>
+      <th rowspan="2">Alias(es)</th>
+      <th colspan="2">Permissions required</th>
+    </tr>
+
+    <tr>
+      <th>By bot</th>
+      <th>By you</th>
+    </tr>
+
+    <tr>
+      <td class="code">purge</td>
+      <td>Number of messages to delete (Integer)</td>
+      <td>Deletes the most recent message(s) in the current channel. Useful for cleanup.</td>
+      <td></td>
+      <td colspan="2">Manage messages</td>
+    </tr>
+
+    <tr>
+      <td class="code">purgeuser</td>
+      <td>Number of messages (Integer), User (User)</td>
+      <td>Deletes the most recent message(s) in the current channel sent by the user.</td>
+      <td></td>
+      <td colspan="2">Manage messages</td>
+    </tr>
+
+    <tr>
+      <td class="code">purgeregex</td>
+      <td>Number of messages (Integer), Regex (Text+)</td>
+      <td rowspan="3">Selectively deletes the most recent message(s) in the current channel based on a regular expression, python script or both. See <a target="_self" href="/Appendices/A2">Appendix A2</a>.</td>
+      <td></td>
+      <td colspan="2">Manage messages</td>
+    </tr>
+
+    <tr>
+      <td class="code">purgepy</td>
+      <td>No. of messages (Integer), Python script (Text+)</td>
+      <td></td>
+      <td colspan="2">Manage messages</td>
+    </tr>
+
+    <tr>
+      <td class="code">purgepygex</td>
+      <td>No. of msg's (Integer), Regex (Text), Py. s (Text+)</td>
+      <td></td>
+      <td colspan="2">Manage messages</td>
+    </tr>
+    
+    <tr>
+      <td class="code" style="font-size: 1.6vw;">purgereactions</td>
+      <td>No. of msg's (Integer)</td>
+      <td>Removes all reactions from the most recent message(s).</td>
+      <td></td>
+      <td colspan="2">Manage reactions</td>
+    </tr>
+
+    <tr>
+      <td class="code">makeinvite</td>
+      <td>Valid duration (Text), <span class="inverted">Max. users (Integer)</span></td>
+      <td>Generates an invite for the server. Defaults to infinite users if not set.</td>
+      <td></td>
+      <td colspan="2">Create invite</td>
+    </tr>
+  </table>
+  </div><br><br>
+
+  <div class="overflow">
+  <table style="width: 220%;">
+    <colgroup>
+      <col span="1" style="width: 15%;">
+      <col span="1" style="width: 45%;">
+      <col span="1" style="width: 70%;">
+      <col span="1" style="width: 30%;">
+      <col span="1" style="width: 30%;">
+      <col span="1" style="width: 30%;">
+    </colgroup>
+
+    <tr>
+      <th class="big" colspan="6"><span class="th">Text commands</span></th>
+    </tr>
+
+    <tr>
+      <th rowspan="2">Command</th>
+      <th rowspan="2">Argument(s)</th>
+      <th rowspan="2">Description</th>
+      <th rowspan="2">Alias(es)</th>
+      <th colspan="2">Permissions required</th>
+    </tr>
+
+    <tr>
+      <th>By bot</th>
+      <th>By you</th>
+    </tr>
+
+    <tr>
+      <td class="code">poll</td>
+      <td>Space-separated pairs (Text*), Title (Text+)</td>
+      <td>Starts a poll (vote). Example of 1 pair: <span class="code">yes:green_check_mark:</span></td>
+      <td class="code">vote</td>
+      <td>Add reactions, Embed links</td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td class="code">insert</td>
+      <td>Emoji (Text), Text to work on (Text+)</td>
+      <td>Replaces spaces in the text with emojis &#x1f600; just &#x1f600; like &#x1f600; this.</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td class="code">spoiler</td>
+      <td>Text to work on (Text+)</td>
+      <td>Generates an annoying piece of spoiler text.</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td class="code">rawspoiler</td>
+      <td>Text to work on (Text+)</td>
+      <td>Generates an annoying piece of spoiler text to copy and paste.</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td class="code smaller">rawrawspoiler</td>
+      <td>Text to work on (Text+)</td>
+      <td>Similar to <span class="code">rawspoiler</span>, but the recursion depth is 2.</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td class="code">reverse</td>
+      <td>Text to work on (Text+)</td>
+      <td>Reverses a piece of text.</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td class="code">emoji</td>
+      <td>Text to work on (Text+)</td>
+      <td>Turns text into regional indicators and other emoji symbols.</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td class="code">base</td>
+      <td>From base, To base (Integer), Number (Text+)</td>
+      <td>Turns text into regional indicators and other emoji symbols.</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td class="code">encode</td>
+      <td rowspan="2">Algorithm (base16/32/64, blake2b/2s, sha1/224/256/384/512), Text (Text+)</td>
+      <td>Encodes/hashes the piece of text.</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td class="code">decode</td>
+      <td>Decodes the piece of text. Note: blake- and sha- hashes are not available!</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td class="code">length</td>
+      <td>Text (Text+)</td>
+      <td>Analyses the length and most common characters in the text.</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td class="code">spellcheck</td>
+      <td>Text (Text)</td>
+      <td>Spellchecks a word based on the QWERTY keyboard layout.</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td class="code">case</td>
+      <td>Text (Text)</td>
+      <td>Makes the piece of text all-lowercased, all-uppercased or in title casing.</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </table>
+  </div><br><br>
+
+  <div class="overflow">
+  <table style="width: 220%;">
+    <colgroup>
+      <col span="1" style="width: 15%;">
+      <col span="1" style="width: 45%;">
+      <col span="1" style="width: 70%;">
+      <col span="1" style="width: 30%;">
+      <col span="1" style="width: 30%;">
+      <col span="1" style="width: 30%;">
+    </colgroup>
+
+    <tr>
+      <th class="big" colspan="6"><span class="th">Information commands</span></th>
+    </tr>
+
+    <tr>
+      <th rowspan="2">Command</th>
+      <th rowspan="2">Argument(s)</th>
+      <th rowspan="2">Description</th>
+      <th rowspan="2">Alias(es)</th>
+      <th colspan="2">Permissions required</th>
+    </tr>
+
+    <tr>
+      <th>By bot</th>
+      <th>By you</th>
+    </tr>
+
+    <tr>
+      <td class="code">color</td>
+      <td>#HEX or R G B or Decimal (Text+)</td>
+      <td>Shows information about a color.</td>
+      <td class="code">colour</td>
+      <td>Embed links</td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td class="code small">simplecolor</td>
+      <td><a href="Colors.jpeg" target="_blank">Color name (Text)</a></td>
+      <td>Shows information about a gradient or color.</td>
+      <td class="code">simplecolour</td>
+      <td></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td class="code">translate</td>
+      <td>Language code (Text), Sentence (Text+)</td>
+      <td>Translates the text to the language.</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td class="code">definition</td>
+      <td>Word (Text)</td>
+      <td>Looks up the word in a dictionary.</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td class="code">unix</td>
+      <td>Time (Text+)</td>
+      <td>Generates Discord timestamps. Argument examples:<span class="code" style="font-size: 1.4vw;">now</span><span class="code" style="font-size: 1.4vw;">2021y12M31d12h0m0s</span></td>
+      <td class="code">timestamp</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td class="code">rtimer</td>
+      <td rowspan="2">Duration (Text)</td>
+      <td>Starts a timer with beautiful regional indicators. See <a target="_self" href="/Appendices/A3">Appendix A3</a>.</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td class="code">ttimer</td>
+      <td>Starts a timer in plain text. See <a target="_self" href="/Appendices/A3">Appendix A3</a>.</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td class="code">terminate</td>
+      <td>Timer ID (Text)</td>
+      <td>Terminates a timer given its code. See <a target="_self" href="/Appendices/A3">Appendix A3</a>.</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td class="code">unscramble</td>
+      <td>Alphabets (Text)</td>
+      <td>Unscrambles a piece of text. Useful when playing Scrabble.</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td class="code">unicode</td>
+      <td>Query (Text+)</td>
+      <td>Looks up unicode characters based on their names.</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td class="code">random</td>
+      <td>Lower (Integer), Upper (Integer)</td>
+      <td>Draws a random integer between the two arguments.</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td class="code">choice</td>
+      <td>Possible choices (Text*)</td>
+      <td>Draws a random choice out of the arguments.</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td class="code">raffle</td>
+      <td rowspan="2">Lower (Integer), Upper (Integer), Times (Integer)</td>
+      <td>Draws random integers between the bounds for multiple times.</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td class="code">pick</td>
+      <td>Similar to <span class="code">raffle</span>, but entries do not repeat.</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </table>
+  </div><br><br>
+
+  <div class="overflow">
+  <table style="width: 220%;">
+    <colgroup>
+      <col span="1" style="width: 15%;">
+      <col span="1" style="width: 45%;">
+      <col span="1" style="width: 70%;">
+      <col span="1" style="width: 30%;">
+      <col span="1" style="width: 30%;">
+      <col span="1" style="width: 30%;">
+    </colgroup>
+
+    <tr>
+      <th class="big" colspan="6"><span class="th">Web commands</span></th>
+    </tr>
+
+    <tr>
+      <th rowspan="2">Command</th>
+      <th rowspan="2">Argument(s)</th>
+      <th rowspan="2">Description</th>
+      <th rowspan="2">Alias(es)</th>
+      <th colspan="2">Permissions required</th>
+    </tr>
+
+    <tr>
+      <th>By bot</th>
+      <th>By you</th>
+    </tr>
+
+    <tr>
+      <td class="code">redirect</td>
+      <td>URL (Text+)</td>
+      <td>Checks for redirects of the URL.</td>
+      <td class="code">redirects</td>
+      <td></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td class="code">screenshot</td>
+      <td>URL (Text), <span class="inverted">Form (short/full/all)</span></td>
+      <td>Captures a screenshot of the website.</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td class="code">rss</td>
+      <td>URL (Text)</td>
+      <td>Views an RSS feed and generates an HTML file.</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td class="code">wiki</td>
+      <td>Query (Text+)</td>
+      <td>Views a Wikipedia article and generates an HTML file.</td>
+      <td></td>
+      <td>Embed links</td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td class="code small">wiki_search</td>
+      <td>Query (Text+)</td>
+      <td>Looks for related Wikipedia articles.</td>
+      <td></td>
+      <td>Embed links</td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td class="code">youtube</td>
+      <td>URL (Text+)</td>
+      <td>Looks for a video on YouTube.</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td class="code">youtube</td>
+      <td>the text "search", then Query (Text+)</td>
+      <td>Looks for a video on YouTube. (e.g. <span class="code">youtube search query</span>)</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td class="code">minecraft</td>
+      <td>Query (Text+)</td>
+      <td>Looks for an entry in the Minecraft Wiki.</td>
+      <td></td>
+      <td>Embed links</td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td class="code">engrave</td>
+      <td>Product (Text), Text (Text+)</td>
+      <td>Engraves a piece of text on an Apple product. See <a target="_self" href="/Appendices/A5">Appendix A5</a></td>
+      <td></td>
+      <td>Embed links</td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td class="code">covid</td>
+      <td><span class="inverted">Country name in the <a href="https://www.worldometers.info/coronavirus/" class="inverted">Worldometer</a> table</span></td>
+      <td>Checks the number of coronavirus cases in a country and generate a pie chart.</td>
+      <td></td>
+      <td>Embed links</td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td class="code">population</td>
+      <td><span class="inverted">Country name in the <a href="https://www.worldometers.info/coronavirus/" class="inverted">Worldometer</a> table</span></td>
+      <td>Checks the population size of a country.</td>
+      <td></td>
+      <td>Embed links</td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td class="code">states</td>
+      <td><span class="inverted"><a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#Officially_assigned_code_elements">2-digit country code</a></td>
+      <td>Checks the administrative divisions (states/provinces/districts) of a country.</td>
+      <td><span class="code small">provinces</span><span class="code small">districts</span></td>
+      <td></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td class="code">map</td>
+      <td>Long. (No.), Lat. (No.), <span class="inverted">Zoom (Integer), Lock (Bool)</td>
+      <td>Generates a map based on the coordinates. Zoom level can be between 0 and 18 inclusive (0: broadest; 18: finest). Optionally locks the zoom level.</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    
+    <tr>
+      <td class="code">weather</td>
+      <td>Location (Text+)</td>
+      <td>Checks the current weather of a location.</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td class="code">forecast</td>
+      <td>Location (Text+)</td>
+      <td>Checks the weather forecast of a location and generates an HTML file.</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td class="code">gender</td>
+      <td>Name (Text+)</td>
+      <td>Estimates the gender of a name. Please use this for fun only!</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td class="code">bird</td>
+      <td><span class="inverted">Number of images (Integer)</span></td>
+      <td>Loads up to 9 random bird images.</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td class="code">bird_fact</td>
+      <td><span class="inverted">Number of facts (Integer)</span></td>
+      <td>Loads up to 9 random bird facts.</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td class="code">bunny</td>
+      <td><span class="inverted">Number of images (Integer)</span></td>
+      <td>Loads up to 9 random bunny images.</td>
+      <td class="code">rabbit</td>
+      <td></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td class="code">bunny_fact</td>
+      <td><span class="inverted">Number of facts (Integer)</span></td>
+      <td>Loads up to 9 random bunny facts.</td>
+      <td class="code">rabbit_fact</td>
+      <td></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td class="code">cat</td>
+      <td><span class="inverted">Number of images (Integer)</span></td>
+      <td>Loads up to 9 random cat images.</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td class="code">cat_fact</td>
+      <td><span class="inverted">Number of facts (Integer)</span></td>
+      <td>Loads up to 9 random cat facts.</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td class="code">dog</td>
+      <td><span class="inverted">Number of images (Integer)</span></td>
+      <td>Loads up to 9 random dog images.</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td class="code">dog_fact</td>
+      <td><span class="inverted">Number of facts (Integer)</span></td>
+      <td>Loads up to 9 random dog facts.</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td class="code">duck</td>
+      <td><span class="inverted">Number of images (Integer)</span></td>
+      <td>Loads up to 9 random duck images.</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td class="code">duck_fact</td>
+      <td><span class="inverted">Number of facts (Integer)</span></td>
+      <td>Loads up to 9 random duck facts.</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td class="code">fox</td>
+      <td><span class="inverted">Number of images (Integer)</span></td>
+      <td>Loads up to 9 random fox images.</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td class="code">fox_fact</td>
+      <td><span class="inverted">Number of facts (Integer)</span></td>
+      <td>Loads up to 9 random fox facts.</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td class="code">kangaroo</td>
+      <td><span class="inverted">Number of images (Integer)</span></td>
+      <td>Loads up to 9 random kangaroo images.</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td class="code smaller">kangaroo_fact</td>
+      <td><span class="inverted">Number of facts (Integer)</span></td>
+      <td>Loads up to 9 random kangaroo facts.</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td class="code">koala</td>
+      <td><span class="inverted">Number of images (Integer)</span></td>
+      <td>Loads up to 9 random koala images.</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td class="code">koala_fact</td>
+      <td><span class="inverted">Number of facts (Integer)</span></td>
+      <td>Loads up to 9 random koala facts.</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td class="code">lizard</td>
+      <td><span class="inverted">Number of images (Integer)</span></td>
+      <td>Loads up to 9 random lizard images.</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td class="code small">lizard_fact</td>
+      <td><span class="inverted">Number of facts (Integer)</span></td>
+      <td>Loads up to 9 random lizard facts.</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td class="code">panda</td>
+      <td><span class="inverted">Number of images (Integer)</span></td>
+      <td>Loads up to 9 random panda images.</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td class="code small">panda_fact</td>
+      <td><span class="inverted">Number of facts (Integer)</span></td>
+      <td>Loads up to 9 random panda facts.</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td class="code">raccoon</td>
+      <td><span class="inverted">Number of images (Integer)</span></td>
+      <td>Loads up to 9 random raccoon images.</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td class="code smaller">raccoon_fact</td>
+      <td><span class="inverted">Number of facts (Integer)</span></td>
+      <td>Loads up to 9 random raccoon facts.</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td class="code">shiba</td>
+      <td><span class="inverted">Number of images (Integer)</span></td>
+      <td>Loads up to 9 random Shiba Inu images. Note: there is no <span class="code">shiba_fact</span>!</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td class="code">dish</td>
+      <td><span class="inverted">Number of images (Integer)</span></td>
+      <td>Loads up to 9 random images of dishes.</td>
+      <td class="code">food</td>
+      <td></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td class="code">nasa</td>
+      <td></td>
+      <td>Shows the NASA Astronomy Picture of the Day.</td>
+      <td class="code">apod</td>
+      <td></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td class="code">joke</td>
+      <td><span class="inverted">Number of jokes (Integer)</span></td>
+      <td>Loads up to 9 random jokes.</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td class="code">quote</td>
+      <td><span class="inverted">Number of quotes (Integer)</span></td>
+      <td>Loads up to 5 random famous quotes.</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td class="code">trivia</td>
+      <td><span class="inverted">Number of questions (Integer)</span></td>
+      <td>Loads up to 3 random questions (with answers).</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td class="code">error</td>
+      <td>Status Code (Integer)</td>
+      <td>Loads the HTTP Cat and HTTP Dog pictures of the status code.</td>
+      <td class="code">statuscode</td>
+      <td></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td class="code">errorcat</td>
+      <td>Status Code (Integer)</td>
+      <td>Loads the HTTP Cat picture of the status code.</td>
+      <td class="code">httpcat</td>
+      <td></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td class="code">errordog</td>
+      <td>Status Code (Integer)</td>
+      <td>Loads the HTTP Dog picture of the status code.</td>
+      <td class="code">httpdog</td>
+      <td></td>
+      <td></td>
+    </tr>
+  </table>
+  </div><br><br>
+
+  <div class="overflow">
+  <table style="width: 220%;">
+    <colgroup>
+      <col span="1" style="width: 15%;">
+      <col span="1" style="width: 45%;">
+      <col span="1" style="width: 70%;">
+      <col span="1" style="width: 30%;">
+      <col span="1" style="width: 30%;">
+      <col span="1" style="width: 30%;">
+    </colgroup>
+
+    <tr>
+      <th class="big" colspan="6"><span class="th">Plot & Drawing commands</span></th>
+    </tr>
+
+    <tr>
+      <th rowspan="2">Command</th>
+      <th rowspan="2">Argument(s)</th>
+      <th rowspan="2">Description</th>
+      <th rowspan="2">Alias(es)</th>
+      <th colspan="2">Permissions required</th>
+    </tr>
+
+    <tr>
+      <th>By bot</th>
+      <th>By you</th>
+    </tr>
+
+    <tr>
+      <td class="code">ascii</td>
+      <td>Text (Text+)</td>
+      <td>Renders the piece of text in different multiline ASCII fonts.</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td class="code">fonts</td>
+      <td>Text (Text+)</td>
+      <td>Renders the piece of text in different fonts.</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td class="code">table</td>
+      <td>Text (Text+)</td>
+      <td>Generates an ASCII table. See <a target="_self" href="/Appendices/A6">Appendix A6</a></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td class="code">captcha</td>
+      <td><span class="inverted">Text (Text+)</span></td>
+      <td>Generates a captcha image. The text is generated randomly by default.</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td class="code">graph</td>
+      <td>Function (Text), <span class="inverted">Lower Bound, Upper Bound (No.)</span></td>
+      <td>Plots a graph with the x-axis bounds. See <a target="_self" href="/Appendices/A7">Appendix A7</a></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td class="code">multigraph</td>
+      <td>Semicolon-separated function(s) (T.), <span class="inverted">Bounds (No.)</span></td>
+      <td>Similar to </td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td class="code small">led_server</td>
+      <td><span class="inverted">Font (Text), Color (Text), Alignment (Text)</span></td>
+      <td>Views the server's channels in an LED font. See <a target="_self" href="/Appendices/A3">Appendix A3</a></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td class="code small">led2_server</td>
+      <td><span class="inverted">Font (Text), Color (Text), Alignment (Text)</span></td>
+      <td>Views the server's channels in an LED font. See <a target="_self" href="/Appendices/A3">Appendix A3</a></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td class="code small">led3_server</td>
+      <td><span class="inverted">Font (Text), Color (Text), Alignment (Text)</span></td>
+      <td>Views the server's channels in an LED font. See <a target="_self" href="/Appendices/A3">Appendix A3</a></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td class="code small">led4_server</td>
+      <td><span class="inverted">Font (Text), Color (Text), Alignment (Text)</span></td>
+      <td>Views the server's channels in an LED font. See <a target="_self" href="/Appendices/A3">Appendix A3</a></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </table>
+  </div><br><br>
+
+</body>
+
+</html>

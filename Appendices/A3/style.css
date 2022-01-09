@@ -40,7 +40,13 @@
 @font-face {font-family: "led4_3i";     src: url("Fonts/led4_3i.ttf")     format("truetype");}
 
 .lcd_led_small {
-  font-size: 3vw;}
+  font-size: 3vw;
+}
 
 .bigger {
-  font-size: 3vw;}
+  font-size: 3vw;
+}
+
+.code {
+  padding: 0.4vw 1vw 0.4vw 1vw !important;
+}

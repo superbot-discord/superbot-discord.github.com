@@ -55,7 +55,14 @@
 
 .code {
   font-family: Font2, monospace;
-  font-size: 2.2vw;
+  font-size: 2.15vw;
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+}
+
+.code_legacy {
+  font-family: Font2, monospace;
+  font-size: 2.15vw;
   padding-top: 0.4vw;
   padding-bottom: 0.4vw;
   padding-left: 0.1vw;
@@ -167,29 +174,6 @@ table {
   overflow-x: scroll;
 }
 
-.cardl {
-  width: 25%;
-  height: inherit;
-  float: left;
-}
-
-.card1 {
-  font-size: 4vw;
-  margin-top: 1.5vw;
-}
-
-.cardr {
-  width: 75%;
-  height: inherit;
-  float: right;
-}
-
-.card2 {
-  font-size: 2vw;
-  vertical-align: middle;
-  margin-top: 0vw;
-}
-
 .rbutton {
   font-size: 2.3vw;
   padding: 1vw 2vw;
@@ -214,6 +198,10 @@ table {
 
 .no_margin {
   margin: 0px 0px 0px 0px;
+}
+
+.no_padding {
+  padding: 0px 0px 0px 0px;
 }
 
 .checkbox_ {
@@ -271,6 +259,55 @@ div.server img:not(.bot_in) {
   padding-top: 0.35vw;
   padding-bottom: 0.35vw;
   display: inline-block;
+}
+
+.cardl {
+  width: 25%;
+  height: inherit;
+  float: left;
+}
+
+.card1 {
+  font-size: 4vw;
+  margin-top: 1.5vw;
+}
+
+.cardr {
+  width: 75%;
+  height: inherit;
+  float: right;
+}
+
+.card2 {
+  font-size: 2vw;
+  vertical-align: middle;
+  margin-top: 0vw;
+}
+
+.card_c {
+  border-style: solid;
+  border-radius: 0.6vw;
+  border-color: #000;
+  margin-top: 2vw;
+  padding: 1vw;
+}
+
+.card_h1 {
+  font-size: 2.7vw;
+  font-family: Font3b;
+}
+
+.card_h2 {
+  font-size: 2.2vw;
+  font-family: Font3b;
+}
+
+.card_p {
+  font-size: 1.7vw;
+}
+
+.card_p .code {
+  font-size: 1.65vw;
 }
 
 div.server img.bot_in {

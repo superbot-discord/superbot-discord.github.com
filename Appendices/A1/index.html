@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html>
+<html style="scroll-behavior: smooth;">
 
 <head>
   <title>SuperBot - Embeds</title>
@@ -20,7 +20,7 @@
 
   <script src="/script_generic.js"></script>
   <h1 style="font-size: 5.2vw;">SuperBot Appendix 1</h1>
-  <h2>Sending Embed messages with <span class="code">embed</span></h2>
+  <h2 id="embed">Sending Embed messages with <span class="code">embed</span></h2>
   <p><span class="code">=embed</span> takes in 11 arguments spread over 11 lines:</p>
   <div class="code">
     =embed Title<br>
@@ -47,8 +47,8 @@
     any other value for 'no'. This only has an effect if there are more than 1 fields.
   </p>
   <h3>Newlines</h3>
-  <p>(Field) Descriptions allow you to include newlines by typing <span class="code">{{{newline}}}</span>.</p>
-  <h2>Using simplified <span class="code">simpembed</span></h2>
+  <p>Field and regular Descriptions allow you to include newlines by typing <span class="code">{{{newline}}}</span>.</p>
+  <h2 id="simpembed">Using simplified <span class="code">simpembed</span></h2>
   <p><span class="code">=simpembed</span> only takes in 4 arguments for convenience:</p>
   <div class="code">
     =simpembed Title<br>
@@ -56,9 +56,9 @@
     Color<br>
     Image Link
   </div>
-  <p>Similar to <span class="code">embed</span>, you can insert field by appending lines to the command.</p>
-
-  <h2>Skipping things with <span class="code">quickembed</span></h2>
+  <p>Similar to <span class="code">embed</span> (see above), you can insert fields by appending lines to the command. You can also
+  add new lines to field and regular descriptions with <span class="code">{{{newline}}}</span>.</p>
+  <h2 id="quickembed">Skipping things with <span class="code">quickembed</span></h2>
   <p><span class="code">=quickembed</span> has the same arguments as <span class="code">simpembed</span>, but the order is different:</p>
   <div class="code">
     =quickembed Title<br>
@@ -75,8 +75,8 @@
     Images are larger than Thumbnails while author/footer images are extremely small.<br><br>
     If you leave a line empty, it will not be processed. If you leave the color empty, it will be automatic based on light/dark theme.<br><br>
 
-    To add Masked URLS into embed/field description, use <span class="code">[Mask](URL)</span>,
-    such as <span class="code antiwrap">[Wiki](https://wikpedia.com)</span>.<br>
+    To add Masked URLs into embed/field descriptions, use <span class="code">[Mask](URL)</span>,
+    such as <span class="code antiwrap">[Wiki](https://wikpedia.com)</span>. Note that they won't work in other places.<br>
 
     To add a new line to embed/field descriptions, use <span class="code">{{{newline}}}</span>.
   </p>
