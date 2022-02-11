@@ -17,13 +17,16 @@
     <a target="_self" href="/Why">Why SuperBot?</a>
     <a target="_self" href="/Map" style="float: right;">Site Map</a>
     <a target="_self" href="/Security" style="float: right;">Security</a>
-    <!-- <a target="_self" href="https://discord.com/api/oauth2/authorize?client_id=796686363604680755&redirect_uri=https://superbot-website.vercel.app/api/Dashboard&response_type=code&scope=identify+guilds+guilds.members.read&prompt=none" style="float: right;">Login</a> -->
-    <a target="_self" href="https://discord.com/api/oauth2/authorize?client_id=796686363604680755&redirect_uri=http://127.0.0.1:5500/api/Dashboard&response_type=code&scope=identify+guilds+guilds.members.read&prompt=none" style="float: right;">Login</a>
+    <a target="_self" href="https://discord.com/api/oauth2/authorize?client_id=796686363604680755&redirect_uri=https://superbot-website.vercel.app/api/Dashboard&response_type=code&scope=identify+guilds+guilds.members.read&prompt=none" style="float: right;">Login</a>
+    <!-- <a target="_self" href="https://discord.com/api/oauth2/authorize?client_id=796686363604680755&redirect_uri=http://127.0.0.1:5500/api/Dashboard&response_type=code&scope=identify+guilds+guilds.members.read&prompt=none" style="float: right;">Login</a> -->
     <a target="_self" href="/Utilities" class="active" style="float: right;">Utilities</a>
   </div>
 
   <h1>SuperBot Utilities</h1>
   <h3>Timestamp converter</h3>
+  <p>Notes: Timestamps must be within ±8 640 000 000 000. Timestamps formatted with <span class="code">&lt;t:123:R&gt;</span> may
+    not be displayed correctly. All timestamps here are displayed in your time zone.</p>
+  <button class="rbutton" onmousedown="update()">Update relative timestamps</button><br><br>
   <input type="text" id="timestamp_box" class="textbox" oninput="convert_1()" placeholder="Don't worry about special characters. Just paste a timestamp here…">
   <div class="overflow">
   <table id="table1" style="width: 110%;">
@@ -93,16 +96,23 @@
       <td id="t173">00:00</td>
       <td><button class="mbutton no_margin" onmousedown="copy_(this)" onmouseup="uncopy_(this)">Copy</button></td>
     </tr>
+
+    <tr>
+      <td id="t181" class="code">&lt;t:0:R&gt;</td>
+      <td id="t182">12:00 AM</td>
+      <td id="t183">00:00</td>
+      <td><button class="mbutton no_margin" onmousedown="copy_(this)" onmouseup="uncopy_(this)">Copy</button></td>
+    </tr>
   </table>
   </div><br>
-  <p>Note: the timestamp must be within ±8 640 000 000 000.</p><br>
 
-  <input type="text" id="Y_box" class="textbox" style="width: 14.2%;" oninput="convert_2()" placeholder="Year">
-  <input type="text" id="M_box" class="textbox" style="width: 14.2%;" oninput="convert_2()" placeholder="Month">
-  <input type="text" id="D_box" class="textbox" style="width: 14.2%;" oninput="convert_2()" placeholder="Day">
-  <input type="text" id="h_box" class="textbox" style="width: 14.2%;" oninput="convert_2()" placeholder="Hour">
-  <input type="text" id="m_box" class="textbox" style="width: 14.2%;" oninput="convert_2()" placeholder="Minute">
-  <input type="text" id="s_box" class="textbox" style="width: 14.2%;" oninput="convert_2()" placeholder="Second">
+  <input type="text" id="Y_box" class="textbox" style="width: 13%;" oninput="convert_2()" placeholder="Year">
+  <input type="text" id="M_box" class="textbox" style="width: 13%;" oninput="convert_2()" placeholder="Month">
+  <input type="text" id="D_box" class="textbox" style="width: 13%;" oninput="convert_2()" placeholder="Day">
+  <input type="text" id="h_box" class="textbox" style="width: 13%;" oninput="convert_2()" placeholder="Hour">
+  <input type="text" id="m_box" class="textbox" style="width: 13%;" oninput="convert_2()" placeholder="Minute">
+  <input type="text" id="s_box" class="textbox" style="width: 13%;" oninput="convert_2()" placeholder="Second">
+  <button class="mbutton" onmousedown="stn()">Now</button>
   <div class="overflow">
   <table id="table1" style="width: 110%;">
     <colgroup>
@@ -169,6 +179,13 @@
       <td id="t271" class="code">&lt;t:0:t&gt;</td>
       <td id="t272">12:00 AM</td>
       <td id="t273">00:00</td>
+      <td><button class="mbutton no_margin" onmousedown="copy_(this)" onmouseup="uncopy_(this)">Copy</button></td>
+    </tr>
+
+    <tr>
+      <td id="t281" class="code">&lt;t:0:R&gt;</td>
+      <td id="t282">12:00 AM</td>
+      <td id="t283">00:00</td>
       <td><button class="mbutton no_margin" onmousedown="copy_(this)" onmouseup="uncopy_(this)">Copy</button></td>
     </tr>
   </table>

@@ -1,25 +1,19 @@
 var boxes_ = ["timestamp", "Y", "M", "D", "h", "m", "s"];
 var boxes = ["Y", "M", "D", "h", "m", "s"];
-var date_now = new Date();
+var date_now;
 
 timestamp_i = localStorage.getItem('timestamp') || "0";
-Y_i = date_now.getFullYear();
-M_i = date_now.getMonth() + 1;
-D_i = date_now.getDate();
-h_i = date_now.getHours();
-m_i = date_now.getMinutes();
-s_i = date_now.getSeconds();
 
-for (i of boxes_) {
+for (i of boxes_) { // Input boxes
   window[i + "_box"] = document.getElementById(i + "_box");
   window[i + "_box"].value = window[i + "_i"]
 }
 
 
 var i, j, k, name_;
-for (k=1; k<=2; k++) {
-  for (i=1; i<=7; i++) {
-    for (j=1; j<=3; j++) {
+for (k=1; k<=2; k++) { // For each table
+  for (i=1; i<=8; i++) { // For each tr
+    for (j=1; j<=3; j++) { // For each td
       name_ = 't' + String(k) + String(i) + String(j)
       window['elm_'+name_] = document.getElementById(name_)
     }
@@ -27,7 +21,7 @@ for (k=1; k<=2; k++) {
 }
 
 var dt1
-function convert_1() {
+function convert_1() { // Table 1 conversion
   timestamp_box.value = timestamp_box.value.replace(/[^\d-]/g,'');
   if (parseInt(timestamp_box.value) > 8640000000000) {
     timestamp_box.value = "8640000000000"
@@ -45,7 +39,7 @@ function convert_1() {
 }
 
 var dt2
-function convert_2() {
+function convert_2() { // Table 2 conversion
   for (i of boxes) {
     window[i + "_box"].value = window[i + "_box"].value.replace(/[^\d-]/g,'');
     window[i + "_i"] = window[i + "_box"].value
@@ -61,9 +55,10 @@ function convert_2() {
 
 var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
 var weekdays=["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
-var dt_, dt_12h
+var dt_, dt_12h, time_diff, rel_disp
 function convert(ts, tb_id, dt) {
   dt_ = [dt.getFullYear(), String(dt.getMonth()+1).padStart(2, "0"), months[dt.getMonth()], dt.getDate(), String(dt.getDate()).padStart(2, "0"), weekdays[dt.getDay()], String(dt.getHours()).padStart(2, "0"), String(dt.getMinutes()).padStart(2, "0"), String(dt.getSeconds()).padStart(2, "0")]
+  // dt_ = [2038, "01", "January", 9, "09", "Saturday", "03", "14", "07"] 10 days before Y2K38
   if (dt.getHours() >= 13) {
     dt_12h = [dt.getHours() - 12, "PM"]
   } else if (dt.getHours() == 12) {
@@ -125,6 +120,24 @@ function convert(ts, tb_id, dt) {
   window[`elm_t${tb_id}71`].innerHTML = `&lt;t:${ts}:t&gt;`
   window[`elm_t${tb_id}72`].innerHTML = `${dt_12h[0]}:${dt_[7]} ${dt_12h[1]}`
   window[`elm_t${tb_id}73`].innerHTML = `${dt_[6]}:${dt_[7]}`
+
+  date_now = new Date();
+  time_diff = (date_now - dt) / 1000
+  if (time_diff < 45) { // 45s
+    rel_disp = "a few seconds ago"
+  } else if (time_diff < 60 * 2) { // 2m
+    rel_disp = "a minute ago"
+  } else if (time_diff < 60 * 45) { // 45m
+    rel_disp = `${(time_diff/60) << 0} minutes ago`
+  } else if (time_diff < 60 * 90) { // 90m
+    rel_disp = "an hour ago"
+  } else if (time_diff < 60 * 60 * 21) { // 21h
+    rel_disp = `${Math.round(time_diff/3600)} hours ago`
+  } else {
+    rel_disp = "Beta"
+  }
+  window[`elm_t${tb_id}81`].innerHTML = `&lt;t:${ts}:R&gt;`
+  window[`elm_t${tb_id}82`].innerHTML = window[`elm_t${tb_id}83`].innerHTML = rel_disp
 }
 
 function copy_(x) {
@@ -136,5 +149,24 @@ function uncopy_(x) {
   x.innerHTML = "Copy";
 }
 
+function stn() {
+  date_now = new Date();
+  Y_i = date_now.getFullYear();
+  M_i = date_now.getMonth() + 1;
+  D_i = date_now.getDate();
+  h_i = date_now.getHours();
+  m_i = date_now.getMinutes();
+  s_i = date_now.getSeconds();
+  for (i of boxes_) { // Input boxes
+    window[i + "_box"].value = window[i + "_i"]
+  }
+  convert_2();
+}
+
+function update() {
+  convert_1();
+  convert_2();
+}
+
+stn();
 convert_1();
-convert_2();

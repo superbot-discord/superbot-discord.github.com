@@ -24,6 +24,7 @@
   <h1>SuperBot Official Documentation</h1>
   <p>Note: The bot requires the Send Messages permission for most commands, while the Upload Files permission is required for some commands.
     These permissions are not listed below.</p>
+  <p>Commands that start with a slash <span class="code">/</span> have slash alternatives, but the regular command is still available.</p>
   <h2>Basic Commands</h2>
 
   <div class="card_c">
@@ -69,7 +70,7 @@
   </div>
 
   <div class="card_c">
-    <p class="card_h1">ping</p>
+    <p class="card_h1">/ping</p>
     <p class="card_p" >Checks whether the bot is online and views the response speed.</p>
     <p class="card_h2">Arguments</p>
     <p class="card_p ">N/A</p>
@@ -156,11 +157,13 @@
   </div>
 
   <div class="card_c">
-    <p class="card_h1">channel {Channel}</p>
+    <p class="card_h1">/channel {Channel}</p>
     <p class="card_p" >Views information about a channel.</p>
     <p class="card_h2">Arguments</p>
     <p class="card_p "><span class="code">{Channel}</span> The text, voice or stage channel to view information about.
       Can be an ID, mention or name. Defaults to the channel in which the command is used.</p>
+    <p class="card_h2">Slash</p>
+    <p class="card_p">The slash command, <span class="code">/channel_info</span>, can also be used to show information of a category.</p>
     <p class="card_h2">Alias</p>
     <p class="card_p code">ch</p>
     <p class="card_h2">Permissions (Bot)</p>
@@ -192,7 +195,7 @@
   </div>
 
   <div class="card_c">
-    <p class="card_h1">emojis</p>
+    <p class="card_h1">/emojis</p>
     <p class="card_p" >Views a list of emojis in the server.</p>
     <p class="card_h2">Arguments</p>
     <p class="card_p ">N/A</p>
@@ -203,7 +206,7 @@
   </div>
 
   <div class="card_c">
-    <p class="card_h1">stickers</p>
+    <p class="card_h1">/stickers</p>
     <p class="card_p" >Views a list of stickers in the server.</p>
     <p class="card_h2">Arguments</p>
     <p class="card_p ">N/A</p>
@@ -228,7 +231,7 @@
   <h2>Discord Information Commands (User)</h2>
 
   <div class="card_c">
-    <p class="card_h1">user {Member}</p>
+    <p class="card_h1">/user {Member}</p>
     <p class="card_p" >Views information about the user. The user must be in the server in which the command is used.</p>
     <p class="card_h2">Arguments</p>
     <p class="card_p "><span class="code">{Member}</span> The user to view information about.
@@ -433,7 +436,7 @@
     <p class="card_p ">N/A</p>
     <p class="card_h2">Alias</p>
     <p class="card_p">N/A</p>
-    <p class="card_h2">Permissions (Bot)</p>
+    <p class="card_h2">Permissions (You)</p>
     <p class="card_p" >You need the <span class="bold">Manage Channel</span> permission.</p>
   </div>
 
@@ -521,8 +524,6 @@
     <p class="card_p "><span class="code">[Message]</span> The message to convert. Can be a reply, ID or URL.</p>
     <p class="card_h2">Alias</p>
     <p class="card_p">N/A</p>
-    <p class="card_h2">Permissions (You)</p>
-    <p class="card_p" >The bot requires the <span class="bold">Embed Links</span> permission.</p>
   </div>
 
   <div id="clearsnipe" class="card_c">
@@ -540,7 +541,7 @@
 
   <div id="clearsnipe" class="card_c">
     <p class="card_h1">kick [Member] {Reason}</p>
-    <p class="card_p" >Kicks the user out of the server once.</p>
+    <p class="card_p" >Kicks the user out of the server once and notify him via a DM.</p>
     <p class="card_h2">Arguments</p>
     <p class="card_p "><span class="code">[Member]</span> The user to kick. Can be an ID, mention, Name#Discriminator notation, name or nickname.</p>
     <p class="card_h2">Alias</p>
@@ -565,7 +566,7 @@
 
   <div id="clearsnipe" class="card_c">
     <p class="card_h1">unban [User] {Reason}</p>
-    <p class="card_p" >Unans the user.</p>
+    <p class="card_p" >Unbans the user.</p>
     <p class="card_h2">Arguments</p>
     <p class="card_p "><span class="code">[User]</span> The user to unban. Can be an ID, mention, Name#Discriminator notation or name.<br>
     <span class="code">{Reason}</span> The reason to ban the user. Shows up in the audit log.</p>
@@ -577,28 +578,68 @@
 
   <div id="clearsnipe" class="card_c">
     <p class="card_h1">timeout [Member] {Duration} {Reason}</p>
-    <p class="card_p" >Timeouts the user. If the duration is not set or is zero, removes the timeout.</p>
+    <p class="card_p" >Times out the user. If the duration is not set or is zero, removes the timeout.</p>
     <p class="card_h2">Arguments</p>
-    <p class="card_p "><span class="code">[User]</span> The user to unban. Can be an ID, mention, Name#Discriminator notation or name.<br>
-    <span class="code">{Reason}</span> The reason to ban the user. Shows up in the audit log.</p>
+    <p class="card_p "><span class="code">[User]</span> The user to timeout. Can be an ID, mention, Name#Discriminator notation or name.<br>
+      <span class="code">{Duration}</span> The duration of the timeout. Supply one or more units in <span class="code">y M d h m s</span>.
+      Examples: <span class="code">3h30m</span>; <span class="code">10m1d</span>. If a numerical value has no units, it will be in seconds.
+      Defaults to 0 (remove the timeout).<br><span class="code">{Reason}</span> The reason to time out the user. Shows up in the audit log.</p>
     <p class="card_h2">Alias</p>
     <p class="card_p">N/A</p>
     <p class="card_h2">Permissions</p>
-    <p class="card_p" >The bot and you need the <span class="bold">Ban Members</span> permission.</p>
+    <p class="card_p" >The bot and you need the <span class="bold">Time Out Members</span> permission.</p>
   </div>
 
-  <h2>Moderation Commands (Channel)</h2>
+  <div id="clearsnipe" class="card_c">
+    <p class="card_h1">untimeout [Member] {Reason}</p>
+    <p class="card_p" >Removes the timeout of the user.</p>
+    <p class="card_h2">Arguments</p>
+    <p class="card_p "><span class="code">[User]</span> The user to remove the timeout of. Can be an ID, mention, Name#Discriminator notation
+      or name.<br><span class="code">{Reason}</span> The reason to remove the timeout of the user. Shows up in the audit log.</p>
+    <p class="card_h2">Alias</p>
+    <p class="card_p">N/A</p>
+    <p class="card_h2">Permissions</p>
+    <p class="card_p" >The bot and you need the <span class="bold">Time Out Members</span> permission.</p>
+  </div>
+
+  <h2>Moderation Commands (Server & Channel)</h2>
 
   <div id="clearsnipe" class="card_c">
     <p class="card_h1">slowmode {Delay} {Reason}</p>
-    <p class="card_p" >Unans the user.</p>
+    <p class="card_p" >Generates the slowmode of the current channel.</p>
     <p class="card_h2">Arguments</p>
-    <p class="card_p "><span class="code">[User]</span> The user to unban. Can be an ID, mention, Name#Discriminator notation or name.<br>
-    <span class="code">{Reason}</span> The reason to ban the user. Shows up in the audit log.</p>
+    <p class="card_p "><span class="code">{Delay}</span> The slowmode delay. Supply one or more units in <span class="code">y M d h m s</span>.
+      Examples: <span class="code">3h30m</span>; <span class="code">10m1d</span>. If a numerical value has no units, it will be in seconds.
+      Defaults to 0 (remove the slowmode).<br><span class="code">{Reason}</span> The reason to set the slowmode. Shows up in the audit log.</p>
     <p class="card_h2">Alias</p>
     <p class="card_p">N/A</p>
     <p class="card_h2">Permissions</p>
-    <p class="card_p" >The bot and you need the <span class="bold">Ban Members</span> permission.</p>
+    <p class="card_p" >The bot and you need the <span class="bold">Manage Channels</span> permission.</p>
+  </div>
+
+  <div id="clearsnipe" class="card_c">
+    <p class="card_h1">makeinvite {Valid Duration} {Max Uses}</p>
+    <p class="card_p" >Generates an invite in the current channel.</p>
+    <p class="card_h2">Arguments</p>
+    <p class="card_p "><span class="code">{Valid Duration}</span> The valid duration of the invite. Supply one or more units in
+      <span class="code">y M d h m s</span>. Examples: <span class="code">3h30m</span>; <span class="code">10m1d</span>. If a
+      numerical value has no units, it will be in seconds. Defaults to 0 (forever).<br><span class="code">{Max Uses}</span> The
+      maximum amount of times the invite can be used. Defaults to 0 (infinity).</p>
+    <p class="card_h2">Alias</p>
+    <p class="card_p">N/A</p>
+    <p class="card_h2">Permissions</p>
+    <p class="card_p" >The bot and you need the <span class="bold">Create Invites</span> permission.</p>
+  </div>
+
+  <div id="clearsnipe" class="card_c">
+    <p class="card_h1">purge [Number]</p>
+    <p class="card_p" >Unans the user.</p>
+    <p class="card_h2">Arguments</p>
+    <p class="card_p "><span class="code">[Number]</span> The number of messages to delete.</p>
+    <p class="card_h2">Alias</p>
+    <p class="card_p">N/A</p>
+    <p class="card_h2">Permissions</p>
+    <p class="card_p" >The bot and you need the <span class="bold">Manage Messages</span> permission.</p>
   </div>
 
   <br>
@@ -671,14 +712,6 @@
       <td>Removes all reactions from the most recent message(s).</td>
       <td></td>
       <td colspan="2">Manage reactions</td>
-    </tr>
-
-    <tr>
-      <td class="code">makeinvite</td>
-      <td>Valid duration (Text), <span class="inverted">Max. users (Integer)</span></td>
-      <td>Generates an invite for the server. Defaults to infinite users if not set.</td>
-      <td></td>
-      <td colspan="2">Create invite</td>
     </tr>
   </table>
   </div><br><br>
