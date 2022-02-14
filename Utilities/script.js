@@ -1,6 +1,32 @@
+var bgcolor = localStorage.getItem('b') || "#ffffff";
+var dark = localStorage.getItem('dark')==='true' || false
+var util_sheet = document.getElementById("utilities_style").sheet;
+var id_box = document.getElementById("id_box");
+var id_txt = document.getElementById("id_text");
 var boxes_ = ["timestamp", "Y", "M", "D", "h", "m", "s"];
 var boxes = ["Y", "M", "D", "h", "m", "s"];
 var date_now;
+
+function adjust(color, amount) {
+  return '#' + color.replace(/^#/, '').replace(/../g, color => ('0'+Math.min(255, Math.max(0, parseInt(color, 16) + amount)).toString(16)).substr(-2));
+}
+
+if (dark) {
+  adjusted_bg2 = adjust(bgcolor, 20);
+} else {
+  adjusted_bg2 = adjust(bgcolor, -10);
+}
+
+util_sheet.deleteRule(util_sheet.cssRules.length - 1);
+util_sheet.insertRule(`
+  .textbox-cont {
+  z-index: 0;
+  width: 15%;
+  position: relative;
+  display: inline-block;
+  height: 3.5vw;
+  background-color: ` + adjusted_bg2 + `
+  }`, util_sheet.cssRules.length)
 
 timestamp_i = localStorage.getItem('timestamp') || "0";
 
@@ -39,15 +65,16 @@ function convert_1() { // Table 1 conversion
 }
 
 var dt2
+var ranges = {"Y": [-270000, 270000], "M": [0, 12], "D": [0, 31], "h": [0, 23], "m": [0, 59], "s": [0, 59]}
 function convert_2() { // Table 2 conversion
   for (i of boxes) {
-    window[i + "_box"].value = window[i + "_box"].value.replace(/[^\d-]/g,'');
-    window[i + "_i"] = window[i + "_box"].value
+    window[i + "_i"] = parseInt(window[i + "_box"].value.replace(/[^\d]/g,''));
+    window[i + "_i"] = window[i + "_i"] < ranges[i][0] ? ranges[i][0] : window[i + "_i"]
+    window[i + "_i"] = String(window[i + "_i"] > ranges[i][1] ? ranges[i][1] : window[i + "_i"])
+    window[i + "_box"].value = ["M", "D", "h", "m", "s"].includes(i) ? window[i + "_i"].padStart(2, "0") : window[i + "_i"]
+    window[i + "_i"] = i == "M" && window[i + "_i"] == 0 ? 1 : window[i + "_i"]
+    window[i + "_i"] = i == "D" && window[i + "_i"] == 0 ? 1 : window[i + "_i"]
     localStorage.setItem(i, window[i + "_i"]);
-    
-    if (window[i + "_i"] == "" || window[i + "_i"] == "-") {
-      window[i + "_i"] = "0"
-    }
   }
   dt2 = new Date(Y_i, M_i - 1, D_i, h_i, m_i, s_i)
   convert(dt2.getTime() / 1000, "2", dt2)
@@ -133,6 +160,16 @@ function convert(ts, tb_id, dt) {
     rel_disp = "an hour ago"
   } else if (time_diff < 60 * 60 * 21) { // 21h
     rel_disp = `${Math.round(time_diff/3600)} hours ago`
+  } else if (time_diff < 60 * 60 * 36) { // 36h
+    rel_disp = "a day ago"
+  } else if (time_diff < 60 * 60 * 24 * 26) { // 26d
+    rel_disp = `${Math.round(time_diff/86400)} days ago`
+  } else if (time_diff < 60 * 60 * 24 * 47) { // 47d
+    rel_disp = "a month ago"
+  } else if (time_diff < 60 * 60 * 24 * 30 * 11) { // 11M
+    rel_disp = `${Math.min(Math.round(time_diff/2592000), 10)} months ago`
+  } else if (time_diff < 60 * 60 * 24 * 365 * 1.5) { // 1.5Y
+    rel_disp = "a year ago"
   } else {
     rel_disp = "Beta"
   }
@@ -168,5 +205,22 @@ function update() {
   convert_2();
 }
 
+var id_text, id_box_, id_box__, idd;
+function convert_3() { // ID Creation Checker
+  id_box.value = id_box_ = id_box.value.replace(/[^\d]/g,'');
+  if (id_box_) {
+    id_box__ = new BigNumber(id_box_)
+    id_box__ = (id_box__.divide(2**22).add(1420070400000)).valueOf().split(".")[0]
+    idd = new Date(parseInt(id_box__))
+    id_text = `The ID was created on <span class="bold">${String(idd.getDate()).padStart(2, "0")} ${months[idd.getMonth()]} ${idd.getFullYear()} (${weekdays[idd.getDay()]})</span> `
+    id_text +=`at <span class="bold">${String(idd.getHours()).padStart(2, "0")}:${String(idd.getMinutes()).padStart(2, "0")}:${String(idd.getSeconds()).padStart(2, "0")}</span> `
+    id_text +=`(plus ${idd.getMilliseconds()} milliseconds).`
+  } else {
+    id_text = "Loading…"
+  }
+  id_txt.innerHTML = id_text
+}
+
 stn();
 convert_1();
+convert_3();

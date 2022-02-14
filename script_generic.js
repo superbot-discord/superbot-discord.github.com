@@ -212,6 +212,7 @@ function setcolor () {
   mysheet.insertRule(`
   .textbox {
     width: 96vw;
+    height: 2.5vw;
     font-size: 2vw;
     padding: 0.5vw 1vw;
     margin-bottom: 1vw;

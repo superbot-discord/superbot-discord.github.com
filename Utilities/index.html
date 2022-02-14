@@ -5,6 +5,7 @@
 <head>
   <title>SuperBot Utilities</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" id="utilities_style" href="style.css">
   <link rel="stylesheet" id="mystyle" href="/style.css">
   <base target="_blank">
 </head>
@@ -23,9 +24,10 @@
   </div>
 
   <h1>SuperBot Utilities</h1>
+  <p>All dates and times displayed on this page are displayed in your time zone.</p>
   <h3>Timestamp converter</h3>
   <p>Notes: Timestamps must be within ±8 640 000 000 000. Timestamps formatted with <span class="code">&lt;t:123:R&gt;</span> may
-    not be displayed correctly. All timestamps here are displayed in your time zone.</p>
+    not be displayed correctly.</p>
   <button class="rbutton" onmousedown="update()">Update relative timestamps</button><br><br>
   <input type="text" id="timestamp_box" class="textbox" oninput="convert_1()" placeholder="Don't worry about special characters. Just paste a timestamp here…">
   <div class="overflow">
@@ -99,20 +101,40 @@
 
     <tr>
       <td id="t181" class="code">&lt;t:0:R&gt;</td>
-      <td id="t182">12:00 AM</td>
-      <td id="t183">00:00</td>
+      <td id="t182">a few seconds ago</td>
+      <td id="t183">a few seconds ago</td>
       <td><button class="mbutton no_margin" onmousedown="copy_(this)" onmouseup="uncopy_(this)">Copy</button></td>
     </tr>
   </table>
   </div><br>
 
-  <input type="text" id="Y_box" class="textbox" style="width: 13%;" oninput="convert_2()" placeholder="Year">
-  <input type="text" id="M_box" class="textbox" style="width: 13%;" oninput="convert_2()" placeholder="Month">
-  <input type="text" id="D_box" class="textbox" style="width: 13%;" oninput="convert_2()" placeholder="Day">
-  <input type="text" id="h_box" class="textbox" style="width: 13%;" oninput="convert_2()" placeholder="Hour">
-  <input type="text" id="m_box" class="textbox" style="width: 13%;" oninput="convert_2()" placeholder="Minute">
-  <input type="text" id="s_box" class="textbox" style="width: 13%;" oninput="convert_2()" placeholder="Second">
-  <button class="mbutton" onmousedown="stn()">Now</button>
+  <div>
+    <div class="textbox-cont">
+      <input type="text" id="Y_box" class="textbox" oninput="convert_2()" placeholder="Year">
+      <input value="Y" class="textbox-placeholder"/>
+    </div>
+    <div class="textbox-cont">
+      <input type="text" id="M_box" class="textbox" oninput="convert_2()" placeholder="Month">
+      <input value="M" class="textbox-placeholder"/>
+    </div>
+    <div class="textbox-cont">
+      <input type="text" id="D_box" class="textbox" oninput="convert_2()" placeholder="Day">
+      <input value="D" class="textbox-placeholder"/>
+    </div>
+    <div class="textbox-cont">
+      <input type="text" id="h_box" class="textbox" oninput="convert_2()" placeholder="Hour">
+      <input value="H" class="textbox-placeholder"/>
+    </div>
+    <div class="textbox-cont">
+      <input type="text" id="m_box" class="textbox" oninput="convert_2()" placeholder="Minute">
+      <input value="M" class="textbox-placeholder"/>
+    </div>
+    <div class="textbox-cont">
+      <input type="text" id="s_box" class="textbox" oninput="convert_2()" placeholder="Second">
+      <input value="S" class="textbox-placeholder"/>
+    </div>
+    <button style="height: 3vw; vertical-align: top; position: relative;" class="mbutton" onmousedown="stn()">Now</button>
+  </div>
   <div class="overflow">
   <table id="table1" style="width: 110%;">
     <colgroup>
@@ -184,13 +206,20 @@
 
     <tr>
       <td id="t281" class="code">&lt;t:0:R&gt;</td>
-      <td id="t282">12:00 AM</td>
-      <td id="t283">00:00</td>
+      <td id="t282">a few seconds ago</td>
+      <td id="t283">a few seconds ago</td>
       <td><button class="mbutton no_margin" onmousedown="copy_(this)" onmouseup="uncopy_(this)">Copy</button></td>
     </tr>
   </table>
   </div>
+
+  <h3>ID Creation checker</h3>
+  <p>This tool checks the creation time of any Discord ID.</p><br>
+  <input type="text" id="id_box" class="textbox" oninput="convert_3()" placeholder="Paste any ID you can find on Discord here…">
+  <p id="id_text">Loading…</p>
+
   <script src="/script_generic.js"></script>
+  <script src="/Utilities/bigint.js"></script>
   <script src="/Utilities/script.js"></script>
 </body>
 
